@@ -317,6 +317,12 @@ PureNumFromTo: !nestedRegex
 PureNumBetweenAnd: !nestedRegex
   def: (entre\s+(la(s)?\s+)?)({BaseDateTime.HourRegex}|{TimeHourNumRegex})(\s*(?<leftDesc>{DescRegex}))?\s*y\s*(la(s)?\s+)?({BaseDateTime.HourRegex}|{TimeHourNumRegex})\s*(?<rightDesc>{PmRegex}|{AmRegex}|{DescRegex})?
   references: [ BaseDateTime.HourRegex, TimeHourNumRegex, DescRegex, PmRegex, AmRegex ]
+SpecificTimeFromTo: !simpleRegex
+  # TODO: modify below regex according to the counterpart in English
+  def: ^[.]
+SpecificTimeBetweenAnd: !simpleRegex
+  # TODO: modify below regex according to the counterpart in English
+  def: ^[.]
 TimeUnitRegex: !simpleRegex
   def: (?<unit>horas|hora|h|minutos|minuto|mins|min|segundos|segundo|secs|sec)\b
 TimeFollowedUnit: !nestedRegex
@@ -734,9 +740,12 @@ FromToRegex: !simpleRegex
 SingleAmbiguousMonthRegex: !simpleRegex
   # TODO: change to Spanish according to corresponding Regex
   def: ^(the\s+)?(may|march)$
+UnspecificDatePeriodRegex: !simpleRegex
+  # TODO: modify below regex according to the counterpart in English
+  def: ^[.]
 PrepositionSuffixRegex: !simpleRegex
   # TODO: change to Spanish according to corresponding Regex
-  def: \b(on|in|at|around|from|to)$
+  def: \b(on|in|at|around|for|during|since|from|to)$
 RestOfDateTimeRegex: !simpleRegex
   # TODO: add this according to the related part in English
   def: ^[\.]

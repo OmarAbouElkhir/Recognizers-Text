@@ -114,6 +114,8 @@ export namespace FrenchDateTime {
 	export const PeriodAmRegex = `(?<am>matin|d[eu] matin|matin[ée]e)s?`;
 	export const PureNumFromTo = `((du|de|des|depuis)\\s+)?(${HourRegex}|${PeriodHourNumRegex})(\\s*(?<leftDesc>${PeriodDescRegex}))?\\s*${TillRegex}\\s*(${HourRegex}|${PeriodHourNumRegex})\\s*(?<rightDesc>${PmRegex}|${AmRegex}|${PeriodDescRegex})?`;
 	export const PureNumBetweenAnd = `(entre\\s+)(${HourRegex}|${PeriodHourNumRegex})(\\s*(?<leftDesc>${PeriodDescRegex}))?\\s*${RangeConnectorRegex}\\s*(${HourRegex}|${PeriodHourNumRegex})\\s*(?<rightDesc>${PmRegex}|${AmRegex}|${PeriodDescRegex})?`;
+	export const SpecificTimeFromTo = `^[.]`;
+	export const SpecificTimeBetweenAnd = `^[.]`;
 	export const PrepositionRegex = `(?<prep>^([aà] la|en|sur\\s*l[ea]|sur|de)$)`;
 	export const TimeOfDayRegex = `\\b(?<timeOfDay>((((dans\\s+(l[ea])?\\s+)?((?<early>d[eé]but(\\s+|-)|t[oô]t(\\s+|-)(l[ea]\\s*)?)|(?<late>fin\\s*|fin de(\\s+(la)?)|tard\\s*))?(matin[ée]e|matin|((d|l)?'?)apr[eè]s[-|\\s*]midi|nuit|soir[eé]e|soir)))|(((\\s+(l[ea])?\\s+)?)(jour|journ[eé]e)))s?)\\b`;
 	export const SpecificTimeOfDayRegex = `\\b((${RelativeRegex}\\s+${TimeOfDayRegex})|(${TimeOfDayRegex}\\s*(${NextSuffixRegex}))\\b|\\bsoir|\\bdu soir)s?\\b`;
@@ -184,6 +186,7 @@ export namespace FrenchDateTime {
 	export const FromRegex2 = `((depuis|de)(\\s*la(s)?)?)$`;
 	export const FromToRegex = `\\b(du|de|des|depuis).+(à|a|au)\\b.+`;
 	export const SingleAmbiguousMonthRegex = `^(le\\s+)?(may|march)$`;
+	export const UnspecificDatePeriodRegex = `^[.]`;
 	export const PrepositionSuffixRegex = `\\b(du|de|[àa]|vers|dans)$`;
 	export const FlexibleDayRegex = `(?<DayOfMonth>([A-Za-z]+\\s)?[A-Za-z\\d]+)`;
 	export const ForTheRegex = `\\b(((pour le ${FlexibleDayRegex})|(dans (le\\s+)?${FlexibleDayRegex}(?<=(st|nd|rd|th))))(?<end>\\s*(,|\\.|!|\\?|$)))`;
