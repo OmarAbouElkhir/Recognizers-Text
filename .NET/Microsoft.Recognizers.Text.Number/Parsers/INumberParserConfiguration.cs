@@ -27,7 +27,7 @@ namespace Microsoft.Recognizers.Text.Number
 
         Regex FractionPrepositionRegex { get; }
 
-        string FractionMarkerToken { get; }
+        string FractionMarkerTokens { get; }
 
         Regex HalfADozenRegex { get; }
 

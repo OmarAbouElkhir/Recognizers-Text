@@ -113,7 +113,7 @@ namespace Microsoft.Recognizers.Text.DataDrivenTests
     public static class TestContextExtensions
     {
         private static IDictionary<Models, Func<TestModel, string, IList<ModelResult>>> modelFunctions = new Dictionary<Models, Func<TestModel, string, IList<ModelResult>>>() {
-            { Models.Number, (test, culture) => NumberRecognizer.RecognizeNumber(test.Input, culture, fallbackToDefaultCulture: false) },
+            { Models.Number, (test, culture) => NumberRecognizer.RecognizeNumber(test.Input, culture, fallbackToDefaultCulture: true) },
             { Models.NumberPercentMode, (test, culture) => NumberRecognizer.RecognizeNumber(test.Input, culture, NumberOptions.PercentageMode, fallbackToDefaultCulture: false) },
             { Models.Ordinal, (test, culture) => NumberRecognizer.RecognizeOrdinal(test.Input, culture, fallbackToDefaultCulture: false) },
             { Models.Percent, (test, culture) => NumberRecognizer.RecognizePercentage(test.Input, culture, fallbackToDefaultCulture: false)},
@@ -165,6 +165,8 @@ namespace Microsoft.Recognizers.Text.DataDrivenTests
                     return GetFrenchExtractor(extractorName);
                 case Culture.German:
                     return GetGermanExtractor(extractorName);
+                case Culture.Thai:
+                    return GetThaiExtractor(extractorName);
             }
 
             throw new Exception($"Extractor '{extractorName}' for '{culture}' not supported");
@@ -188,6 +190,8 @@ namespace Microsoft.Recognizers.Text.DataDrivenTests
                     return GetFrenchParser(parserName);
                 case Culture.German:
                     return GetGermanParser(parserName);
+                case Culture.Thai:
+                    return GetThaiParser(parserName);
             }
 
             throw new Exception($"Parser '{parserName}' for '{culture}' not supported");
@@ -561,6 +565,28 @@ namespace Microsoft.Recognizers.Text.DataDrivenTests
             throw new Exception($"Parser '{parserName}' for German not supported");
         }
 
+        public static IDateTimeExtractor GetThaiExtractor(DateTimeExtractors extractorName)
+        {
+            // switch (extractorName)
+            // {
+            //     case DateTimeExtractors.Date:
+            //         return new BaseDateExtractor(new ThaiDateExtractorConfiguration());
+            // }
+
+            throw new Exception($"Extractor '{extractorName}' for Thai not supported");
+        }
+
+        public static IDateTimeParser GetThaiParser(DateTimeParsers parserName)
+        {
+            // var commonConfiguration = new ThaiCommonDateTimeParserConfiguration(DateTimeOptions.None);
+            // switch (parserName)
+            // {
+            //     case DateTimeParsers.Date:
+            //         return new BaseDateParser(new ThaiDateParserConfiguration(commonConfiguration));
+            // }
+
+            throw new Exception($"Parser '{parserName}' for Thai not supported");
+        }
     }
 
     public static class TestModelExtensions

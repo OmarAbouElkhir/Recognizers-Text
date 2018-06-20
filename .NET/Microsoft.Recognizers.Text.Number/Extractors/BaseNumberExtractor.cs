@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -42,6 +43,8 @@ namespace Microsoft.Recognizers.Text.Number
                     matchSource.Add(m, collection.Value);
                 }
             }
+
+            matchSource = RankMatches(matchSource);
 
             var last = -1;
             for (var i = 0; i < source.Length; i++)
@@ -100,6 +103,33 @@ namespace Microsoft.Recognizers.Text.Number
                 BaseNumbers.DoubleRegexDefinition(placeholder, thousandsMark, decimalsMark);
 
             return new Regex(regexDefinition, RegexOptions.IgnoreCase | RegexOptions.Singleline);
+        }
+
+        private Dictionary<Match, string> RankMatches(Dictionary<Match, string> matches)
+        {
+            var result = new Dictionary<Match, string>();
+            var staticRanks = new List<string> { "Integer" };
+
+            foreach (var rank in staticRanks)
+            {
+                foreach (var match in matches)
+                {
+                    if (match.Value.Contains(rank))
+                    {
+                        result.Add(match.Key, match.Value);
+                    }
+                }
+            }
+
+            foreach (var match in matches)
+            {
+                if (!result.ContainsKey(match.Key))
+                {
+                    result.Add(match.Key, match.Value);
+                }
+            }
+
+            return result;
         }
     }
 

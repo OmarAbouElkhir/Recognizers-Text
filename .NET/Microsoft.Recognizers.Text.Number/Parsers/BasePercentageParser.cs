@@ -19,7 +19,7 @@ namespace Microsoft.Recognizers.Text.Number
                 if (extendedData1.Count == 2)
                 {
                     // for case like "2 out of 5".
-                    extResult.Text = $"{extendedData1[0].Item1} {Config.FractionMarkerToken} {extendedData1[1].Item1}";
+                    extResult.Text = $"{extendedData1[0].Item1} {Config.FractionMarkerTokens} {extendedData1[1].Item1}";
                     extResult.Data = $"Frac{Config.LangMarker}";
 
                     ret = base.Parse(extResult);

@@ -4,26 +4,26 @@ using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-using Microsoft.Recognizers.Definitions.English;
+using Microsoft.Recognizers.Definitions.Thai;
 
-namespace Microsoft.Recognizers.Text.Number.English
+namespace Microsoft.Recognizers.Text.Number.Thai
 {
-    public class EnglishNumberParserConfiguration : INumberParserConfiguration
+    public class ThaiNumberParserConfiguration : INumberParserConfiguration
     {
-        public EnglishNumberParserConfiguration(NumberOptions options) : this()
+        public ThaiNumberParserConfiguration(NumberOptions options) : this()
         {
             this.Options = options;
         }
 
-        public EnglishNumberParserConfiguration() : this(new CultureInfo(Culture.English)) { }
+        public ThaiNumberParserConfiguration() : this(new CultureInfo(Culture.Thai)) { }
 
-        public EnglishNumberParserConfiguration(CultureInfo ci)
+        public ThaiNumberParserConfiguration(CultureInfo ci)
         {
             this.LangMarker = NumbersDefinitions.LangMarker;
             this.CultureInfo = ci;
 
             this.DecimalSeparatorChar = NumbersDefinitions.DecimalSeparatorChar;
-            this.FractionMarkerTokens = NumbersDefinitions.FractionMarkerToken;
+            this.FractionMarkerTokens = NumbersDefinitions.FractionMarkerTokens;
             this.NonDecimalSeparatorChar = NumbersDefinitions.NonDecimalSeparatorChar;
             this.HalfADozenText = NumbersDefinitions.HalfADozenText;
             this.WordSeparatorToken = NumbersDefinitions.WordSeparatorToken;

@@ -12,7 +12,8 @@ namespace Microsoft.Recognizers.Text
         public const string German = "de-de";
         public const string Japanese = "ja-jp";
         public const string Dutch = "nl-nl";
-            
+        public const string Thai = "th-th";
+
         public string CultureName;
         public string CultureCode;
 
@@ -24,7 +25,8 @@ namespace Microsoft.Recognizers.Text
             new Culture("French", French),
             new Culture("German", German),
             new Culture("Japanese", Japanese),
-            new Culture("Dutch", Dutch)
+            new Culture("Dutch", Dutch),
+            new Culture("Thai", Thai)
         };
 
         private Culture(string cultureName, string cultureCode)

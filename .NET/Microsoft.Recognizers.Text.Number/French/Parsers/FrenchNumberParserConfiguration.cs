@@ -18,7 +18,7 @@ namespace Microsoft.Recognizers.Text.Number.French
             this.CultureInfo = ci;
 
             this.DecimalSeparatorChar = NumbersDefinitions.DecimalSeparatorChar;
-            this.FractionMarkerToken = NumbersDefinitions.FractionMarkerToken; 
+            this.FractionMarkerTokens = NumbersDefinitions.FractionMarkerToken; 
             this.NonDecimalSeparatorChar = NumbersDefinitions.NonDecimalSeparatorChar;
             this.HalfADozenText = NumbersDefinitions.HalfADozenText;
             this.WordSeparatorToken = NumbersDefinitions.WordSeparatorToken;
@@ -62,7 +62,7 @@ namespace Microsoft.Recognizers.Text.Number.French
 
         public Regex NegativeNumberSignRegex { get; private set; }
 
-        public string FractionMarkerToken { get; private set; }
+        public string FractionMarkerTokens { get; private set; }
 
         public Regex HalfADozenRegex { get; private set; }
 

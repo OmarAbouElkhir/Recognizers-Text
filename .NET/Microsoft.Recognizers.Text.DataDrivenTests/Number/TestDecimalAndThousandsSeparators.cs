@@ -24,7 +24,7 @@ namespace Microsoft.Recognizers.Text.Number.Tests
 
         public Regex FractionPrepositionRegex { get; }
 
-        public string FractionMarkerToken { get; }
+        public string FractionMarkerTokens { get; }
 
         public Regex HalfADozenRegex { get; }
 

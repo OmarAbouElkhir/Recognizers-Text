@@ -20,7 +20,7 @@ namespace Microsoft.Recognizers.Text.Number.Chinese
             CultureInfo = ci;
 
             DecimalSeparatorChar = NumbersDefinitions.DecimalSeparatorChar;
-            FractionMarkerToken = NumbersDefinitions.FractionMarkerToken;
+            FractionMarkerTokens = NumbersDefinitions.FractionMarkerToken;
             NonDecimalSeparatorChar = NumbersDefinitions.NonDecimalSeparatorChar;
             HalfADozenText = NumbersDefinitions.HalfADozenText;
             WordSeparatorToken = NumbersDefinitions.WordSeparatorToken;
@@ -65,7 +65,7 @@ namespace Microsoft.Recognizers.Text.Number.Chinese
 
         public Regex FractionPrepositionRegex { get; }
 
-        public string FractionMarkerToken { get; private set; }
+        public string FractionMarkerTokens { get; private set; }
 
         public Regex HalfADozenRegex { get; private set; }
 

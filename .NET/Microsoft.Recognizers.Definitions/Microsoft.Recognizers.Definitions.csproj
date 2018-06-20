@@ -226,6 +226,11 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
+    <Compile Update="Thai\NumbersDefinitions.cs">
+      <DependentUpon>NumbersDefinitions.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -380,6 +385,10 @@
     <None Update="Spanish\NumbersWithUnitDefinitions.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>NumbersWithUnitDefinitions.cs</LastGenOutput>
+    </None>
+    <None Update="Thai\NumbersDefinitions.tt">
+      <LastGenOutput>NumbersDefinitions.cs</LastGenOutput>
+      <Generator>TextTemplatingFileGenerator</Generator>
     </None>
   </ItemGroup>
 

@@ -28,8 +28,8 @@ namespace Microsoft.Recognizers.Text.Number
 
             TextNumberRegex = new Regex(@"(?<=\b)(" + singleIntFrac + @")(?=\b)", RegexOptions.IgnoreCase | RegexOptions.Singleline);
 
-            //necessary for the german language because bigger numbers are not separated by whitespaces or special characters like in other languages
-            if (config.CultureInfo.Name == "de-DE") {
+            // necessary for the German/Thai language because bigger numbers are not separated by whitespaces or special characters like in other languages
+            if (config.CultureInfo.Name == "de-DE" || config.CultureInfo.Name == "th-TH") {
                 TextNumberRegex = new Regex(@"(" + singleIntFrac + @")", RegexOptions.IgnoreCase | RegexOptions.Singleline);
             }
 
@@ -397,7 +397,15 @@ namespace Microsoft.Recognizers.Text.Number
                 }
 
                 var intStr = string.Join(" ", fracWords.GetRange(0, mixedIndex));
-                intValue = GetIntValue(GetMatches(intStr));
+
+                if (!string.IsNullOrWhiteSpace(intStr))
+                {
+                    intValue = GetIntValue(GetMatches(intStr));
+                }
+                else
+                {
+                    intValue = 1;
+                }
 
                 // Find mixed number
                 if (mixedIndex != fracWords.Count && numerValue < denomiValue)

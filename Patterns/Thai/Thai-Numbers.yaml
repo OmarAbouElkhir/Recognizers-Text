@@ -1,0 +1,498 @@
+﻿---
+LangMarker: Thai
+#Numbers Regex
+ZeroIntegerRegex: !simpleRegex
+  def: ((?<!(ประจำ|เจ้าหน้าที่|เข้า|ติดต่อ|ผ่าน|ทุก))ศูนย์(?!(บริการ|แลกเปลี่ยน|วิจัย|เครดิตบูโร|การค้า|กลาง|รวม|ประชุม|คอมเพล็กซ์|ตรวจสอบ|สิริกิต|สิริกิต์|ซ่อม|สรรพสินค้า|ประมวลผล|พักฟื้น|ใหญ่|ฝึก|อบรม|รับฝาก|บัตรเครดิต|ราชการ|แพทย์)))
+OneIntegerRegex: !simpleRegex
+  def: ((?<!(พระราม))หนึ่ง(?!(เดียว)))
+TwoIntegerRegex: !simpleRegex
+  def: ((?<!(พระราม|มือ|เรา))สอง(?!(แคว|ขั้ว|ใจ|หน้า|เรา)))
+ThreeIntegerRegex: !simpleRegex
+  def: ((?<!(พระราม|มือที่))สาม(?!(ี|พราน|เสน|ิต|มารถ|ัญ|มัญ|ย่าน|แยก|ัคคี|านย์	)))
+FourIntegerRegex: !simpleRegex
+  def: ((?<!(หลัก))สี่(?!(พระราม|แยก|มุมเมือง|เหลี่ยม|แผ่นดิน)))
+FiveIntegerRegex: !simpleRegex
+  def: ((?<!(พระราม))ห้า(?!(ง|ม|ว|ย|แยก)))
+SixIntegerRegex: !simpleRegex
+  def: ((?<!(พระราม|โก|แ|วิ|ระ))หก(?!(ล้ม|ลุก)))
+SevenIntegerRegex: !simpleRegex
+  def: ((?<!(พระราม))เจ็ด(?!(ย่าน)))
+EightIntegerRegex: !simpleRegex
+  def: ((?<!(พระราม))แปด(?!(ริ้ว|เปื้อน|สาแหรก)))
+NineIntegerRegex: !simpleRegex
+  def: ((?<!(พระราม))เก้า(?!(อี้)))
+TenIntegerRegex: !simpleRegex
+  def: ((?<!(พระราม|จ่า))สิบ(?!(ถาม|ตรี|โท|เอก|ปาก)))
+HundredIntegerRegex: !simpleRegex
+  def: ((?<!(ส|เรียบ|เต็ม|นาย))ร้อย(?!(ตรี|โท|เอก|กรอง|แก้ว|เล่มเกวียน|ดวงใจ|ละ)))
+ThousandIntegerRegex: !simpleRegex
+  def: ((?<!(เกี่ยว|ผูก|ร้อย|เดิม|เอก))พัน(?!(ตรี|โท|เอก|ธ์|ธุ์|ธุกรรม|ทิป|ทิพ|ธิป|ทิพย์|ธุ|ธกิจ|ธบัตร|ธะ|ธมิตร|ท้าย|ธ)))
+HundredThousandIntegerRegex: !simpleRegex
+  def: ((?<!(สุข|บาง|กำแพง))แสน(?!(ดี|ชั่ว|สิริ|สดชื่น|แสบ|พิศดาร|สวย|งาม|สุข)))
+MillionIntegerRegex: !simpleRegex
+  def: ((?<!(หัว))ล้าน(?!(นา)))
+#Integer Regex
+RoundNumberIntegerRegex: !simpleRegex
+  def: (ร้อย|พัน|หมื่น|แสน|ล้าน|สิบล้าน|ร้อยล้าน|พันล้าน|หมื่นล้าน|แสนล้าน|ล้านล้าน)
+ZeroToNineIntegerRegex: !simpleRegex
+  def: (สาม|เจ็ด|แปด|สี่|ห้า|ศูนย์|เก้า|หนึ่ง|เอ็ด|สอง|หก)
+NegativeNumberTermsRegex: !simpleRegex
+  def: ((ลบ|ติดลบ)\s*)
+NegativeNumberSignRegex: !nestedRegex
+  def: ^{NegativeNumberTermsRegex}.*
+  references: [ NegativeNumberTermsRegex ]
+TenToNineteenIntegerRegex: !simpleRegex
+  def: (สิบเจ็ด|สิบสาม|สิบสี่|สิบแปด|สิบเก้า|สิบห้า|สิบหก|สิบเอ็ด|สิบสอง|สิบ)
+TensNumberIntegerRegex: !simpleRegex
+  def: (เจ็ดสิบ|ยี่สิบ|สามสิบ|แปดสิบ|เก้าสิบ|สี่สิบ|ห้าสิบ|หกสิบ)
+SeparaIntRegex: !nestedRegex
+  def: ((({TenToNineteenIntegerRegex}|({TensNumberIntegerRegex}(\s*((กับ)?\s*)?|\s*-\s*){ZeroToNineIntegerRegex})|{TensNumberIntegerRegex}|{ZeroToNineIntegerRegex})(\s*{RoundNumberIntegerRegex})*))|((\s*{RoundNumberIntegerRegex})+)
+  references: [ TenToNineteenIntegerRegex, TensNumberIntegerRegex, ZeroToNineIntegerRegex, RoundNumberIntegerRegex ]
+AllIntRegex: !nestedRegex
+  def: (((({TenToNineteenIntegerRegex}|({TensNumberIntegerRegex}(\s*((กับ)?\s*)?|\s*-\s*){ZeroToNineIntegerRegex})|{TensNumberIntegerRegex}|{ZeroToNineIntegerRegex})?(\s*{RoundNumberIntegerRegex})+)\s*((กับ)?\s*)?)*{SeparaIntRegex})
+  references: [ TenToNineteenIntegerRegex, TensNumberIntegerRegex, ZeroToNineIntegerRegex, RoundNumberIntegerRegex, SeparaIntRegex ]
+PlaceHolderPureNumber: !simpleRegex
+  def: \b
+PlaceHolderDefault: !simpleRegex
+  def: \D
+NumbersWithPlaceHolder: !paramsRegex
+  def: ((?<!\d+\s*)-\s*)?\d+(?!(\.\d+[a-zA-Z]))(?={placeholder})
+  params: [ placeholder ]
+NumbersWithSuffix: !simpleRegex
+  def: ((?<!\d+\s*)-\s*)?\d+\s*(k|K|เค|m|M|g|G|b|B|t|T)
+RoundNumberIntegerRegexWithLocks: !nestedRegex
+  def: \d+\s*{RoundNumberIntegerRegex}
+  references: [ RoundNumberIntegerRegex ]
+NumbersWithDozenSuffix: !simpleRegex
+  def: ((?<!\d+\s*)-\s*)?\d+\s*โหล
+AllIntRegexWithLocks: !nestedRegex
+  def: ({AllIntRegex})
+  references: [ AllIntRegex ]
+AllIntRegexWithDozenSuffixLocks: !nestedRegex
+  def: (((ครึ่ง\s*)?โหล)|({AllIntRegex}\s*โหล))
+  references: [ AllIntRegex ]
+#Ordinal Regex
+RoundNumberOrdinalRegex: !simpleRegex
+  def: (ที่ร้อย|อันดับร้อย|ร้อย|ที่พัน|อันดับพัน|พัน|ที่หมื่น|อันดับหมื่น|หมื่น|ที่แสน|อันดับแสน|แสน|ที่ล้าน|อันดับล้าน|ล้าน|ที่สิบล้าน|อันดับสิบล้าน|สิบล้าน|ที่ร้อยล้าน|อันดับร้อยล้าน|ร้อยล้าน|ที่พันล้าน|อันดับพันล้าน|พันล้าน|ที่หมื่นล้าน|อันดับหมื่นล้าน|หมื่นล้าน|ที่แสนล้าน|อันดับแสนล้าน|แสนล้าน|ที่ล้านล้าน|อันดับล้านล้าน|ล้านล้าน)
+BasicOrdinalRegex: !simpleRegex
+  def: (แรก|ที่หนึ่ง|อันดับหนึ่ง|หนึ่ง|ที่สอง|อันดับสอง|สอง|ที่สาม|อันดับสาม|สาม|ที่สี่|อันดับสี่|สี่|ที่ห้า|อันดับห้า|ห้า|ที่หก|อันดับหก|หก|ที่เจ็ด|อันดับเจ็ด|เจ็ด|ที่แปด|อันดับแปด|แปด|ที่เก้า|อันดับเก้า|เก้า|ที่สิบ|อันดับสิบ|สิบ|ที่สิบเอ็ด|อันดับสิบเอ็ด|สิบเอ็ด|ที่สิบสอง|อันดับสิบสอง|สิบสอง|ที่สิบสาม|อันดับสิบสาม|สิบสาม|ที่สิบสี่|อันดับสิบสี่|สิบสี่|ที่สิบห้า|อันดับสิบห้า|สิบห้า|ที่สิบหก|อันดับสิบหก|สิบหก|ที่สิบเจ็ด|อันดับสิบเจ็ด|สิบเจ็ด|ที่สิบแปด|อันดับสิบแปด|สิบแปด|ที่สิบเก้า|อันดับสิบเก้า|สิบเก้า|ที่ยี่สิบ|อันดับยี่สิบ|ยี่สิบ|ที่สามสิบ|อันดับสามสิบ|สามสิบ|ที่สี่สิบ|อันดับสี่สิบ|สี่สิบ|ที่ห้าสิบ|อันดับห้าสิบ|ห้าสิบ|ที่หกสิบ|อันดับหกสิบ|หกสิบ|ที่เจ็ดสิบ|อันดับเจ็ดสิบ|เจ็ดสิบ|ที่แปดสิบ|อันดับแปดสิบ|แปดสิบ|ที่เก้าสิบ|อันดับเก้าสิบ|เก้าสิบ|ส่วนหนึ่ง|ในหนึ่ง|จากหนึ่ง|ส่วนสอง|ในสอง|จากสอง|ส่วนสาม|ในสาม|จากสาม|ส่วนสี่|ในสี่|จากสี่|ส่วนห้า|ในห้า|จากห้า|ส่วนหก|ในหก|จากหก|ส่วนเจ็ด|ในเจ็ด|จากเจ็ด|ส่วนแปด|ในแปด|จากแปด|ส่วนเก้า|ในเก้า|จากเก้า|ส่วนสิบ|ในสิบ|จากสิบ|ส่วนสิบเอ็ด|ในสิบเอ็ด|จากสิบเอ็ด|ส่วนสิบสอง|ในสิบสอง|จากสิบสอง|ส่วนสิบสาม|ในสิบสาม|จากสิบสาม|ส่วนสิบสี่|ในสิบสี่|จากสิบสี่|ส่วนสิบห้า|ในสิบห้า|จากสิบห้า|ส่วนสิบหก|ในสิบหก|จากสิบหก|ส่วนสิบเจ็ด|ในสิบเจ็ด|จากสิบเจ็ด|ส่วนสิบแปด|ในสิบแปด|จากสิบแปด|ส่วนสิบเก้า|ในสิบเก้า|จากสิบเก้า|ส่วนยี่สิบ|ในยี่สิบ|จากยี่สิบ|ส่วนสามสิบ|ในสามสิบ|จากสามสิบ|ส่วนสี่สิบ|ในสี่สิบ|จากสี่สิบ|ส่วนห้าสิบ|ในห้าสิบ|จากห้าสิบ|ส่วนหกสิบ|ในหกสิบ|จากหกสิบ|ส่วนเจ็ดสิบ|ในเจ็ดสิบ|จากเจ็ดสิบ|ส่วนแปดสิบ|ในแปดสิบ|จากแปดสิบ|ส่วนเก้าสิบ|ในเก้าสิบ|จากเก้าสิบ|ส่วนร้อย|ในร้อย|จากร้อย|ส่วนพัน|ในพัน|จากพัน|ส่วนหมื่น|ในหมื่น|จากหมื่น|ส่วนแสน|ในแสน|จากแสน|ส่วนล้าน|ในล้าน|จากล้าน|ส่วนสิบล้าน|ในสิบล้าน|จากสิบล้าน|ส่วนร้อยล้าน|ในร้อยล้าน|จากร้อยล้าน|ส่วนพันล้าน|ในพันล้าน|จากพันล้าน|ส่วนหมื่นล้าน|ในหมื่นล้าน|จากหมื่นล้าน|ส่วนแสนล้าน|ในแสนล้าน|จากแสนล้าน|ส่วนล้านล้าน|ในล้านล้าน|จากล้านล้าน)
+SuffixBasicOrdinalRegex: !nestedRegex
+  def: ((((({TensNumberIntegerRegex}(\s*(กับ\s*)?|\s*-\s*){ZeroToNineIntegerRegex})|{TensNumberIntegerRegex}|{ZeroToNineIntegerRegex})(\s*{RoundNumberIntegerRegex})+)\s*(กับ\s*)?)*({TensNumberIntegerRegex}(\s*|\s*-\s*))?{BasicOrdinalRegex})
+  references: [ TensNumberIntegerRegex, ZeroToNineIntegerRegex, RoundNumberIntegerRegex, BasicOrdinalRegex ]
+SuffixRoundNumberOrdinalRegex: !nestedRegex
+  def: (({AllIntRegex}\s*){RoundNumberOrdinalRegex})
+  references: [ AllIntRegex, RoundNumberOrdinalRegex ]
+AllOrdinalRegex: !nestedRegex
+  def: ({SuffixBasicOrdinalRegex}|{SuffixRoundNumberOrdinalRegex})
+  references: [ SuffixBasicOrdinalRegex, SuffixRoundNumberOrdinalRegex ]
+OrdinalSuffixRegex: !simpleRegex
+  def: ((\d*(1st|2nd|3rd|4th|5th|6th|7th|8th|9th|0th))|(11th|12th))
+OrdinalNumericRegex: !simpleRegex 
+  def: (\d{1,3}(\s*,\s*\d{3})*\s*th)
+OrdinalEnglishRegex: !nestedRegex
+  def: ({AllOrdinalRegex})
+  references: [ AllOrdinalRegex ]
+#Fraction Regex
+FractionNotationWithSpacesRegex: !simpleRegex
+  def: ((?<=\W|^)-\s*)?\d+\s+\d+[/]\d+(?=([^/]|$))
+FractionNotationRegex: !simpleRegex
+  def: (((?<=\W|^)-\s*)|(?<![/-])(?<=\b))\d+[/]\d+(?=([^/]|$))
+FractionNounRegex: !nestedRegex
+  def: ({AllIntRegex}\s*(กับ\s*)?)?(เศษ\s*)?({AllIntRegex})(\s*|\s*-\s*)((({AllOrdinalRegex})|({RoundNumberOrdinalRegex}))|ครึ่ง|หนึ่งในสี่)
+  references: [ AllIntRegex, AllOrdinalRegex, RoundNumberOrdinalRegex ]
+FractionNounWithArticleRegex: !nestedRegex
+  def: ({AllIntRegex}\s*(กับ\s*)?)?(เศษ\s*)?(หนึ่ง|เอ็ด)(\s*|\s*-\s*)(?!(แรก|ที่หนึ่ง|อันดับหนึ่ง|หนึ่ง)|(ที่สอง|อันดับสอง|สอง))(({AllOrdinalRegex})|({RoundNumberOrdinalRegex})|(ครึ่ง(?!โหล))|หนึ่งในสี่)
+  references: [ AllIntRegex, AllOrdinalRegex, RoundNumberOrdinalRegex ]
+FractionPrepositionRegex: !nestedRegex
+  def: (เศษ\s*)?(?<numerator>({AllIntRegex})|((?<!\.)\d+))\s*(ส่วน|ใน|จาก)\s*(?<denominator>({AllIntRegex})|(\d+)(?!\.))
+  references: [ AllIntRegex ]
+#Double Regex
+AllPointRegex: !nestedRegex
+  def: ((\s*{ZeroToNineIntegerRegex})+|(\s*{SeparaIntRegex}))
+  references: [ ZeroToNineIntegerRegex, SeparaIntRegex ]
+AllFloatRegex: !nestedRegex
+  def: '{AllIntRegex}(\s*จุด){AllPointRegex}'
+  references: [ AllIntRegex, AllPointRegex ]
+DoubleWithMultiplierRegex: !simpleRegex
+  def: (((?<!\d+\s*)-\s*)|(?<!\d+\.))\d+\.\d+\s*(k|K|เค|m|M|g|G|b|B|t|T)
+DoubleExponentialNotationRegex: !simpleRegex
+  def: (((?<!\d+\s*)-\s*)|(?<!\d+\.))(\d+(\.\d+)?)e([+-]*[1-9]\d*)
+DoubleCaretExponentialNotationRegex: !simpleRegex
+  def: (((?<!\d+\s*)-\s*)|(?<!\d+\.))(\d+(\.\d+)?)\^([+-]*[1-9]\d*)
+DoubleDecimalPointRegex: !paramsRegex
+  def: (((?<!\d+\s*)-\s*)|(?<!\d+\.))\d+\.\d+(?!(\.\d+))(?={placeholder})
+  params: [ placeholder ]
+DoubleWithoutIntegralRegex: !paramsRegex
+  def: (?<=\s?|^)(?<!(\d+))\.\d+(?!(\.\d+))(?={placeholder})
+  params: [ placeholder ]
+DoubleWithRoundNumber: !nestedRegex
+  def: (((?<!\d+\s*)-\s*)|(?<!\d+\.))\d+\.\d+\s*{RoundNumberIntegerRegex}
+  references: [ RoundNumberIntegerRegex ]
+DoubleAllFloatRegex: !nestedRegex
+  def: ({AllFloatRegex})
+  references: [ AllFloatRegex ]
+#Number Regex
+CurrencyRegex: !simpleRegex
+  def: ((?<=\W|^)-\s*)?\d+\s*(k|K|เค|m|M|g|G|b|B|t|T)
+#Parser
+DecimalSeparatorChar: !char '.'
+FractionMarkerTokens: (ส่วน|ใน|จาก)
+NonDecimalSeparatorChar: !char ','
+HalfADozenText: หก
+WordSeparatorToken: กับ
+WrittenDecimalSeparatorTexts: [จุด]
+WrittenGroupSeparatorTexts: [จุด]
+WrittenIntegerSeparatorTexts: [กับ]
+WrittenFractionSeparatorTexts: [กับ]
+HalfADozenRegex: !simpleRegex
+  def: (ครึ่ง\s*โหล)
+DigitalNumberRegex: !simpleRegex
+  def: (ร้อย|พัน|หมื่น|แสน|ล้าน|สิบล้าน|ร้อยล้าน|พันล้าน|หมื่นล้าน|แสนล้าน|ล้านล้าน|โหล)|((?<=\d|\b)(k|K|เค|m|M|g|G|b|B|t|T))
+CardinalNumberMap: !dictionary
+  types: [ string, long ]
+  entries:
+    ศูนย์: 0
+    หนึ่ง: 1
+    เอ็ด: 1
+    สอง: 2
+    สาม: 3
+    สี่: 4
+    ห้า: 5
+    หก: 6
+    เจ็ด: 7
+    แปด: 8
+    เก้า: 9
+    สิบ: 10
+    สิบเอ็ด: 11
+    สิบสอง: 12
+    โหล: 12
+    สิบสาม: 13
+    สิบสี่: 14
+    สิบห้า: 15
+    สิบหก: 16
+    สิบเจ็ด: 17
+    สิบแปด: 18
+    สิบเก้า: 19
+    ยี่สิบ: 20
+    สามสิบ: 30
+    สี่สิบ: 40
+    ห้าสิบ: 50
+    หกสิบ: 60
+    เจ็ดสิบ: 70
+    แปดสิบ: 80
+    เก้าสิบ: 90
+    ร้อย: 100
+    พัน: 1000
+    หมื่น: 10000
+    แสน: 100000
+    ล้าน: 1000000
+    สิบล้าน: 10000000
+    ร้อยล้าน: 100000000
+    พันล้าน: 1000000000
+    หมื่นล้าน: 10000000000
+    แสนล้าน: 100000000000
+    ล้านล้าน: 1000000000000
+OrdinalNumberMap: !dictionary
+  types: [ string, long ]
+  entries:
+    แรก: 1
+    ที่หนึ่ง: 1
+    อันดับหนึ่ง: 1
+    หนึ่ง: 1
+    ที่สอง: 2
+    อันดับสอง: 2
+    สอง: 2
+    ครึ่ง: 2
+    ที่สาม: 3
+    อันดับสาม: 3
+    สาม: 3
+    ที่สี่: 4
+    อันดับสี่: 4
+    สี่: 4
+    ที่ห้า: 5
+    อันดับห้า: 5
+    ห้า: 5
+    ที่หก: 6
+    อันดับหก: 6
+    หก: 6
+    ที่เจ็ด: 7
+    อันดับเจ็ด: 7
+    เจ็ด: 7
+    ที่แปด: 8
+    อันดับแปด: 8
+    แปด: 8
+    ที่เก้า: 9
+    อันดับเก้า: 9
+    เก้า: 9
+    ที่สิบ: 10
+    อันดับสิบ: 10
+    สิบ: 10
+    ที่สิบเอ็ด: 11
+    อันดับสิบเอ็ด: 11
+    สิบเอ็ด: 11
+    ที่สิบสอง: 12
+    อันดับสิบสอง: 12
+    สิบสอง: 12
+    ที่สิบสาม: 13
+    อันดับสิบสาม: 13
+    สิบสาม: 13
+    ที่สิบสี่: 14
+    อันดับสิบสี่: 14
+    สิบสี่: 14
+    ที่สิบห้า: 15
+    อันดับสิบห้า: 15
+    สิบห้า: 15
+    ที่สิบหก: 16
+    อันดับสิบหก: 16
+    สิบหก: 16
+    ที่สิบเจ็ด: 17
+    อันดับสิบเจ็ด: 17
+    สิบเจ็ด: 17
+    ที่สิบแปด: 18
+    อันดับสิบแปด: 18
+    สิบแปด: 18
+    ที่สิบเก้า: 19
+    อันดับสิบเก้า: 19
+    สิบเก้า: 19
+    ที่ยี่สิบ: 20
+    อันดับยี่สิบ: 20
+    ยี่สิบ: 20
+    ที่สามสิบ: 30
+    อันดับสามสิบ: 30
+    สามสิบ: 30
+    ที่สี่สิบ: 40
+    อันดับสี่สิบ: 40
+    สี่สิบ: 40
+    ที่ห้าสิบ: 50
+    อันดับห้าสิบ: 50
+    ห้าสิบ: 50
+    ที่หกสิบ: 60
+    อันดับหกสิบ: 60
+    หกสิบ: 60
+    ที่เจ็ดสิบ: 70
+    อันดับเจ็ดสิบ: 70
+    เจ็ดสิบ: 70
+    ที่แปดสิบ: 80
+    อันดับแปดสิบ: 80
+    แปดสิบ: 80
+    ที่เก้าสิบ: 90
+    อันดับเก้าสิบ: 90
+    เก้าสิบ: 90
+    ที่ร้อย: 100
+    อันดับร้อย: 100
+    ร้อย: 100
+    ที่พัน: 1000
+    อันดับพัน: 1000
+    พัน: 1000
+    ที่หมื่น: 10000
+    อันดับหมื่น: 10000
+    หมื่น: 10000
+    ที่แสน: 100000
+    อันดับแสน: 100000
+    แสน: 100000
+    ที่ล้าน: 1000000
+    อันดับล้าน: 1000000
+    ล้าน: 1000000
+    ที่สิบล้าน: 10000000
+    อันดับสิบล้าน: 10000000
+    สิบล้าน: 10000000
+    ที่ร้อยล้าน: 100000000
+    อันดับร้อยล้าน: 100000000
+    ร้อยล้าน: 100000000
+    ที่พันล้าน: 1000000000
+    อันดับพันล้าน: 1000000000
+    พันล้าน: 1000000000
+    ที่หมื่นล้าน: 10000000000
+    อันดับหมื่นล้าน: 10000000000
+    หมื่นล้าน: 10000000000
+    ที่แสนล้าน: 100000000000
+    อันดับแสนล้าน: 100000000000
+    แสนล้าน: 100000000000
+    ที่ล้านล้าน: 1000000000000
+    อันดับล้านล้าน: 1000000000000
+    ล้านล้าน: 1000000000000
+    ส่วนหนึ่ง: 1
+    ในหนึ่ง: 1
+    จากหนึ่ง: 1
+    ส่วนสอง: 2
+    ในสอง: 2
+    จากสอง: 2
+    ครึ่ง: 2
+    ส่วนสาม: 3
+    ในสาม: 3
+    จากสาม: 3
+    ส่วนสี่: 4
+    ในสี่: 4
+    จากสี่: 4
+    ส่วนห้า: 5
+    ในห้า: 5
+    จากห้า: 5
+    ส่วนหก: 6
+    ในหก: 6
+    จากหก: 6
+    ส่วนเจ็ด: 7
+    ในเจ็ด: 7
+    จากเจ็ด: 7
+    ส่วนแปด: 8
+    ในแปด: 8
+    จากแปด: 8
+    ส่วนเก้า: 9
+    ในเก้า: 9
+    จากเก้า: 9
+    ส่วนสิบ: 10
+    ในสิบ: 10
+    จากสิบ: 10
+    ส่วนสิบเอ็ด: 11
+    ในสิบเอ็ด: 11
+    จากสิบเอ็ด: 11
+    ส่วนสิบสอง: 12
+    ในสิบสอง: 12
+    จากสิบสอง: 12
+    ส่วนสิบสาม: 13
+    ในสิบสาม: 13
+    จากสิบสาม: 13
+    ส่วนสิบสี่: 14
+    ในสิบสี่: 14
+    จากสิบสี่: 14
+    ส่วนสิบห้า: 15
+    ในสิบห้า: 15
+    จากสิบห้า: 15
+    ส่วนสิบหก: 16
+    ในสิบหก: 16
+    จากสิบหก: 16
+    ส่วนสิบเจ็ด: 17
+    ในสิบเจ็ด: 17
+    จากสิบเจ็ด: 17
+    ส่วนสิบแปด: 18
+    ในสิบแปด: 18
+    จากสิบแปด: 18
+    ส่วนสิบเก้า: 19
+    ในสิบเก้า: 19
+    จากสิบเก้า: 19
+    ส่วนยี่สิบ: 20
+    ในยี่สิบ: 20
+    จากยี่สิบ: 20
+    ส่วนสามสิบ: 30
+    ในสามสิบ: 30
+    จากสามสิบ: 30
+    ส่วนสี่สิบ: 40
+    ในสี่สิบ: 40
+    จากสี่สิบ: 40
+    ส่วนห้าสิบ: 50
+    ในห้าสิบ: 50
+    จากห้าสิบ: 50
+    ส่วนหกสิบ: 60
+    ในหกสิบ: 60
+    จากหกสิบ: 60
+    ส่วนเจ็ดสิบ: 70
+    ในเจ็ดสิบ: 70
+    จากเจ็ดสิบ: 70
+    ส่วนแปดสิบ: 80
+    ในแปดสิบ: 80
+    จากแปดสิบ: 80
+    ส่วนเก้าสิบ: 90
+    ในเก้าสิบ: 90
+    จากเก้าสิบ: 90
+    ส่วนร้อย: 100
+    ในร้อย: 100
+    จากร้อย: 100
+    ส่วนพัน: 1000
+    ในพัน: 1000
+    จากพัน: 1000
+    ส่วนหมื่น: 10000
+    ในหมื่น: 10000
+    จากหมื่น: 10000
+    ส่วนแสน: 100000
+    ในแสน: 100000
+    จากแสน: 100000
+    ส่วนล้าน: 1000000
+    ในล้าน: 1000000
+    จากล้าน: 1000000
+    ส่วนสิบล้าน: 10000000
+    ในสิบล้าน: 10000000
+    จากสิบล้าน: 10000000
+    ส่วนร้อยล้าน: 100000000
+    ในร้อยล้าน: 100000000
+    จากร้อยล้าน: 100000000
+    ส่วนพันล้าน: 1000000000
+    ในพันล้าน: 1000000000
+    จากพันล้าน: 1000000000
+    ส่วนหมื่นล้าน: 10000000000
+    ในหมื่นล้าน: 10000000000
+    จากหมื่นล้าน: 10000000000
+    ส่วนแสนล้าน: 100000000000
+    ในแสนล้าน: 100000000000
+    จากแสนล้าน: 100000000000
+    ส่วนล้านล้าน: 1000000000000
+    ในล้านล้าน: 1000000000000
+    จากล้านล้าน: 1000000000000
+RoundNumberMap: !dictionary
+  types: [ string, long ]
+  entries:
+    สิบ: 10
+    ร้อย: 100
+    พัน: 1000
+    หมื่น: 10000
+    แสน: 100000
+    ล้าน: 1000000
+    สิบล้าน: 10000000
+    ร้อยล้าน: 100000000
+    พันล้าน: 1000000000
+    หมื่นล้าน: 10000000000
+    แสนล้าน: 100000000000
+    ล้านล้าน: 1000000000000
+    ที่สิบ: 10
+    ที่ร้อย: 100
+    อันดับร้อย: 100
+    ร้อย: 100
+    ที่พัน: 1000
+    อันดับพัน: 1000
+    พัน: 1000
+    ที่หมื่น: 10000
+    อันดับหมื่น: 10000
+    หมื่น: 10000
+    ที่แสน: 100000
+    อันดับแสน: 100000
+    แสน: 100000
+    ที่ล้าน: 1000000
+    อันดับล้าน: 1000000
+    ล้าน: 1000000
+    ที่สิบล้าน: 10000000
+    อันดับสิบล้าน: 10000000
+    สิบล้าน: 10000000
+    ที่ร้อยล้าน: 100000000
+    อันดับร้อยล้าน: 100000000
+    ร้อยล้าน: 100000000
+    ที่พันล้าน: 1000000000
+    อันดับพันล้าน: 1000000000
+    พันล้าน: 1000000000
+    ที่หมื่นล้าน: 10000000000
+    อันดับหมื่นล้าน: 10000000000
+    หมื่นล้าน: 10000000000
+    ที่แสนล้าน: 100000000000
+    อันดับแสนล้าน: 100000000000
+    แสนล้าน: 100000000000
+    ที่ล้านล้าน: 1000000000000
+    อันดับล้านล้าน: 1000000000000
+    ล้านล้าน: 1000000000000
+    โหล: 12
+    k: 1000
+    เค: 1000
+    m: 1000000
+    g: 1000000000
+    b: 1000000000
+    t: 1000000000000
+NativeNumberMap: !dictionary
+  types: [ string, long ]
+  entries:
+    ๐: 0
+    ๑: 1
+    ๒: 2
+    ๓: 3
+    ๔: 4
+    ๕: 5
+    ๖: 6
+    ๗: 7
+    ๘: 8
+    ๙: 9
+...
