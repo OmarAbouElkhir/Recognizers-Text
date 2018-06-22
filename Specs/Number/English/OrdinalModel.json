@@ -18,6 +18,7 @@
 ,
 {
   "Input": "a hundred trillionth",
+  "Debug": true,
   "Results": [
     {
       "Text": "a hundred trillionth",

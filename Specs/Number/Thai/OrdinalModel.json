@@ -1,0 +1,237 @@
+[{
+  "Input": "ที่สามล้านล้าน",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "ที่สามล้านล้าน",
+      "TypeName": "ordinal",
+      "Resolution": {
+        "value": "3000000000000"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ที่หนึ่งล้านล้าน",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "ที่หนึ่งล้านล้าน",
+      "TypeName": "ordinal",
+      "Resolution": {
+        "value": "1000000000000"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ที่หนึ่งร้อยล้านล้าน",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "ที่หนึ่งร้อยล้านล้าน",
+      "TypeName": "ordinal",
+      "Resolution": {
+        "value": "100000000000000"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ที่ 11",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "ที่ 11",
+      "TypeName": "ordinal",
+      "Resolution": {
+        "value": "11"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ที่ 21",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "ที่ 21",
+      "TypeName": "ordinal",
+      "Resolution": {
+        "value": "21"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ที่ 30",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "ที่ 30",
+      "TypeName": "ordinal",
+      "Resolution": {
+        "value": "30"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ที่ 2",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "ที่ 2",
+      "TypeName": "ordinal",
+      "Resolution": {
+        "value": "2"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ที่สิบเอ็ด",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "ที่สิบเอ็ด",
+      "TypeName": "ordinal",
+      "Resolution": {
+        "value": "11"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ที่ยี่สิบ",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "ที่ยี่สิบ",
+      "TypeName": "ordinal",
+      "Resolution": {
+        "value": "20"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ที่ยี่สิบห้า",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "ที่ยี่สิบห้า",
+      "TypeName": "ordinal",
+      "Resolution": {
+        "value": "25"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ที่ยี่สิบเอ็ด",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "ที่ยี่สิบเอ็ด",
+      "TypeName": "ordinal",
+      "Resolution": {
+        "value": "21"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ที่หนึ่งร้อยยี่สิบห้า",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "ที่หนึ่งร้อยยี่สิบห้า",
+      "TypeName": "ordinal",
+      "Resolution": {
+        "value": "125"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ที่หนึ่งร้อยยี่สิบห้า",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "ที่หนึ่งร้อยยี่สิบห้า",
+      "TypeName": "ordinal",
+      "Resolution": {
+        "value": "125"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ที่ล้านล้าน",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "ที่ล้านล้าน",
+      "TypeName": "ordinal",
+      "Resolution": {
+        "value": "1000000000000"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ที่ยี่สิบเอ็ดล้านล้านสามร้อยยี่สิบสอง",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "ที่ยี่สิบเอ็ดล้านล้านสามร้อยยี่สิบสอง",
+      "TypeName": "ordinal",
+      "Resolution": {
+        "value": "21000000000322"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ที่สองร้อย",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "ที่สองร้อย",
+      "TypeName": "ordinal",
+      "Resolution": {
+        "value": "200"
+      }
+    }
+  ]
+},
+{
+  "Input": "จองที่นั่งชั้นหนึ่งไปซีแอตเทิล",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "หนึ่ง",
+      "TypeName": "ordinal",
+      "Resolution": {
+        "value": "1"
+      }
+    }
+  ]
+}
+]

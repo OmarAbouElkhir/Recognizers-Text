@@ -75,6 +75,7 @@
     <Compile Include="Matcher\StringMatcherTest.cs" />
     <Compile Include="Matcher\SimpleTokenizerTest.cs" />
     <Compile Include="NumberWithUnit\TestNumberWithUnitRecognizerCache.cs" />
+    <Compile Include="NumberWithUnit\TestNumberWithUnit_Thai.cs" />
     <Compile Include="NumberWithUnit\TestNumberWithUnit_French.cs" />
     <Compile Include="NumberWithUnit\TestNumberWithUnit_German.cs" />
     <Compile Include="NumberWithUnit\TestNumberWithUnit_Japanese.cs" />

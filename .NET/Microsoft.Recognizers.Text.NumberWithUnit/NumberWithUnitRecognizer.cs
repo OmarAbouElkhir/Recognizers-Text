@@ -356,6 +356,18 @@ namespace Microsoft.Recognizers.Text.NumberWithUnit
                     }
                 }));
             #endregion
+
+            #region Thai
+            RegisterModel<AgeModel>(
+                Culture.Thai,
+                (options) => new AgeModel(new Dictionary<IExtractor, IParser>
+                {
+                    {
+                        new NumberWithUnitExtractor(new Thai.AgeExtractorConfiguration()),
+                        new NumberWithUnitParser(new Thai.AgeParserConfiguration())
+                    }
+                }));
+            #endregion
         }
     }
 }

@@ -231,6 +231,11 @@ namespace Microsoft.Recognizers.Text.Number
                 (options) => new NumberModel(
                     AgnosticNumberParserFactory.GetParser(AgnosticNumberParserType.Number, new ThaiNumberParserConfiguration(options)),
                     Thai.NumberExtractor.GetInstance(NumberMode.PureNumber, options)));
+            RegisterModel<OrdinalModel>(
+                Culture.Thai,
+                (options) => new OrdinalModel(
+                    AgnosticNumberParserFactory.GetParser(AgnosticNumberParserType.Ordinal, new ThaiNumberParserConfiguration(options)),
+                    Thai.OrdinalExtractor.GetInstance()));
             #endregion
         }
     }

@@ -49,37 +49,37 @@
 ,
 {
   "Input": "ของเหลว 180.25มล",
-  "NotSupportedByDesign": "dotNet,javascript,python",
+  "NotSupported": "dotNet,javascript,python",
   "Results": []
 }
 ,
 {
   "Input": "ของเหลว 180มล",
-  "NotSupportedByDesign": "dotNet,javascript,python",
+  "NotSupported": "dotNet,javascript,python",
   "Results": []
 }
 ,
 {
   "Input": " ถนน 29กม ",
-  "NotSupportedByDesign": "dotNet,javascript,python",
+  "NotSupported": "dotNet,javascript,python",
   "Results": []
 }
 ,
 {
   "Input": " 4 พฤษภาคม ",
-  "NotSupportedByDesign": "dotNet,javascript,python",
+  "NotSupported": "dotNet,javascript,python",
   "Results": []
 }
 ,
 {
   "Input": " ของเหลว .25มล ",
-  "NotSupportedByDesign": "dotNet,javascript,python",
+  "NotSupported": "dotNet,javascript,python",
   "Results": []
 }
 ,
 {
   "Input": "จองที่นั่งชั้นหนึ่งไปซีแอตเทิล",
-  "NotSupportedByDesign": "dotNet,javascript,python",
+  "NotSupported": "dotNet,javascript,python",
   "Results": []
 }
 ,
@@ -127,8 +127,7 @@
 ,
 {
   "Input": "หนึ่งร้อยสามเศษสองส่วนสาม",
-  "NotSupported": "javascript,python",
-  "NotSupportedByDesign": "dotNet,javascript,python",
+  "NotSupported": "dotNet,javascript,python",
   "Results": [
     {
       "Text": "หนึ่งร้อยสามเศษสองส่วนสาม",
@@ -548,8 +547,7 @@
 ,
 {
   "Input": "1 ล้านล้าน",
-  "NotSupported": "javascript,python",
-  "NotSupportedByDesign": "dotNet,javascript,python",
+  "NotSupported": "dotNet,javascript,python",
   "Results": [
     {
       "Text": "1 ล้านล้าน",
@@ -871,8 +869,7 @@
 ,
 {
   "Input": "ครึ่ง",
-  "NotSupported": "javascript,python",
-  "NotSupportedByDesign": "dotNet,javascript,python",
+  "NotSupported": "dotNet,javascript,python",
   "Results": [
     {
       "Text": "ครึ่ง",
@@ -900,8 +897,7 @@
 ,
 {
   "Input": "ยี่สิบเศษสามส่วนห้า",
-  "NotSupported": "javascript,python",
-  "NotSupportedByDesign": "dotNet,javascript,python",
+  "NotSupported": "dotNet,javascript,python",
   "Results": [
     {
       "Text": "ยี่สิบเศษสามส่วนห้า",
@@ -929,8 +925,7 @@
 ,
 {
   "Input": "ยี่สิบสามเศษสามส่วนห้า",
-  "NotSupported": "javascript,python",
-  "NotSupportedByDesign": "dotNet,javascript,python",
+  "NotSupported": "dotNet,javascript,python",
   "Results": [
     {
       "Text": "ยี่สิบสามเศษสามส่วนห้า",
@@ -958,8 +953,7 @@
 ,
 {
   "Input": "หนึ่งครึ่ง",
-  "NotSupported": "javascript,python",
-  "NotSupportedByDesign": "dotNet,javascript,python",
+  "NotSupported": "dotNet,javascript,python",
   "Results": [
     {
       "Text": "หนึ่งครึ่ง",
@@ -973,8 +967,7 @@
 ,
 {
   "Input": "หนึ่งเศษหนึ่งส่วนสี่",
-  "NotSupported": "javascript,python",
-  "NotSupportedByDesign": "dotNet,javascript,python",
+  "NotSupported": "dotNet,javascript,python",
   "Results": [
     {
       "Text": "หนึ่งเศษหนึ่งส่วนสี่",
@@ -988,8 +981,7 @@
 ,
 {
   "Input": "ห้าเศษหนึ่งส่วนสี่",
-  "NotSupported": "javascript,python",
-  "NotSupportedByDesign": "dotNet,javascript,python",
+  "NotSupported": "dotNet,javascript,python",
   "Results": [
     {
       "Text": "ห้าเศษหนึ่งส่วนสี่",
@@ -1003,8 +995,7 @@
 ,
 {
   "Input": "หนึ่งร้อยเศษสามส่วนสี่",
-  "NotSupported": "javascript,python",
-  "NotSupportedByDesign": "dotNet,javascript,python",
+  "NotSupported": "dotNet,javascript,python",
   "Results": [
     {
       "Text": "หนึ่งร้อยเศษสามส่วนสี่",
@@ -1242,8 +1233,7 @@
 ,
 {
   "Input": "สามเศษหนึ่งส่วนห้า",
-  "NotSupported": "javascript,python",
-  "NotSupportedByDesign": "dotNet,javascript,python",
+  "NotSupported": "dotNet,javascript,python",
   "Results": [
     {
       "Text": "สามเศษหนึ่งส่วนห้า",
@@ -1411,8 +1401,7 @@
 ,
 {
   "Input": "หนึ่งร้อยสามสิบเศษสองส่วนห้า",
-  "NotSupported": "javascript,python",
-  "NotSupportedByDesign": "dotNet,javascript,python",
+  "NotSupported": "dotNet,javascript,python",
   "Results": [
     {
       "Text": "หนึ่งร้อยสามสิบเศษสองส่วนห้า",
@@ -1942,8 +1931,7 @@
 },
 {
   "Input": "เวลาใดที่สามารถพบกันในวันที่ 5/17/2018",
-  "NotSupported": "javascript",
-  "NotSupportedByDesign": "dotNet,python",
+  "NotSupported": "dotNet,javascript,python",
   "Results": [
     {
       "Text": "5",

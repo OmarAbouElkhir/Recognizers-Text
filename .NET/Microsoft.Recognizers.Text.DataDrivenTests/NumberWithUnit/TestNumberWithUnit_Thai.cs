@@ -1,10 +1,10 @@
 ﻿using Microsoft.Recognizers.Text.DataDrivenTests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Microsoft.Recognizers.Text.Number.Tests
+namespace Microsoft.Recognizers.Text.NumberWithUnit.Tests
 {
     [TestClass]
-    public class TestNumber_Thai : TestBase
+    public class TestNumberWithUnit_Thai : TestBase
     {
         public static TestResources TestResources { get; protected set; }
 
@@ -21,18 +21,11 @@ namespace Microsoft.Recognizers.Text.Number.Tests
             base.TestSpecInitialize(TestResources);
         }
 
-        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV", "NumberModel-Thai.csv", "NumberModel-Thai#csv", DataAccessMethod.Sequential)]
+        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV", "AgeModel-Thai.csv", "AgeModel-Thai#csv", DataAccessMethod.Sequential)]
         [TestMethod]
-        public void NumberModel()
+        public void AgeModel()
         {
-            base.TestNumber();
-        }
-
-        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV", "OrdinalModel-Thai.csv", "OrdinalModel-Thai#csv", DataAccessMethod.Sequential)]
-        [TestMethod]
-        public void OrdinalModel()
-        {
-            base.TestNumber();
+            base.TestNumberWithUnit();
         }
     }
 }

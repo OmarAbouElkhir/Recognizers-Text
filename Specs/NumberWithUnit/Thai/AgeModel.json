@@ -1,0 +1,242 @@
+[{
+  "Input": "ตอนเธออายุห้าขวบ เธอหัดขี่จักรยาน",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "ห้าขวบ",
+      "TypeName": "age",
+      "Resolution": {
+        "value": "5",
+        "unit": "Year"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ตำนานนี้อายุสิบปี",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "สิบปี",
+      "TypeName": "age",
+      "Resolution": {
+        "value": "10",
+        "unit": "Year"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันอายุเพียง 29 ปี",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "29 ปี",
+      "TypeName": "age",
+      "Resolution": {
+        "value": "29",
+        "unit": "Year"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ตอนนี้ หลังจากมีอายุเก้าสิบห้าปี มุมมองก็เปลี่ยนไป",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "เก้าสิบห้าปี",
+      "TypeName": "age",
+      "Resolution": {
+        "value": "95",
+        "unit": "Year"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "กำแพงเมืองจีนมีอายุมากกว่า 500 ปี และยาวมากกว่า 5,000 ไมล์",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "500 ปี",
+      "TypeName": "age",
+      "Resolution": {
+        "value": "500",
+        "unit": "Year"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "เธออายุ 60 ปี เธอเกิดวันที่ 8 พฤษภาคม 1945",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "60 ปี",
+      "TypeName": "age",
+      "Resolution": {
+        "value": "60",
+        "unit": "Year"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "25% ของเคสไม่ถูกวินิจฉัยพบจนกระทั่งอายุราว 3 ปี",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "3 ปี",
+      "TypeName": "age",
+      "Resolution": {
+        "value": "3",
+        "unit": "Year"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "เมื่อไหร่ถึงจะมีความกดดันให้ทำตามสัญญาที่มีอายุหนึ่งปี",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "หนึ่งปี",
+      "TypeName": "age",
+      "Resolution": {
+        "value": "1",
+        "unit": "Year"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "มันเกิดขึ้นตอนที่เด็กทารกมีอายุเพียงสิบเดือน",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "สิบเดือน",
+      "TypeName": "age",
+      "Resolution": {
+        "value": "10",
+        "unit": "Month"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ข้อเสนอของคณะกรรมการมีอายุ 8 เดือน",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "8 เดือน",
+      "TypeName": "age",
+      "Resolution": {
+        "value": "8",
+        "unit": "Month"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ประมาณ 50% ของเคสไม่ถูกวินิจฉัยพบที่อายุประมาณสิบแปดเดือน",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "สิบแปดเดือน",
+      "TypeName": "age",
+      "Resolution": {
+        "value": "18",
+        "unit": "Month"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ก็เป็นไปได้ แต่ในปี 2006 95% ของพวกเขามีอายุต่ำกว่าสามเดือน",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "สามเดือน",
+      "TypeName": "age",
+      "Resolution": {
+        "value": "3",
+        "unit": "Month"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ถ้าเราเดินหน้าต่อในเดือนธันวาคม มันจะมีอายุสามสัปดาห์",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "สามสัปดาห์",
+      "TypeName": "age",
+      "Resolution": {
+        "value": "3",
+        "unit": "Week"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ที่อายุ 6 สัปดาห์ คนเราสามารถฉลองคริสต์มาสได้แล้ว",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "6 สัปดาห์",
+      "TypeName": "age",
+      "Resolution": {
+        "value": "6",
+        "unit": "Week"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "บิลค่าสาธารณูปโภคอายุ 90 วัน ถือว่าค่อนข้างสายทีเดียว",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "90 วัน",
+      "TypeName": "age",
+      "Resolution": {
+        "value": "90",
+        "unit": "Day"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "เขาอายุประมาณ 40 - 50 ปี",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "50 ปี",
+      "Start": 17,
+      "End": 28,
+      "TypeName": "age",
+      "Resolution": {
+        "unit": "Year",
+        "value": "50"
+      }
+    }
+  ]
+}
+]
