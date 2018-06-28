@@ -27,5 +27,12 @@ namespace Microsoft.Recognizers.Text.NumberWithUnit.Tests
         {
             base.TestNumberWithUnit();
         }
+
+        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV", "CurrencyModel-Thai.csv", "CurrencyModel-Thai#csv", DataAccessMethod.Sequential)]
+        [TestMethod]
+        public void CurrencyModel()
+        {
+            base.TestCurrency();
+        }
     }
 }

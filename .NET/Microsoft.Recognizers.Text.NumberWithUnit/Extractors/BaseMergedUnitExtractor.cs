@@ -132,7 +132,7 @@ namespace Microsoft.Recognizers.Text.NumberWithUnit
             for (int i = 0, j = 0; i < numErs.Count; i++)
             {
                 bool hasBehindExtraction = false;
-                while (j < ers.Count && ers[j].Start + ers[j].Length < numErs[i].Start)
+                while (j < ers.Count && ers[j].Start + ers[j].Length <= numErs[i].Start)
                 {
                     hasBehindExtraction = true;
                     j++;
@@ -168,7 +168,7 @@ namespace Microsoft.Recognizers.Text.NumberWithUnit
                 var overlap = false;
                 foreach (var er in ers)
                 {
-                    if (er.Start <= extractResult.Start && er.Start + er.Length >= extractResult.Start)
+                    if (er.Start <= extractResult.Start && er.Start + er.Length > extractResult.Start)
                     {
                         overlap = true;
                     }

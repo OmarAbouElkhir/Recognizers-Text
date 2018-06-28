@@ -367,6 +367,15 @@ namespace Microsoft.Recognizers.Text.NumberWithUnit
                         new NumberWithUnitParser(new Thai.AgeParserConfiguration())
                     }
                 }));
+            RegisterModel<CurrencyModel>(
+                Culture.Thai,
+                (options) => new CurrencyModel(new Dictionary<IExtractor, IParser>
+                {
+                    {
+                        new BaseMergedUnitExtractor(new Thai.CurrencyExtractorConfiguration()),
+                        new BaseMergedUnitParser(new Thai.CurrencyParserConfiguration())
+                    }
+                }));
             #endregion
         }
     }

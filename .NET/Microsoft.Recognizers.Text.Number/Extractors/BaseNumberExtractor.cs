@@ -34,17 +34,20 @@ namespace Microsoft.Recognizers.Text.Number
             {
                 foreach (Match m in collection.Key)
                 {
-                    for (var j = 0; j < m.Length; j++)
-                    {
-                        matched[m.Index + j] = true;
-                    }
-
-                    // Keep Source Data for extra information
                     matchSource.Add(m, collection.Value);
                 }
             }
 
+            matchSource = RemoveRedundantMatches(matchSource);
             matchSource = RankMatches(matchSource);
+
+            foreach (var match in matchSource)
+            {
+                for (var i = 0; i < match.Key.Length; i++)
+                {
+                    matched[match.Key.Index + i] = true;
+                }
+            }
 
             var last = -1;
             for (var i = 0; i < source.Length; i++)
@@ -103,6 +106,48 @@ namespace Microsoft.Recognizers.Text.Number
                 BaseNumbers.DoubleRegexDefinition(placeholder, thousandsMark, decimalsMark);
 
             return new Regex(regexDefinition, RegexOptions.IgnoreCase | RegexOptions.Singleline);
+        }
+
+        private Dictionary<Match, string> RemoveRedundantMatches(Dictionary<Match, string> matches)
+        {
+            var result = new Dictionary<Match, string>();
+            var toBeRemoved = new Dictionary<Match, string>();
+
+            var orderedMatches = matches.OrderBy(x => x.Key.Index).ToDictionary(x => x.Key, y => y.Value);
+
+            for (var i = 0; i < orderedMatches.Count; i++)
+            {
+                for (var j = i + 1; j < orderedMatches.Count; j++)
+                {
+                    var start1 = orderedMatches.ElementAt(i).Key.Index;
+                    var end1 = start1 + orderedMatches.ElementAt(i).Key.Length;
+
+                    var start2 = orderedMatches.ElementAt(j).Key.Index;
+                    var end2 = start2 + orderedMatches.ElementAt(j).Key.Length;
+
+                    if ((start1 < start2 && end1 < end2 && end1 > start2) 
+                        || (start1 == start2 && end1 == end2) 
+                        || (start1 < start2 && end1 > end2)
+                        || (start1 == start2 && end2 < end1)
+                        || (start1 < start2 && end1 == end2))
+                    {
+                        if (!toBeRemoved.ContainsKey(orderedMatches.ElementAt(j).Key))
+                        {
+                            toBeRemoved.Add(orderedMatches.ElementAt(j).Key, orderedMatches.ElementAt(j).Value);
+                        }
+                    }
+                }
+            }
+
+            foreach (var match in orderedMatches)
+            {
+                if (!toBeRemoved.ContainsKey(match.Key))
+                {
+                    result.Add(match.Key, match.Value);
+                }
+            }
+
+            return result;
         }
 
         private Dictionary<Match, string> RankMatches(Dictionary<Match, string> matches)

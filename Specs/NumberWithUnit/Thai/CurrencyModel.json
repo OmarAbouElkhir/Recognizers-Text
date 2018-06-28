@@ -1,0 +1,1632 @@
+[{
+  "Input": "เขตมอนต์โกเมอรี่ รัฐแมรี่แลนด์ - - $ 75 ล้านของภาระผูกพันทั่วไปในซีรีส์บี ที่รวมตราสารหนี้เพื่อการพัฒนาสาธารณะปี 1989 ผ่านบริษัทผู้ผลิตฮันโนเวอร์ทรัสต์ กรุ๊ป",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 75 ล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "75000000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "กลุ่มบริษัทในเครือโนเกียสัญชาติฟินแลนด์ oy ab แถลงว่าบริษัทได้ข้อตกลงที่จะซื้อบริษัทเคเบิลสัญชาติดัตช์ nkf kabel b . v . ในราคา 420 ล้านมาร์กกาฟินแลนด์",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "420 ล้านมาร์กกาฟินแลนด์",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "420000000",
+        "unit": "Finnish markka"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "เนชั่นแนลจ่ายซีเกิลและชัสเตอร์ $94,000 ให้ยอมความทั้งหมด",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$94,000",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "94000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "บริษัทเจนเนอรัลไดนามิกส์เซอร์วิซ ซึ่งเป็นหนึ่งในเครือบริษัทเจนเนอรัลไดนามิกส์ คอร์ป ชนะสัญญาจ้างของกองทัพ $48.2 ล้านเพื่อสร้างโรงซ่อมบำรุงรถถังในปากีสถาน",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$48.2 ล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "48200000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ราคาของเครื่องจำลองเครื่องที่สองอยู่ระหว่าง 16.4 ล้านดอลลาร์แคนาดา",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "16.4 ล้านดอลลาร์แคนาดา",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "16400000",
+        "unit": "Canadian dollar",
+        "isoCurrency": "CAD"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "บริษัทโกลาร์แก๊ส โฮลดิ้ง ซึ่งเป็นบริษัทลูกในเครือบริษัทโกต้าส์ - ลาร์เซ็น ชิปปิ้ง คอร์ป เสนอขายตั๋วสัญญาใช้เงินเพื่อจำนองเรือสำหรับลูกค้าชั้นดี $ 280 ล้านครั้งแรก ผ่านตลาดทุนของเมอร์ริล ลินช์",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 280 ล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "280000000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "บาร์ด / อีเอ็มเอสมียอดขายในปี 1988 ประมาณ $ 14 ล้าน เบิร์ทเชอร์กล่าว",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 14 ล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "14000000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ราคาแอคคอร์ดเริ่มที่ $ 12,345",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 12,345",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "12345",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "` ` แบทแมน ' ' เรื่องเดียวกวาดรายได้ไปมากกว่า $ 247 ล้านบนในบ็อกซ์ออฟฟิศจนถึงวันนี้ ขึ้นเป็นหนังที่ทำรายได้มากที่สุดของวอร์เนอร์ บราเธอร์ส",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 247 ล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "247000000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "มูลค่ารวมของคอยล์ถูกประเมินไว้ที่ £ 8.10 ล้านในเดือนตุลาคม 2014",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "£ 8.10 ล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "8100000",
+        "unit": "Pound"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "รายได้สุทธิจากดอกเบี้ยดิ่งลง 27 % ในไตรมาสอยู่ที่ $ 254 ล้าน",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 254 ล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "254000000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ศาลอุทธรณ์กลางสั่งให้กฎหมายก๊าซธรรมชาติที่ปกป้องบริษัทท่อส่งจากการส่งต่อส่วนของลูกค้าเป็นเงิน $ 1 พันล้านจากสัญญา 'ไม่ใช้ก็ต้องจ่าย' ที่มีข้อโต้แย้งกันอยู่เป็นโมฆะ",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 1 พันล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "1000000000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ไตรมาศในปี 1988 ยังมีผลกำไรรวมประมาณ $ 35 ล้าน",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 35 ล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "35000000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "วาย เจ ปาร์คและครอบครัวของเธอประหยัดอดออมเป็นเวลาสี่ปีเพื่อซื้ออพาร์ทเมนต์ขนาดย่อมที่นี่ แต่พบว่ายิ่งเก็บเงินได้ใกล้ $ 40,000 ที่ต้องการไว้ตอนแรกเท่าไหร่ ราคาก็ยิ่งสูงขึ้นเท่านั้น",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 40,000",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "40000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "อี โรเบิร์ต วอลลาชถูกตักสินโทษโดยผู้พิพากษาสหรัฐในนิวยอร์กให้จำคุกเป็นเวลาหกปี และถูกปรับ $ 250,000 จากการถูกจับในคดีฉ้อโกงเวดเทคอันอื้อฉาว",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 250,000",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "250000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "บทความในมิดเดิลอีสต์อีโคโนมิคเซอร์เวย์( mees ) เผยแพร่วันนี้วันพุธเปิดเผยว่าอิรักขอให้ผู้ซื้อจ่ายค่าน้ำมันเพิ่ม 50 เซนต์ต่อบาร์เรลจากราคาอย่างเป็นทางการในวันที่ 1 ธันวาคม เข้าบัญชีที่ไม่ได้อยู่ภายใต้การควบคุมขององค์การสหประชาชาติ",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "50 เซนต์",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "50",
+        "unit": "Cent"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ส่วนงานเชฟโรเล็ตของเจนเนอรัล มอเตอร์ส  คอร์ป ตอบโต้ต่อยอดขายที่เชื่องช้า โดยแถลงว่าจะเสนอให้ส่วนลด $ 800 ในรุ่นเบอร์เร็ตตาปี 1990 ซึ่งเป็นรุ่นสองประตูของสายการผลิตหลักรถคอมแพ็ค",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 800",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "800",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "( สตอเรอร์ยังคงนำ $ 125 ล้านของหุ้นกู้จูเนียร์ซายทีวี ไปเป็นการชำระเงินบางส่วนสำหรับสินทรัพย์ของทีวี)",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 125 ล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "125000000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "การซื้อขายโอเวอร์ เดอะ เคาน์เทอร์ในประเทศวันศุกร์ หุ้นของ scimed ตกลงไป $ 2.75",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 2.75",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "2.75",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ในเวลาเดียวกัน นักลงทุนประเมินว่าการปรับโครงสร้างจะลดรายจ่ายค่าดอกเบี้ยเงินสดประจำปีของบริษัทอย่างต่ำ  $ 90 ล้าน",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 90 ล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "90000000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ค่าใช้จ่ายในการลงทุนของปี 1990 จะพุ่งขึ้นเล็กน้อยจากที่ประมาณไว้ $ 470 ล้านในปีนี้ นายมารุส กล่าว",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 470 ล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "470000000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "เชียร์ซัน ` ` มีเงินลงทุนจริงๆ เพียง $ 300 ล้าน ' ' นายบาวแมนจากเอสแอนด์พีกล่าว",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 300 ล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "300000000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "มันอาจจะตรงไปตรงมา - - เขาต้องการเงินเป็นค่าอาหาร - - หรือซับซ้อนอย่างไม่น่าเชื่อ น้องสาวเขากำลังใกล้ตายในขณะนี้ในโฮโบเคน เขาทำกระเป๋าเงินหายและมีเศษเงินอยู่เพียง $ 1.22 เพื่อจ่ายเป็นค่าตั๋วรถเมล์ คุณจะไม่ให้ความแตกต่างกับเขาหรือ",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 1.22",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "1.22",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "สัญญาเดือนธันวาคมพุ่งขึ้น 1.20 เซนต์ ",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "1.20 เซนต์",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "1.2",
+        "unit": "Cent"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "วอลเตอร์ เคิรชเบอร์เกอร์ นักวิเคราะห์จากเพนเวบเบอร์ อิงค์ กล่าวว่าการเสนอขายผู้ถือหุ้นในราคาสูงกว่าโดยอยู่ที่ $ 70 ต่อหุ้น เป็นวิธีที่ได้ผลอย่างดีในการป้องกันไม่ให้เกิดการเสนอซื้อแบบ stena - tiphook",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 70",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "70",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ยอดขายสุทธิของไตรมาสสามปีนี้อยู่ที่ $ 14 ล้านเมื่อปีที่แล้ว",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 14 ล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "14000000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "บริษัทแม่ของธนาคารเฟิร์สท์เนชั่นแนลแบงก์ออฟชิคาโก ซึ่งมีสินทรัพย์  $ 4 หมื่น 8 พันล้าน แถลงว่าได้เตรียมเงินไว้รองรับการขาดทุนในสินเชื่อและการลงทุนในประเทศที่ประสบปัญหาทางการเงิน",
+  "NotSupported": "dotNet, javascript, python",
+  "Results": [
+    {
+      "Text": "$ 4 หมื่น 8 พันล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "48000000000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฟลูออร์ คอร์ป แถลงว่าชนะสัญญามูลค่า $ 300 ล้านเพื่อจัดหาบริการด้านวิศวกรรมและการจัดการการก่อสร้างที่เหมืองทองแดงในอิเรียนจายา อินโดนีเซีย ให้กับหน่วยงานหนึ่งในบริษัทฟรีพอร์ท-แมคโมแรนคอปเปอร์",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 300 ล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "300000000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "อเมริกันสต๊อกเอ็กซ์เชนจ์แถลงว่าจะขายที่นั่งในราคาที่ลดลง $ 5,000 จากการลดราคาครั้งที่แล้วเมื่อวันศุกร์ที่ผ่านมา",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 5,000",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "5000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "วอร์เนอร์คอมมิวนิเคชั่น อิงค์ ซึ่งถูกซื้อกิจการโดยไทม์ วอร์เนอร์ ยื่นฟ้องกรณีละเมิดสัญญาโดยเรียกค่าเสียหายจำนวน $ 1 พันล้านจากโซนี่และสองโปรดิวเซอร์",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 1 พันล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "1000000000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ในเดือนสิงหาคม อาซาร์โคขายหุ้นที่เหลือหนึ่งส่วนสามของห้างหุ้นส่วนจำกัดแอสเบสโตสไมน์นิ่งในแคนาดาเป็นเงิน $ 11.7 ล้าน ผ่านบริษัทลูก lac d ' amiante du quebec",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 11.7 ล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "11700000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ในปี 1988 การส่งออกของเล่นและเกมส์ที่ผลิตในประเทศมีมูลค่าลดลง 19% จากปี 1987 เหลือ 10.05 พันล้านดอลลาร์ฮ่องกง",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "10.05 พันล้านดอลลาร์ฮ่องกง",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "10050000000",
+        "unit": "Hong Kong dollar",
+        "isoCurrency": "HKD"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ยอดขายไตรมาศสี่ของปีงบประมาณโตขึ้นประมาณ 18 % จาก $ 1.17 พันล้านในหนึ่งปีก่อนหน้า",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 1.17 พันล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "1170000000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ในช่วงหนึ่งชั่วโมงแรกของการซื้อขายเมื่อวาน ราคาตกลงไปกว่า 1/4 จุด หรือตกลงไปประมาณ $ 2.50 สำหรับมูลค่าตามหน้าตราสาร",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 2.50",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "2.5",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ยกตัวอย่างเช่น นิวเจอร์ซี่ได้รับข้อเสนอให้รับเงิน $ 300,000 แต่ปฏิเสธ",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 300,000",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "300000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ยอดขายพุ่ง 6 . 2 % เป็น $ 1.45 พันล้าน",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 1.45 พันล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "1450000000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "เมื่อบ่ายวานนี้ การขายคืนหน่วยลงทุนมีมูลค่าน้อยกว่า 15% ของจำนวนเงินสดทั้งหมดประมาณ $ 2 พันล้านของกองทุนหุ้นฟิเดลิตี้",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 2 พันล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "2000000000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "onvia . com inc . ลดลง 34 เซนต์",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "34 เซนต์",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "34",
+        "unit": "Cent"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "แผ่นพับของ tw เขียนว่าถ้าการเข้าซื้อกิจการเสร็จสมบูรณ์เร็วกว่านี้  รายได้ก่อนภาษี ` `จะไม่เพียงพอที่จะชำระค่าใช้จ่ายคงที่ รวมถึงดอกเบี้ยตราสารหนี้' ' โดยประมาณ $ 62.7 ล้าน ในหกเดือนแรกของปี 1989",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 62.7 ล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "62700000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ไฟล์เน็ตหมายเหตุไว้ว่ามีเงินสดและหลักทรัพย์ที่มีสภาพคล่องสูงรวมทั้งหมด $ 22.5 ล้านในวันที่ 30 กย และผู้ถือหุ้น",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 22.5 ล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "22500000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "สำหรับร้านอาหารที่แพงที่สุด 20 ร้านในเมือง ราคาอาหารเย็นเริ่มตั้งแต่  $ 63.45 และยังเพิ่มขึ้นอีก 8 เปอร์เซ็นต์ด้วย",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 63.45",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "63.45",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ทรานส์เวิลด์ แอร์ไลน์ อิงค์เสนอขายตั๋วสัญญาใช้เงินไม่ด้อยสิทธิมูลค่า $ 150 ล้านผ่านเดรกเซล เบิร์นแฮม",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 150 ล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "150000000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "เฟตตูชินี่กับเห็ดพอร์ทโทเบลโล่ราคา $ 8.50",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 8.50",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "8.5",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "การส่งมอบเดือนมีนาคมสิ้นสุดลงโดยมีเงินทดรองจ่าย 14.27 เซนต์",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "14.27 เซนต์",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "14.27",
+        "unit": "Cent"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ค่าใช้จ่ายทางดอกเบี้ยในไตรมาศที่สามของปี 1988 อยู่ที่ $ 75.3 ล้าน",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 75.3 ล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "75300000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ทรัสต์สำหรับกลุ่มผู้เรียกร้องค่าเสียหายมูลค่า $ 2.38 พันล้าน ได้ถูกก่อตั้งขึ้นโดยเป็นส่วนหนึ่งของแผนล้มละลายและการปรับโครงสร้างของเอเอ็ช โรบินเพื่อแก้ปัญหาการเรียกร้องค่าเสียหายจากการบาดเจ็บจากการใช้ผลิตภัณฑ์",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 2.38 พันล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "2380000000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ข้อกำหนดของสัญญาเสนอขายทำให้เพิ่มมูลค่า 528 ล้านฟรังก์ในหุ้นจำนวน 32.99 %",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "528 ล้านฟรังก์",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "528000000",
+        "unit": "Franc"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "รัสเซียได้ยอมรับเงินกู้จากธนาคารโลกจำนวนสหรัฐ $ 150 ล้านเพื่อนำมาต่อต้านการแพร่ของเชื้อเอดส์และวัณโรค จบกระบวนการเจรจาต่อรองที่ยาวนานถึงสี่ปี เจ้าหน้าที่ธนาคารโลกกล่าวเมื่อวันศุกร์",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "สหรัฐ $ 150 ล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "150000000",
+        "unit": "United States dollar",
+        "isoCurrency": "USD"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "เบลเซาท์แพ็คก่อนหน้านี้มีมูลค่าอยู่ที่ $ 98 ต่อหุ้น",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 98",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "98",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ดีลเลอร์แห่งหนึ่งกล่าวว่าการเจรจานั้นเกี่ยวกับที่บริษัทขายหุ้นกู้เบลเวทเธอร์ 30 ปีในราคาประมาณ $ 500 ล้าน",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 500 ล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "500000000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "สำหรับไตรมาศที่สาม เซียร์เปิดเผยว่ารายได้รวมทั้งหมดพุ่ง 4.8% เป็น $ 13.18 พันล้านในปีก่อนหน้า",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 13.18 พันล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "13180000000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "สำหรับเก้าเดือน  อีธิลเปิดเผยว่ามูลค่าลดลงสุทธิ 2 % หรือ $ 1.40 ต่อหุ้น",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 1.40",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "1.4",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ตามความคาดหมายของนักวิเคราะห์ เดือนกันยายนจะมีการขาดดุลบัญชีเดินสะพัด 1 . 6 ล้าน ( $ 2.54 พันล้าน ) เทียบกับการขาดดุลเดือนสิงหาคมที่ 2 พันล้าน",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 2.54 พันล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "2540000000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ยูโรบอนด์ที่ไม่ระบุดอกเบี้ยมูลค่า 125 ล้านดอลลาร์ออสเตรเลียครบกำหนดวันที่ 12 ธค 1994 ราคา 50.9375 อัตราผลตอบแทน 15.06%  ซื้อผ่านธนาคารฮัมโบรส์ จำกัด จะได้ลดธรรมเนียม",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "125 ล้านดอลลาร์ออสเตรเลีย",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "125000000",
+        "unit": "Australian dollar",
+        "isoCurrency": "AUD"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "เมื่อวันศุกร์ หัวหน้าเลขาธิการคณะรัฐมนตรีประกาศว่า รัฐมนตรี 8 ท่านได้รับเงินห้าล้านเยนจากกลุ่มอุตสาหกรรม",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "ห้าล้านเยน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "5000000",
+        "unit": "Japanese yen",
+        "isoCurrency": "JPY"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": " รวมถึง 450,000 เยนจากนายกรัฐมนตรีโทชิกิ ไคฟู",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "450,000 เยน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "450000",
+        "unit": "Japanese yen",
+        "isoCurrency": "JPY"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "บริษัทผู้ผลิตเคมีภัณฑ์ภายใต้การควบคุมของรัฐฝรั่งเศส ออร์เคม เอส เอ กำลังยื่นข้อเสนอซื้อราคาเป็นมิตร 470 เพนซ์ต่อหุ้นเพื่อแลกกับ 59.2 % ของกลุ่มเคมีภัณฑ์พิเศษจากอังกฤษ โค๊ทส์ บราเธอร์ส พีแอลซี ซึ่งไม่ได้ถือหุ้นอยู่  ทั้งสองฝ่ายกล่าว",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "470 เพนซ์",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "470",
+        "unit": "Pence"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "เมื่อปรับมูลค่าการใช้จ่ายตามค่าแรงของเดือนสิงหาคมแล้ว  รายได้ครัวเรือนลดลง 0.6 % เหลือ 309,381 เยนจากหนึ่งปีก่อนหน้า",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "309,381 เยน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "309381",
+        "unit": "Japanese yen",
+        "isoCurrency": "JPY"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "เนชั่นแนลอินคัมเรียลตี้ทรัสต์เปิดเผยว่า จะกลับมาจ่ายเงินปันผล โดยจะจ่ายเงินปันผล 12 เซนต์ต่อหุ้นในวันที่ 6 พย ให้กับหุ้นตามบัญชีวันที่ 25 ตค",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "12 เซนต์",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "12",
+        "unit": "Cent"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "นายบาวเดอร์กล่าวว่า 300 ล้านดอลลาร์แคนาดาจะถูกบันทึกเป็นรายได้",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "300 ล้านดอลลาร์แคนาดา",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "300000000",
+        "unit": "Canadian dollar",
+        "isoCurrency": "CAD"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ซึ่งจะคิดเป็นมูลค่าประมาณ 1.34 ดอลลาร์แคนาดาต่อหุ้น",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "1.34 ดอลลาร์แคนาดา",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "1.34",
+        "unit": "Canadian dollar",
+        "isoCurrency": "CAD"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ราคาไข่ไก่เฉลี่ย 64.2 เซนต์ต่อหนึ่งโหล",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "64.2 เซนต์",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "64.2",
+        "unit": "Cent"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "บริษัทยังคงกล่าว มีความคาดหวังว่าในปี 1989 ทั้งปี จะมียอดขาย 2 หมื่นล้านฟรังก์ จากการที่จะเก็บเงินได้จากสัญญาจ้างขนาดใหญ่ในครึ่งที่สองของปี",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "2 หมื่นล้านฟรังก์",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "20000000000",
+        "unit": "Franc"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "การซื้อขายรายการนั้นทำให้บริษัทนิวส์อินเตอร์เนชั่นแนล พีแอลซีของนายเมอร์ดอค ซึ่งเป็นหน่วยย่อยของกลุ่มนิวส์ คอร์ปซึ่งตั้งอยู่ที่ออสเตรเลีย ต้องลงทะเบียนสิทธิจองซื้อหุ้นสามัญใหม่ออกโดยซีต้า ซึ่งมีมูลค่าอยู่ที่ 6.65 พันล้านเปเซตา",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "6.65 พันล้านเปเซตา",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "6650000000",
+        "unit": "Peseta"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฟูจิตสึ จำกัด กล่าวว่าต้องการที่จะถอนการยื่นประมูลหนึ่งเยนซึ่งเป็นข้อโต้แย้งอย่างมาก ในการออกแบบระบบคอมพิวเตอร์สำหรับการประปาเมืองฮิโรชิม่า",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "หนึ่งเยน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "1",
+        "unit": "Japanese yen",
+        "isoCurrency": "JPY"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "พันธบัตร 7.75% มูลค่า 250 ล้านกิลเดอร์ดัตช์ครบกำหนดวันที่ 15 พย 1999 ราคา 101.25 ให้ผลตอบแทน 7 . 57 % ที่ราคาของวันที่ออก และเสียค่าธรรมเนียมลดลง 7 . 86 % โดยธนาคารอัมโร",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "250 ล้านกิลเดอร์ดัตช์",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "250000000",
+        "unit": "Netherlands guilder"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "นอกจากนี้ ธนาคารมีทางเลือกที่จะซื้อหุ้น BIP 30 . 84 % จาก Societe Generale หลังจากวันที่  1 มค 1990 ที่ราคา 1,015 ฟรังก์ต่อหุ้น",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "1,015 ฟรังก์",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "1015",
+        "unit": "Franc"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ราคาหุ้นไหลในช่วงท้ายของการซื้อขายจนเกือบถึงหนึ่งเพนนี",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "หนึ่งเพนนี",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "1",
+        "unit": "Penny"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ต่อหุ้น ต่ำกว่าที่  197 เพนซ์",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "197 เพนซ์",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "197",
+        "unit": "Pence"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "รายได้จากการดำเนินกิจการของไตรมาศปรับขึ้นเป็น 361 ล้านปอนด์",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "361 ล้านปอนด์",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "361000000",
+        "unit": "Pound"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ปีที่แล้ว มูลค่าการผลิตรวมของทาวน์ชิพ เอนเตอร์ไพรส์ทั้งเมืองทะลุ 1 แสนล้านหยวนเป็นครั้งแรก เป็นอันดับหนึ่งของทั้งจังหวัด",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "1 แสนล้านหยวน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "100000000000",
+        "unit": "Chinese yuan",
+        "isoCurrency": "CNY"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "เรนเจอร์สยังเก็บรักษามูลค่าประเมิน £ 50 ล้านเอาไว้ได้จากคำแนะนำของวอล์คเกอร์",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "£ 50 ล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "50000000",
+        "unit": "Pound"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "แลกกับการที่ฟรานซิส เหลิง ปัคยอมตกลงขายหุ้น PCCW 8% ให้กับ telefónica เป็นเงิน 323 ล้านยูโร",
+  "NotSupported": "dotNet,javascript,python",
+  "Results": [
+    {
+      "Text": "323 ล้านยูโร",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "323000000",
+        "unit": "Euro",
+        "isoCurrency": "EUR"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ยูฟ่าปรับเฟอร์กูสันฐานที่ทำให้เกมส์เกิดความเสียชื่อเสียงจากความคิดเห็นของเขา ในวันที่ 1 พฤษภาคมปีนั้น เขาถูกปรับเป็นเงิน 10,000 ฟรังก์สวิส",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "10,000 ฟรังก์สวิส",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "10000",
+        "unit": "Swiss franc",
+        "isoCurrency": "CHF"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "IPL ทำสัญญากับคิงฟิชเชอร์แอร์ไลน์เพื่อเป็นผู้ตัดสินอย่างเป็นทางการของซีรีส์ (เป็นจำนวนเงินประมาณ £ 15 ล้าน) ",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "£ 15 ล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "15000000",
+        "unit": "Pound"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "รายได้ของอุตสาหกรรมอิเล็กทรอนิกส์เมืองแอดิเลดเติบโต 15% ต่อปีตั้งแต่ปี 1990 และสูงถึง $ 4 พันล้านในปี 2011",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 4 พันล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "4000000000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "เอเบลแอนด์แอสโซซิเอทยื่นประมูล $ 4 ล้านเพื่อทำเอฟเฟ็คหนัง และพาราเมาน์ตกลง",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 4 ล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "4000000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "มาโลนฟ้องฟอกซ์เป็นเงิน $ 1.6 ล้านที่ละเมิดสัญญา",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 1.6 ล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "1600000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ในปี 2003 บาเยิร์นมิวนิคปล่อยกู้ให้ดอร์ทมุนด์เป็นเงิน € 2 ล้านสองถึงสามเดือนเพื่อนำไปจ่ายเงินเดือน",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "€ 2 ล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "2000000",
+        "unit": "Euro",
+        "isoCurrency": "EUR"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ล็อกฮีด มาร์ตินและรัฐบาลสหรัฐอเมริกาทำการล๊อบบี้อย่างจริงจังในสัญญาซื้อเครื่องบินรบ 126 ลำของอินเดียมูลค่าสหรัฐ $ 1 หมื่นล้าน",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "สหรัฐ $ 1 หมื่นล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "10000000000",
+        "unit": "United States dollar",
+        "isoCurrency": "USD"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "อ้างอิงจากบริษัทวิจัย NPD ราคาขายเฉลี่ยของเครื่องพีซีวินโดวส์ตกลงจาก $ 659 ในเดือนตุลาคม 2008 เหลือ",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 659",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "659",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "one . tel ลอยอยู่ในตลาดหลักทรัพย์ออสเตรเลียที่ราคา  $ 2 ต่อหุ้นในเดือนพฤษภาคม 1997",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 2",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "2",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ที่นั่งของเดอะอีสต์แสตนด์ ( วอร์เชสเตอร์ อเวนิว )  สร้างเสร็จในปี 1934 ซึ่งเพิ่มความจุเป็น 80 , 000 ผู้ชมโดยประมาณแต่มีราคา £ 60,000",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "£ 60,000",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "60000",
+        "unit": "Pound"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "เพื่อนร่วมทีมฟูแล่มของเขา จอห์นนี่ เฮนส์ กลายเป็นผู้เล่น £ 100 คนแรก",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "£ 100",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "100",
+        "unit": "Pound"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "สำหรับเก้าเดือน amr พุ่งขึ้นสุทธิ 15 % เป็น $ 415.9 ล้าน",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 415.9 ล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "415900000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ราคาหุ้นของสายการบินอยู่ต่ำกว่าระดับ 210 เพนซ์มากแล้ว ซึ่งเป็นราคาช่วงที่บริษัทประกาศสิทธิการซื้อหุ้นออกใหม่ปลายเดือนกันยายน",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "210 เพนซ์",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "210",
+        "unit": "Pence"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "โรลลิ่ง สโตนเผย ` ` ฮาร์เปอร์คอลลินส์เข้าซื้อโครงการหนังสือเป็นเงิน $ 3 ล้านในปี 2008",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 3 ล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "3000000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ข้อสรุปของพวกเขาเป็นคำแถลงสั้นๆ ว่า $ 48 \" ไม่เพียงพอ\"",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 48",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "48",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ปี 2013 นิตยสารฟอร์บสได้ลงภาพคีธบนหน้าปกพร้อมเขียนว่า ผู้อยู่ในแวดลงดนตรีคันทรี $ 500 ล้าน",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 500 ล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "500000000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "แฮร์รี่ เฟอร์กูสันฟ้องฟอร์ดฐานใช้สิทธิบัตรของเขาอย่างผิดกฎหมาย โดยเรียกร้องค่าชดเชยเป็นเงิน £ 90 ล้าน และยอมความในปี 1952",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "£ 90 ล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "90000000",
+        "unit": "Pound"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "แอโรสมิธเซ็นสัญญากับโคลัมเบียกลางปี 1972 ตามรายงานเป็นเงิน $ 125,000 และออกอัลบั้มแรกของพวกเขา  แอโรสมิธ",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 125,000",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "125000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ถือเป็นหนึ่งในการเข้าซื้อกิจการที่ใหญ่ที่สุดของโค้ก ตั้งแต่ที่มีการซื้อออดวัลล่า อิงค์ เป็นเงิน $ 186 ล้านในปี 2001",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 186 ล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "186000000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ต่อมา Apple และ Creative ตกลงยอมความ โดย Apple จ่ายเงินให้ Creative $ 100 ล้าน และ Creative ได้มีชื่ออยู่ในโครงการอุปกรณ์เสริม ` ` made for ipod ' '",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$ 100 ล้าน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "100000000",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "การยื่นฟ้องฮาร์ท-สก็อตจึงถูกพิจารณารวมถึงข้อกังวลเรื่องการป้องกันการผูกขาดด้วย โดยปกติ ฮาร์ท-สก็อตถูกใช้ในปัจจุบันเพื่อให้ผู้จัดการของบริษัทเป้าหมายได้ทราบล่วงหน้าเกี่ยวกับการเสนอซื้อ และมีโอกาสใช้ช่วงเวลาการพิจารณาที่กำหนดเพื่อยื้อเวลา ภาษี $ 20,000 อาจเป็นเพียงค่าใช้จ่ายเล็กน้อยในการซื้อขายระดับหลายพันล้านดอลลาร์ แต่มีผลกระทบมากต่อการซื้อขายระดับย่อยเป็นพันรายการ",
+  "NotSupported": "dotNet, javascript, python",
+  "Results": [
+    {
+      "Text": "$ 20,000",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "20000",
+        "unit": "Dollar"
+      }
+    }
+    ,
+    {
+      "Text": "ดอลลาร์",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": null,
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ดอลลาร์ : 143.80 เยน ขึ้น 0 . 95 , 1 . 8500 มาร์ค ขึ้น 0 . 0085",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "ดอลลาร์",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": null,
+        "unit": "Dollar"
+      }
+    }
+    ,
+    {
+      "Text": "143.80 เยน",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "143.8",
+        "unit": "Japanese yen",
+        "isoCurrency": "JPY"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "มันมีราคาเพียงสามดอลลาร์ห้าสิบเซนต์",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "สามดอลลาร์ห้าสิบเซนต์",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "3.5",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "มันมีราคาเพียงสิบสามดอลลาร์กับสี่สิบห้าเซนต์",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "สิบสามดอลลาร์กับสี่สิบห้าเซนต์",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "13.45",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "มันมีราคาเพียงสิบสามดอลลาร์สี่สิบห้าเซนต์",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "สิบสามดอลลาร์สี่สิบห้าเซนต์",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "13.45",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "มันมีราคาเพียงสิบสามดอลลาร์สี่สิบห้า",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "สิบสามดอลลาร์สี่สิบห้า",
+      "TypeName": "currency",
+      "Resolution": {
+        "value": "13.45",
+        "unit": "Dollar"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "มันมีราคาหนึ่งดอลลาร์กับหนึ่งเซนต์และคะแนนบัตรเครดิตหนึ่งพอยท์",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "หนึ่งดอลลาร์กับหนึ่งเซนต์",
+      "TypeName": "currency",
+      "Resolution": {
+        "unit": "Dollar",
+        "value": "1.01"
+      }
+    } 
+  ]
+}
+,
+{
+  "Input": "ราคาสำหรับคุณ 10 ดอลลาร์สหรัฐ และสำหรับฉัน 100 หยวนจีน",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "10 ดอลลาร์สหรัฐ",
+      "TypeName": "currency",
+      "Resolution": {
+        "isoCurrency": "USD",
+        "unit": "United States dollar",
+        "value": "10"
+      }
+    }
+    ,
+    {
+      "Text": "100 หยวนจีน",
+      "TypeName": "currency",
+      "Resolution": {
+        "isoCurrency": "CNY",
+        "unit": "Chinese yuan",
+        "value": "100"
+      }
+    } 
+  ]
+}
+,
+{
+  "Input": "ราคาสำหรับคุณ 10 ดอลลาร์สหรัฐ และสำหรับฉัน 100 ดอลลาร์แคนาดากับห้าสิบเซนต์",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "10 ดอลลาร์สหรัฐ",
+      "TypeName": "currency",
+      "Resolution": {
+        "isoCurrency": "USD",
+        "unit": "United States dollar",
+        "value": "10"
+      }
+    }
+    ,
+    {
+      "Text": "100 ดอลลาร์แคนาดากับห้าสิบเซนต์",
+      "TypeName": "currency",
+      "Resolution": {
+        "isoCurrency": "CAD",
+        "unit": "Canadian dollar",
+        "value": "100.5"
+      }
+    } 
+  ]
+}
+,
+{
+  "Input": "อาจต้องใช้หนึ่งหยวนกับห้าเจี๋ยวห้าเฟิน",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "หนึ่งหยวนกับห้าเจี๋ยวห้าเฟิน",
+      "TypeName": "currency",
+      "Resolution": {
+        "isoCurrency": "CNY",
+        "unit": "Chinese yuan",
+        "value": "1.55"
+      }
+    } 
+  ]
+}
+,
+{
+  "Input": "มันมีราคาหนึ่งดอลลาร์กับสองเซนต์และคะแนนบัตรเครดิตสามพอยท์",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "หนึ่งดอลลาร์กับสองเซนต์",
+      "TypeName": "currency",
+      "Resolution": {
+        "unit": "Dollar",
+        "value": "1.02"
+      }
+    } 
+  ]
+}
+,
+{
+  "Input": "นี่ ราคาคือ $4.25 และ 32 คือปริมาณ",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "$4.25",
+      "TypeName": "currency",
+      "Resolution": {
+        "unit": "Dollar",
+        "value": "4.25"
+      }
+    } 
+  ]
+}
+]
