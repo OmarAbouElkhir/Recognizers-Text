@@ -326,6 +326,12 @@ namespace Microsoft.Recognizers.Text.DateTime
         private List<Token> DurationWithBeforeAndAfter(string text, DateObject reference)
         {
             var ret = new List<Token>();
+
+            if (config.DurationExtractor == null)
+            {
+                return ret;
+            }
+
             var durationEr = config.DurationExtractor.Extract(text, reference);
 
             foreach (var er in durationEr)

@@ -33,20 +33,23 @@ namespace Microsoft.Recognizers.Text.DateTime
             }
 
             // The order is important, since there is a problem in merging
-            AddTo(ret, this.config.DateExtractor.Extract(text, reference), text);
-            AddTo(ret, this.config.TimeExtractor.Extract(text, reference), text);
-            AddTo(ret, this.config.DurationExtractor.Extract(text, reference), text);
-            AddTo(ret, this.config.DatePeriodExtractor.Extract(text, reference), text);
-            AddTo(ret, this.config.DateTimeExtractor.Extract(text, reference), text);
-            AddTo(ret, this.config.TimePeriodExtractor.Extract(text, reference), text);
-            AddTo(ret, this.config.DateTimePeriodExtractor.Extract(text, reference), text);
-            AddTo(ret, this.config.SetExtractor.Extract(text, reference), text);
-            AddTo(ret, this.config.HolidayExtractor.Extract(text, reference), text);
+            if (this.config.DateExtractor != null) AddTo(ret, this.config.DateExtractor.Extract(text, reference), text);
+            if (this.config.TimeExtractor != null) AddTo(ret, this.config.TimeExtractor.Extract(text, reference), text);
+            if (this.config.DurationExtractor != null) AddTo(ret, this.config.DurationExtractor.Extract(text, reference), text);
+            if (this.config.DatePeriodExtractor != null) AddTo(ret, this.config.DatePeriodExtractor.Extract(text, reference), text);
+            if (this.config.DateTimeExtractor != null) AddTo(ret, this.config.DateTimeExtractor.Extract(text, reference), text);
+            if (this.config.TimePeriodExtractor != null) AddTo(ret, this.config.TimePeriodExtractor.Extract(text, reference), text);
+            if (this.config.DateTimePeriodExtractor != null) AddTo(ret, this.config.DateTimePeriodExtractor.Extract(text, reference), text);
+            if (this.config.SetExtractor != null) AddTo(ret, this.config.SetExtractor.Extract(text, reference), text);
+            if (this.config.HolidayExtractor != null) AddTo(ret, this.config.HolidayExtractor.Extract(text, reference), text);
 
             if ((this.config.Options & DateTimeOptions.EnablePreview) != 0)
             {
-                AddTo(ret, this.config.TimeZoneExtractor.Extract(text, reference), text);
-                ret = this.config.TimeZoneExtractor.RemoveAmbiguousTimezone(ret);
+                if (this.config.TimeZoneExtractor != null)
+                {
+                    AddTo(ret, this.config.TimeZoneExtractor.Extract(text, reference), text);
+                    ret = this.config.TimeZoneExtractor.RemoveAmbiguousTimezone(ret);
+                }
             }
 
             // This should be at the end since if need the extractor to determine the previous text contains time or not
@@ -55,7 +58,10 @@ namespace Microsoft.Recognizers.Text.DateTime
             // modify time entity to an alternative DateTime expression if it follows a DateTime entity
             if ((this.config.Options & DateTimeOptions.ExtendedTypes) != 0)
             {
-                ret = this.config.DateTimeAltExtractor.Extract(ret, text, reference);
+                if (this.config.DateTimeAltExtractor != null)
+                {
+                    ret = this.config.DateTimeAltExtractor.Extract(ret, text, reference);
+                }
             }
 
             AddMod(ret, text);
@@ -209,7 +215,7 @@ namespace Microsoft.Recognizers.Text.DateTime
             foreach (var er in ers)
             {
                 // Skip the unspecific date period
-                if (this.config.UnspecificDatePeriodRegex.IsMatch(er.Text))
+                if (this.config.UnspecificDatePeriodRegex != null && this.config.UnspecificDatePeriodRegex.IsMatch(er.Text))
                 {
                     continue;
                 }

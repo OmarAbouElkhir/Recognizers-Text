@@ -1,0 +1,1699 @@
+[{
+  "Input": "ฉันจะกลับวันที่ 2/ตค",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "Results": [
+    {
+      "Text": "2/ตค",
+      "TypeName": "datetimeV2.date",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "XXXX-10-02",
+            "type": "date",
+            "value": "2016-10-02"
+          },
+          {
+            "timex": "XXXX-10-02",
+            "type": "date",
+            "value": "2017-10-02"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะกลับวันที่ 22/04",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "Results": [
+    {
+      "Text": "22/04",
+      "TypeName": "datetimeV2.date",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "XXXX-04-22",
+            "type": "date",
+            "value": "2016-04-22"
+          },
+          {
+            "timex": "XXXX-04-22",
+            "type": "date",
+            "value": "2017-04-22"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะกลับพฤษภาคมวันที่ยี่สิบเก้า",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "Results": [
+    {
+      "Text": "พฤษภาคมวันที่ยี่สิบเก้า",
+      "TypeName": "datetimeV2.date",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "XXXX-05-29",
+            "type": "date",
+            "value": "2016-05-29"
+          },
+          {
+            "timex": "XXXX-05-29",
+            "type": "date",
+            "value": "2017-05-29"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะกลับวันที่สองส.ค.",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "Results": [
+    {
+      "Text": "สองส.ค.",
+      "TypeName": "datetimeV2.date",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "XXXX-08-02",
+            "type": "date",
+            "value": "2016-08-02"
+          },
+          {
+            "timex": "XXXX-08-02",
+            "type": "date",
+            "value": "2017-08-02"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะกลับวันนี้",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "Results": [
+    {
+      "Text": "วันนี้",
+      "TypeName": "datetimeV2.date",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "2016-11-07",
+            "type": "date",
+            "value": "2016-11-07"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะกลับพรุ่งนี้",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "Results": [
+    {
+      "Text": "พรุ่งนี้",
+      "TypeName": "datetimeV2.date",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "2016-11-08",
+            "type": "date",
+            "value": "2016-11-08"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะกลับเมื่อวาน",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "Results": [
+    {
+      "Text": "เมื่อวาน",
+      "TypeName": "datetimeV2.date",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "2016-11-06",
+            "type": "date",
+            "value": "2016-11-06"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะกลับวันศุกร์",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "Results": [
+    {
+      "Text": "วันศุกร์",
+      "TypeName": "datetimeV2.date",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "XXXX-WXX-5",
+            "type": "date",
+            "value": "2016-11-04"
+          },
+          {
+            "timex": "XXXX-WXX-5",
+            "type": "date",
+            "value": "2016-11-11"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะไม่อยู่ตั้งแต่ 4-23 ในเดือนหน้า",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "Results": [
+    {
+      "Text": "ตั้งแต่ 4-23 ในเดือนหน้า",
+      "TypeName": "datetimeV2.daterange",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "(2016-12-04,2016-12-23,P19D)",
+            "type": "daterange",
+            "start": "2016-12-04",
+            "end": "2016-12-23"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะไม่อยู่ระหว่างวันที่ 3 และ 12 ของเดือนกันยา ฮ่าฮ่าฮ่า",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "Results": [
+    {
+      "Text": "ระหว่างวันที่ 3 และ 12 ของเดือนกันยา",
+      "TypeName": "datetimeV2.daterange",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "(XXXX-09-03,XXXX-09-12,P9D)",
+            "type": "daterange",
+            "start": "2016-09-03",
+            "end": "2016-09-12"
+          },
+          {
+            "timex": "(XXXX-09-03,XXXX-09-12,P9D)",
+            "type": "daterange",
+            "start": "2017-09-03",
+            "end": "2017-09-12"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะไม่อยู่เดือนกันยายนนี้",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "Results": [
+    {
+      "Text": "เดือนกันยายนนี้",
+      "TypeName": "datetimeV2.daterange",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "2016-09",
+            "type": "daterange",
+            "start": "2016-09-01",
+            "end": "2016-10-01"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะไม่อยู่วันที่ 12 มกราคม 2016 - 01/22/2016",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "Results": [
+    {
+      "Text": "วันที่ 12 มกราคม 2016 - 01/22/2016",
+      "TypeName": "datetimeV2.daterange",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "(2016-01-12,2016-01-22,P10D)",
+            "type": "daterange",
+            "start": "2016-01-12",
+            "end": "2016-01-22"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะไม่อยู่ 3 วันถัดไป",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "Results": [
+    {
+      "Text": "3 วันถัดไป",
+      "TypeName": "datetimeV2.daterange",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "(2016-11-08,2016-11-11,P3D)",
+            "type": "daterange",
+            "start": "2016-11-08",
+            "end": "2016-11-11"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะไม่อยู่ตอนสัปดาห์สุดท้ายของเดือนกรกฎาคม",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "Results": [
+    {
+      "Text": "สัปดาห์สุดท้ายของเดือนกรกฎาคม",
+      "TypeName": "datetimeV2.daterange",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "XXXX-07-W04",
+            "type": "daterange",
+            "start": "2016-07-25",
+            "end": "2016-08-01"
+          },
+          {
+            "timex": "XXXX-07-W04",
+            "type": "daterange",
+            "start": "2017-07-24",
+            "end": "2017-07-31"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะไม่อยู่ 2015-3",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "Results": [
+    {
+      "Text": "2015-3",
+      "TypeName": "datetimeV2.daterange",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "2015-03",
+            "type": "daterange",
+            "start": "2015-03-01",
+            "end": "2015-04-01"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะจากไปฤดูร้อนนี้",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "NotSupported": "python",
+  "Results": [
+    {
+      "Text": "ฤดูร้อนนี้",
+      "TypeName": "datetimeV2.daterange",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "2016-SU",
+            "type": "daterange",
+            "value": "not resolved"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะไม่อยู่ตั้งแต่พรุ่งนี้",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "Results": [
+    {
+      "Text": "ตั้งแต่พรุ่งนี้",
+      "TypeName": "datetimeV2.daterange",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "2016-11-08",
+            "Mod": "since",
+            "type": "daterange",
+            "start": "2016-11-08"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะไม่อยู่ตั้งแต่สิงหาคม",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "Results": [
+    {
+      "Text": "ตั้งแต่สิงหาคม",
+      "TypeName": "datetimeV2.daterange",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "XXXX-08",
+            "Mod": "since",
+            "type": "daterange",
+            "start": "2016-08-01"
+          },
+          {
+            "timex": "XXXX-08",
+            "Mod": "since",
+            "type": "daterange",
+            "start": "2017-08-01"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะไม่อยู่ตั้งแต่สิงหาคมนี้",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "Results": [
+    {
+      "Text": "ตั้งแต่สิงหาคมนี้",
+      "TypeName": "datetimeV2.daterange",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "2016-08",
+            "Mod": "since",
+            "type": "daterange",
+            "start": "2016-08-01"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะกลับตอนนี้",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "Results": [
+    {
+      "Text": "ตอนนี้",
+      "TypeName": "datetimeV2.datetime",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "PRESENT_REF",
+            "type": "datetime",
+            "value": "2016-11-07 00:00:00"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะกลับวันที่ 14 ตุลาคม ตอน 8:00:31",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "Results": [
+    {
+      "Text": "วันที่ 14 ตุลาคม ตอน 8:00:31 น.",
+      "TypeName": "datetimeV2.datetime",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "XXXX-10-14T08:00:31",
+            "type": "datetime",
+            "value": "2016-10-14 08:00:31"
+          },
+          {
+            "timex": "XXXX-10-14T08:00:31",
+            "type": "datetime",
+            "value": "2017-10-14 08:00:31"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะกลับพรุ่งนี้ 8:00 น",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "Results": [
+    {
+      "Text": "พรุ่งนี้ 8:00 น",
+      "TypeName": "datetimeV2.datetime",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "2016-11-08T08:00",
+            "type": "datetime",
+            "value": "2016-11-08 08:00:00"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะกลับ 10 โมง คืนนี้",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "Results": [
+    {
+      "Text": "10 โมง คืนนี้",
+      "TypeName": "datetimeV2.datetime",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "2016-11-07T22",
+            "type": "datetime",
+            "value": "2016-11-07 22:00:00"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะกลับ 8 โมงเช้านี้",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "Results": [
+    {
+      "Text": "8 โมงเช้านี้",
+      "TypeName": "datetimeV2.datetime",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "2016-11-07T08",
+            "type": "datetime",
+            "value": "2016-11-07 08:00:00"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะกลับตอนสิ้นวันพรุ่งนี้",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "Results": [
+    {
+      "Text": "สิ้นวันพรุ่งนี้",
+      "TypeName": "datetimeV2.datetime",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "2016-11-08T23:59",
+            "type": "datetime",
+            "value": "2016-11-08 23:59:00"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะกลับตอนสิ้นวันอาทิตย์",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "Results": [
+    {
+      "Text": "สิ้นวันอาทิตย์",
+      "TypeName": "datetimeV2.datetime",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "XXXX-WXX-7T23:59",
+            "type": "datetime",
+            "value": "2016-11-06 23:59:00"
+          },
+          {
+            "timex": "XXXX-WXX-7T23:59",
+            "type": "datetime",
+            "value": "2016-11-13 23:59:00"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะกลับตอนสิ้นวันอาทิตย์นี้",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "Results": [
+    {
+      "Text": "สิ้นวันอาทิตย์นี้",
+      "TypeName": "datetimeV2.datetime",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "2016-11-13T23:59",
+            "type": "datetime",
+            "value": "2016-11-13 23:59:00"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะไม่อยู่ตอนห้าโมงถึงเจ็ดโมงวันนี้",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T16:12:00"
+  },
+  "Results": [
+    {
+      "Text": "ห้าโมงถึงเจ็ดโมงวันนี้",
+      "TypeName": "datetimeV2.datetimerange",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "(2016-11-07T05,2016-11-07T07,PT2H)",
+            "type": "datetimerange",
+            "start": "2016-11-07 05:00:00",
+            "end": "2016-11-07 07:00:00"
+          },
+          {
+            "timex": "(2016-11-07T17,2016-11-07T19,PT2H)",
+            "type": "datetimerange",
+            "start": "2016-11-07 17:00:00",
+            "end": "2016-11-07 19:00:00"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะไม่อยู่ตั้งแต่ 5 โมงถึง 6 โมงเย็น ในวันที่ 22 เมษา",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T16:12:00"
+  },
+  "Results": [
+    {
+      "Text": "ตั้งแต่ 5 โมงถึง 6 โมงเย็น ในวันที่ 22 เมษา",
+      "TypeName": "datetimeV2.datetimerange",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "(XXXX-04-22T17,XXXX-04-22T18,PT1H)",
+            "type": "datetimerange",
+            "start": "2016-04-22 17:00:00",
+            "end": "2016-04-22 18:00:00"
+          },
+          {
+            "timex": "(XXXX-04-22T17,XXXX-04-22T18,PT1H)",
+            "type": "datetimerange",
+            "start": "2017-04-22 17:00:00",
+            "end": "2017-04-22 18:00:00"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะไม่อยู่ 3:00 ถึง 4:00 พรุ่งนี้",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T16:12:00"
+  },
+  "Results": [
+    {
+      "Text": "3:00 ถึง 4:00 พรุ่งนี้",
+      "TypeName": "datetimeV2.datetimerange",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "(2016-11-08T03:00,2016-11-08T04:00,PT1H)",
+            "type": "datetimerange",
+            "start": "2016-11-08 03:00:00",
+            "end": "2016-11-08 04:00:00"
+          },
+          {
+            "timex": "(2016-11-08T15:00,2016-11-08T16:00,PT1H)",
+            "type": "datetimerange",
+            "start": "2016-11-08 15:00:00",
+            "end": "2016-11-08 16:00:00"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะกลับเย็นนี้",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T16:12:00"
+  },
+  "Results": [
+    {
+      "Text": "เย็นนี้",
+      "TypeName": "datetimeV2.datetimerange",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "2016-11-07TEV",
+            "type": "datetimerange",
+            "start": "2016-11-07 16:00:00",
+            "end": "2016-11-07 20:00:00"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะกลับคืนพรุ่งนี้",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T16:12:00"
+  },
+  "Results": [
+    {
+      "Text": "คืนพรุ่งนี้",
+      "TypeName": "datetimeV2.datetimerange",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "2016-11-08TNI",
+            "type": "datetimerange",
+            "start": "2016-11-08 20:00:00",
+            "end": "2016-11-08 23:59:59"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะกลับวันจันทร์หน้าตอนบ่าย",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T16:12:00"
+  },
+  "Results": [
+    {
+      "Text": "วันจันทร์หน้าตอนบ่าย",
+      "TypeName": "datetimeV2.datetimerange",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "2016-11-14TAF",
+            "type": "datetimerange",
+            "start": "2016-11-14 12:00:00",
+            "end": "2016-11-14 16:00:00"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะกลับชั่วโมงหน้า",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T16:12:00"
+  },
+  "Results": [
+    {
+      "Text": "ชั่วโมงหน้า",
+      "TypeName": "datetimeV2.datetimerange",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "(2016-11-07T16:12:00,2016-11-07T17:12:00,PT1H)",
+            "type": "datetimerange",
+            "start": "2016-11-07 16:12:00",
+            "end": "2016-11-07 17:12:00"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะกลับวันอังคารตอนเช้า",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T16:12:00"
+  },
+  "Results": [
+    {
+      "Text": "วันอังคารตอนเช้า",
+      "TypeName": "datetimeV2.datetimerange",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "XXXX-WXX-2TMO",
+            "type": "datetimerange",
+            "start": "2016-11-01 08:00:00",
+            "end": "2016-11-01 12:00:00"
+          },
+          {
+            "timex": "XXXX-WXX-2TMO",
+            "type": "datetimerange",
+            "start": "2016-11-08 08:00:00",
+            "end": "2016-11-08 12:00:00"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะจากไปเป็นเวลา 3 ชม.",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "Results": [
+    {
+      "Text": "3 ชม.",
+      "TypeName": "datetimeV2.duration",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "PT3H",
+            "type": "duration",
+            "value": "10800"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะจากไป 3.5ปี",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "Results": [
+    {
+      "Text": "3.5ปี",
+      "TypeName": "datetimeV2.duration",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "P3.5Y",
+            "type": "duration",
+            "value": "110376000"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะจากไป 3 นาที",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "Results": [
+    {
+      "Text": "3 นาที",
+      "TypeName": "datetimeV2.duration",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "PT3M",
+            "type": "duration",
+            "value": "180"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะจากไป 123.45 วินาที",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "Results": [
+    {
+      "Text": "123.45 วินาที",
+      "TypeName": "datetimeV2.duration",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "PT123.45S",
+            "type": "duration",
+            "value": "123.45"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะจากไปทั้งวัน",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "Results": [
+    {
+      "Text": "ทั้งวัน",
+      "TypeName": "datetimeV2.duration",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "P1D",
+            "type": "duration",
+            "value": "86400"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "จัดเวลาการประชุดให้ฉันในสัปดาห์หน้าวันจ. หรือ ",
+  "Context": {
+    "ReferenceDateTime": "2017-12-04T00:00:00"
+  },
+  "NotSupported": "javascript",
+  "Results": [
+    {
+      "Text": "สัปดาห์หน้าวันจ.",
+      "TypeName": "datetimeV2.date",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "2017-12-11",
+            "type": "date",
+            "value": "2017-12-11"
+          }
+        ]
+      }
+    },
+    {
+      "Text": "อ.",
+      "TypeName": "datetimeV2.date",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "XXXX-WXX-2",
+            "type": "date",
+            "value": "2017-11-28"
+          },
+          {
+            "timex": "XXXX-WXX-2",
+            "type": "date",
+            "value": "2017-12-05"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "คอร์ทานา โปรดตั้งการโทรสไกป์ตอนอาทิตย์หน้าวันอังคารหรือวันพฤหัส",
+  "Context": {
+    "ReferenceDateTime": "2017-12-04T00:00:00"
+  },
+  "NotSupported": "javascript",
+  "Results": [
+    {
+      "Text": "อาทิตย์หน้าวันอังคาร",
+      "TypeName": "datetimeV2.date",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "2017-12-12",
+            "type": "date",
+            "value": "2017-12-12"
+          }
+        ]
+      }
+    },
+    {
+      "Text": "วันพฤหัส",
+      "TypeName": "datetimeV2.date",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "XXXX-WXX-4",
+            "type": "date",
+            "value": "2017-11-30"
+          },
+          {
+            "timex": "XXXX-WXX-4",
+            "type": "date",
+            "value": "2017-12-07"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "นัดหมายมื้อเที่ยงนี้ในวันอ. ที่ 9 พฤษภาคม โดยไม่ต้องติดต่อไปหาคนอื่น",
+  "Context": {
+    "ReferenceDateTime": "2018-01-07T00:00:00"
+  },
+  "NotSupported": "javascript",
+  "Results": [
+    {
+      "Text": "วันอ. ที่ 9 พฤษภาคม",
+      "TypeName": "datetimeV2.date",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "XXXX-05-09",
+            "type": "date",
+            "value": "2017-05-09"
+          },
+          {
+            "timex": "XXXX-05-09",
+            "type": "date",
+            "value": "2018-05-09"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "มีวันว่างอยู่ 2-3 วันในสัปดาห์ของวันที่ 10 เมษายน  ฉันว่าเราควรโทรไปคุยเผื่อว่าจะมีทางเลือกอื่นๆ",
+  "Context": {
+    "ReferenceDateTime": "2018-03-14T01:00:00"
+  },
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "สัปดาห์ของวันที่ 10 เมษายน",
+      "TypeName": "datetimeV2.daterange",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "XXXX-04-10",
+            "type": "daterange",
+            "start": "2017-04-10",
+            "end": "2017-04-17"
+          },
+          {
+            "timex": "XXXX-04-10",
+            "type": "daterange",
+            "start": "2018-04-09",
+            "end": "2018-04-16"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันจะกลับวันที่ 1 กรกฎาคม เป็นครั้งที่ 17",
+  "Context": {
+    "ReferenceDateTime": "2018-04-07T00:00:00"
+  },
+  "Results": [
+    {
+      "Text": "วันที่ 1 กรกฎาคม",
+      "Start": 13,
+      "End": 20,
+      "TypeName": "datetimeV2.date",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "XXXX-07-01",
+            "type": "date",
+            "value": "2017-07-01"
+          },
+          {
+            "timex": "XXXX-07-01",
+            "type": "date",
+            "value": "2018-07-01"
+          }
+        ]
+      }
+    } 
+  ]
+}
+,
+{
+  "Input": "ฉันจะเดินทางไปปักกิ่งตอนเช้าวันพุธ",
+  "Context": {
+    "ReferenceDateTime": "2018-05-18T00:00:00"
+  },
+  "NotSupportedByDesign": "javascript, python",
+  "Results": [
+    {
+      "Text": "ตอนเช้าวันพุธ",
+      "TypeName": "datetimeV2.datetimerange",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "XXXX-WXX-3",
+            "Mod": "start",
+            "type": "datetimerange",
+            "start": "2018-05-23 00:00:00",
+            "end": "2018-05-23 12:00:00"
+          }
+        ]
+      }
+    }
+  ]
+},
+{
+  "Input": "ฉันจะเดินทางไปปักกิ่งวันนี้ตอนกลางวัน",
+  "Context": {
+    "ReferenceDateTime": "2018-05-18T00:00:00"
+  },
+  "NotSupportedByDesign": "javascript, python",
+  "Results": [
+    {
+      "Text": "วันนี้ตอนกลางวัน",
+      "TypeName": "datetimeV2.datetimerange",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "2018-05-18",
+            "Mod": "mid",
+            "type": "datetimerange",
+            "start": "2018-05-18 10:00:00",
+            "end": "2018-05-18 14:00:00"
+          }
+        ]
+      }
+    }
+  ]
+},
+{
+  "Input": "ฉันจะเดินทางไปปักกิ่งภายในวันนี้",
+  "Context": {
+    "ReferenceDateTime": "2018-05-18T00:00:00"
+  },
+  "NotSupportedByDesign": "javascript, python",
+  "Results": [
+    {
+      "Text": "ภายในวันนี้",
+      "TypeName": "datetimeV2.datetimerange",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "2018-05-18",
+            "Mod": "end",
+            "type": "datetimerange",
+            "start": "2018-05-18 12:00:00",
+            "end": "2018-05-19 00:00:00"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันกลับไปจีนในเดือนเมษายน 2017",
+  "Context": {
+    "ReferenceDateTime": "2018-05-24T00:00:00"
+  },
+  "NotSupported": "python",
+  "Results": [{
+    "Text": "เดือนเมษายน 2017",
+    "Start": 24,
+    "End": 33,
+    "TypeName": "datetimeV2.daterange",
+    "Resolution": {
+      "values": [
+        {
+          "timex": "2017-04",
+          "type": "daterange",
+          "start": "2017-04-01",
+          "end": "2017-05-01"
+        }
+      ]
+    }
+  }]
+}
+,
+{
+  "Input": "ฉันกลับไปจีนในเดือนเมษายน",
+  "Context": {
+    "ReferenceDateTime": "2018-05-24T00:00:00"
+  },
+  "NotSupported": "python",
+  "Results": [{
+    "Text": "เดือนเมษายน",
+    "Start": 28,
+    "End": 32,
+    "TypeName": "datetimeV2.daterange",
+    "Resolution": {
+      "values": [
+        {
+          "timex": "XXXX-04",
+          "type": "daterange",
+          "start": "2018-04-01",
+          "end": "2018-05-01"
+        },
+        {
+          "timex": "XXXX-04",
+          "type": "daterange",
+          "start": "2019-04-01",
+          "end": "2019-05-01"
+        }
+      ]
+    }
+  }]
+}
+,
+{
+  "Input": "คุณว่างสองวันหลังจากวันนี้ไหม",
+  "Context": {
+    "ReferenceDateTime": "2018-05-31T00:00:00"
+  },
+  "NotSupported": "javascript, python",
+  "Results": [{
+    "Text": "สองวันหลังจากวันนี้",
+    "Start": 18,
+    "End": 37,
+    "TypeName": "datetimeV2.date",
+    "Resolution": {
+      "values": [
+        {
+          "timex": "2018-06-02",
+          "type": "date",
+          "value": "2018-06-02"
+        }
+      ]
+    }
+  }]
+}
+,
+{
+  "Input": "คุณว่างสามอาทิตย์ถัดจากวันพรุ่งนี้ไหม",
+  "Context": {
+    "ReferenceDateTime": "2018-05-31T00:00:00"
+  },
+  "NotSupported": "javascript, python",
+  "Results": [{
+    "Text": "สามอาทิตย์ถัดจากวันพรุ่งนี้",
+    "Start": 18,
+    "End": 42,
+    "TypeName": "datetimeV2.date",
+    "Resolution": {
+      "values": [
+        {
+          "timex": "2018-06-22",
+          "type": "date",
+          "value": "2018-06-22"
+        }
+      ]
+    }
+  }]
+}
+,
+{
+  "Input": "คุณอยู่ที่ไหนสองวันก่อนเมื่อวานนี้",
+  "Context": {
+    "ReferenceDateTime": "2018-05-31T00:00:00"
+  },
+  "NotSupported": "javascript, python",
+  "Results": [{
+    "Text": "สองวันก่อนเมื่อวานนี้",
+    "Start": 15,
+    "End": 39,
+    "TypeName": "datetimeV2.date",
+    "Resolution": {
+      "values": [
+        {
+          "timex": "2018-05-28",
+          "type": "date",
+          "value": "2018-05-28"
+        }
+      ]
+    }
+  }]
+}
+,
+{
+  "Input": "อีไล ลิลลี่ขาย IVAC วันที่ 31 ธ.ค. 1994",
+  "Context": {
+    "ReferenceDateTime": "2018-05-01T00:00:00"
+  },
+  "NotSupported": "python",
+  "Results": [{
+    "Text": "วันที่ 31 ธ.ค. 1994",
+    "Start": 23,
+    "End": 36,
+    "TypeName": "datetimeV2.date",
+    "Resolution": {
+      "values": [
+        {
+          "timex": "1994-12-31",
+          "type": "date",
+          "value": "1994-12-31"
+        }
+      ]
+    }
+  }]
+}
+,
+{
+  "Input": "ฉันจะกลับ 3/5/18 @ 17:49:19",
+  "Context": {
+    "ReferenceDateTime": "2018-05-01T00:00:00"
+  },
+  "NotSupported": "python",
+  "Results": [{
+    "Text": "3/5/18 @ 17:49:19",
+    "Start": 13,
+    "End": 29,
+    "TypeName": "datetimeV2.datetime",
+    "Resolution": {
+      "values": [
+        {
+          "timex": "2018-05-03T17:49:19",
+          "type": "datetime",
+          "value": "2018-05-03 17:49:19"
+        }
+      ]
+    }
+  }]
+}
+,
+{
+  "Input": "มันจะเกิดขึ้นระหว่าง 10 ถึง 11:30 น. ในวันที่ 1/1/2015",
+  "Context": {
+    "ReferenceDateTime": "2018-05-31T00:00:00"
+  },
+  "NotSupported": "javascript,python",
+  "Results": [{
+    "Text": "ระหว่าง 10 ถึง 11:30 น. ในวันที่ 1/1/2015",
+    "Start": 15,
+    "End": 46,
+    "TypeName": "datetimeV2.datetimerange",
+    "Resolution": {
+      "values": [
+        {
+          "timex": "(2015-01-01T10,2015-01-01T11:30,PT1H30M)",
+          "type": "datetimerange",
+          "start": "2015-01-01 10:00:00",
+          "end": "2015-01-01 11:30:00"
+        },
+        {
+          "timex": "(2015-01-01T22,2015-01-01T23:30,PT1H30M)",
+          "type": "datetimerange",
+          "start": "2015-01-01 22:00:00",
+          "end": "2015-01-01 23:30:00"
+        }
+      ]
+    }
+  }]
+}
+,
+{
+  "Input": "มันจะเกิดขึ้นในวันที่ 1/1/2015 ระหว่าง 10 และ 11:30 นาฬิกา",
+  "Context": {
+    "ReferenceDateTime": "2018-05-31T00:00:00"
+  },
+  "NotSupported": "javascript,python",
+  "Results": [{
+    "Text": "วันที่ 1/1/2015 ระหว่าง 10 และ 11:30 นาฬิกา",
+    "Start": 15,
+    "End": 43,
+    "TypeName": "datetimeV2.datetimerange",
+    "Resolution": {
+      "values": [
+        {
+          "timex": "(2015-01-01T10,2015-01-01T11:30,PT1H30M)",
+          "type": "datetimerange",
+          "start": "2015-01-01 10:00:00",
+          "end": "2015-01-01 11:30:00"
+        },
+        {
+          "timex": "(2015-01-01T22,2015-01-01T23:30,PT1H30M)",
+          "type": "datetimerange",
+          "start": "2015-01-01 22:00:00",
+          "end": "2015-01-01 23:30:00"
+        }
+      ]
+    }
+  }]
+}
+,
+{
+  "Input": "มันจะเกิดขึ้นตั้งแต่ 10:30 น. ถึง 3 น. ในวันที่ 1/1/2015",
+  "Context": {
+    "ReferenceDateTime": "2018-05-31T00:00:00"
+  },
+  "NotSupported": "javascript,python",
+  "Results": [{
+    "Text": "ตั้งแต่ 10:30 น. ถึง 3 น. ในวันที่ 1/1/2015",
+    "Start": 15,
+    "End": 41,
+    "TypeName": "datetimeV2.datetimerange",
+    "Resolution": {
+      "values": [
+        {
+          "timex": "(2015-01-01T10:30,2015-01-01T15,PT4H30M)",
+          "type": "datetimerange",
+          "start": "2015-01-01 10:30:00",
+          "end": "2015-01-01 15:00:00"
+        }
+      ]
+    }
+  }]
+}
+,
+{
+  "Input": "มันจะเกิดขึ้นระหว่าง 3 ถึง 5 โมงในวันที่ 1/1/2015",
+  "Context": {
+    "ReferenceDateTime": "2018-05-31T00:00:00"
+  },
+  "NotSupported": "javascript,python",
+  "Results": [{
+    "Text": "ระหว่าง 3 ถึง 5 โมงในวันที่ 1/1/2015",
+    "Start": 15,
+    "End": 41,
+    "TypeName": "datetimeV2.datetimerange",
+    "Resolution": {
+      "values": [
+        {
+          "timex": "(2015-01-01T03,2015-01-01T05,PT2H)",
+          "type": "datetimerange",
+          "start": "2015-01-01 03:00:00",
+          "end": "2015-01-01 05:00:00"
+        },
+        {
+          "timex": "(2015-01-01T15,2015-01-01T17,PT2H)",
+          "type": "datetimerange",
+          "start": "2015-01-01 15:00:00",
+          "end": "2015-01-01 17:00:00"
+        }
+      ]
+    }
+  }]
+}
+,
+{
+  "Input": "มันจะเกิดขึ้นตั้งแต่ 3:30 ถึง 5:55 นาฬิกาในวันที่ 1/1/2015",
+  "Context": {
+    "ReferenceDateTime": "2018-05-31T00:00:00"
+  },
+  "NotSupported": "javascript,python",
+  "Results": [{
+    "Text": "ตั้งแต่ 3:30 ถึง 5:55 นาฬิกาในวันที่ 1/1/2015",
+    "Start": 15,
+    "End": 43,
+    "TypeName": "datetimeV2.datetimerange",
+    "Resolution": {
+      "values": [
+        {
+          "timex": "(2015-01-01T03:30,2015-01-01T05:55,PT2H25M)",
+          "type": "datetimerange",
+          "start": "2015-01-01 03:30:00",
+          "end": "2015-01-01 05:55:00"
+        },
+        {
+          "timex": "(2015-01-01T15:30,2015-01-01T17:55,PT2H25M)",
+          "type": "datetimerange",
+          "start": "2015-01-01 15:30:00",
+          "end": "2015-01-01 17:55:00"
+        }
+      ]
+    }
+  }]
+}
+,
+{
+  "Input": "แสดงยอดขายก่อน คศ 2010 หรือหลัง คศ 2018",
+  "Context": {
+    "ReferenceDateTime": "2018-05-31T00:00:00"
+  },
+  "NotSupported": "javascript,python",
+  "Results": [{
+    "Text": "ก่อน คศ 2010",
+    "Start": 14,
+    "End": 24,
+    "TypeName": "datetimeV2.daterange",
+    "Resolution": {
+      "values": [
+        {
+          "timex": "2010",
+          "Mod": "before",
+          "type": "daterange",
+          "end": "2010-01-01"
+        }
+      ]
+    }
+  },
+  {
+    "Text": "หลัง คศ 2018",
+    "Start": 29,
+    "End": 38,
+    "TypeName": "datetimeV2.daterange",
+    "Resolution": {
+      "values": [
+        {
+          "timex": "2018",
+          "Mod": "after",
+          "type": "daterange",
+          "start": "2019-01-01"
+        }
+      ]
+    }
+  }]
+}
+,
+{
+  "Input": "แสดงยอดขายหลังปี 2010 และก่อนปี 2018 หรือก่อนปี 2000 แต่ไม่ใช่ปี 1998",
+  "Context": {
+    "ReferenceDateTime": "2018-05-31T00:00:00"
+  },
+  "NotSupported": "javascript,python",
+  "Results": [{
+    "Text": "หลังปี 2010",
+    "Start": 14,
+    "End": 23,
+    "TypeName": "datetimeV2.daterange",
+    "Resolution": {
+      "values": [
+        {
+          "timex": "2010",
+          "Mod": "after",
+          "type": "daterange",
+          "start": "2011-01-01"
+        }
+      ]
+    }
+  },
+  {
+    "Text": "ก่อนปี 2018",
+    "Start": 29,
+    "End": 39,
+    "TypeName": "datetimeV2.daterange",
+    "Resolution": {
+      "values": [
+        {
+          "timex": "2018",
+          "Mod": "before",
+          "type": "daterange",
+          "end": "2018-01-01"
+        }
+      ]
+    }
+  },
+  {
+    "Text": "ก่อนปี 2000",
+    "Start": 44,
+    "End": 54,
+    "TypeName": "datetimeV2.daterange",
+    "Resolution": {
+      "values": [
+        {
+          "timex": "2000",
+          "Mod": "before",
+          "type": "daterange",
+          "end": "2000-01-01"
+        }
+      ]
+    }
+  },
+  {
+    "Text": "ปี 1998",
+    "Start": 64,
+    "End": 67,
+    "TypeName": "datetimeV2.daterange",
+    "Resolution": {
+      "values": [
+        {
+          "timex": "1998",
+          "type": "daterange",
+          "start": "1998-01-01",
+          "end": "1999-01-01"
+        }
+      ]
+    }
+  }]
+}
+,
+{
+  "Input": "คอร์ทานา โปรดตั้งการโทรสไกป์ตอนวันศุกร์นี้ 15 มิย กับจิม",
+  "Context": {
+    "ReferenceDateTime": "2018-06-20T00:00:00"
+  },
+  "NotSupported": "python",
+  "Results": [{
+    "Text": "วันศุกร์นี้ 15 มิย",
+    "Start": 45,
+    "End": 62,
+    "TypeName": "datetimeV2.date",
+    "Resolution": {
+      "values": [
+        {
+          "timex": "XXXX-06-15",
+          "type": "date",
+          "value": "2018-06-15"
+        },
+        {
+          "timex": "XXXX-06-15",
+          "type": "date",
+          "value": "2019-06-15"
+        }
+      ]
+    }
+  }]
+}
+,
+{
+  "Input": "คอร์ทานา โปรดตั้งการโทรสไกป์ตอนวันศุกร์นี้ (15-มิย) กับจิม",
+  "Context": {
+    "ReferenceDateTime": "2018-06-20T00:00:00"
+  },
+  "NotSupported": "python",
+  "Results": [{
+    "Text": "วันศุกร์นี้ (15-มิย)",
+    "Start": 45,
+    "End": 64,
+    "TypeName": "datetimeV2.date",
+    "Resolution": {
+      "values": [
+        {
+          "timex": "XXXX-06-15",
+          "type": "date",
+          "value": "2018-06-15"
+        },
+        {
+          "timex": "XXXX-06-15",
+          "type": "date",
+          "value": "2019-06-15"
+        }
+      ]
+    }
+  }]
+}
+]

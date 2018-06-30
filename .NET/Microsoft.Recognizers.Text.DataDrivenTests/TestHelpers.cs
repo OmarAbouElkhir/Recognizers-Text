@@ -14,6 +14,7 @@ using Microsoft.Recognizers.Text.NumberWithUnit;
 using Microsoft.Recognizers.Text.DateTime.French;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.Recognizers.Text.DateTime.German;
+using Microsoft.Recognizers.Text.DateTime.Thai;
 using Microsoft.Recognizers.Text.Sequence;
 using Microsoft.Recognizers.Text.Choice;
 
@@ -567,23 +568,27 @@ namespace Microsoft.Recognizers.Text.DataDrivenTests
 
         public static IDateTimeExtractor GetThaiExtractor(DateTimeExtractors extractorName)
         {
-            // switch (extractorName)
-            // {
-            //     case DateTimeExtractors.Date:
-            //         return new BaseDateExtractor(new ThaiDateExtractorConfiguration());
-            // }
+            switch (extractorName)
+            {
+                case DateTimeExtractors.Date:
+                    return new BaseDateExtractor(new ThaiDateExtractorConfiguration());
+                case DateTimeExtractors.Merged:
+                    return new BaseMergedDateTimeExtractor(new ThaiMergedExtractorConfiguration(DateTimeOptions.None));
+            }
 
             throw new Exception($"Extractor '{extractorName}' for Thai not supported");
         }
 
         public static IDateTimeParser GetThaiParser(DateTimeParsers parserName)
         {
-            // var commonConfiguration = new ThaiCommonDateTimeParserConfiguration(DateTimeOptions.None);
-            // switch (parserName)
-            // {
-            //     case DateTimeParsers.Date:
-            //         return new BaseDateParser(new ThaiDateParserConfiguration(commonConfiguration));
-            // }
+            var commonConfiguration = new ThaiCommonDateTimeParserConfiguration(DateTimeOptions.None);
+            switch (parserName)
+            {
+                case DateTimeParsers.Date:
+                    return new BaseDateParser(new ThaiDateParserConfiguration(commonConfiguration));
+                case DateTimeParsers.Merged:
+                    return new BaseMergedDateTimeParser(new ThaiMergedParserConfiguration(DateTimeOptions.None));
+            }
 
             throw new Exception($"Parser '{parserName}' for Thai not supported");
         }

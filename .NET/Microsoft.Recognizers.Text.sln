@@ -47,6 +47,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Patterns", "Patterns", "{23
 		..\Patterns\Spanish\Spanish-DateTime.yaml = ..\Patterns\Spanish\Spanish-DateTime.yaml
 		..\Patterns\Spanish\Spanish-Numbers.yaml = ..\Patterns\Spanish\Spanish-Numbers.yaml
 		..\Patterns\Spanish\Spanish-NumbersWithUnit.yaml = ..\Patterns\Spanish\Spanish-NumbersWithUnit.yaml
+		..\Patterns\Thai\Thai-DateTime.yaml = ..\Patterns\Thai\Thai-DateTime.yaml
 		..\Patterns\Thai\Thai-Numbers.yaml = ..\Patterns\Thai\Thai-Numbers.yaml
 		..\Patterns\Thai\Thai-NumbersWithUnit.yaml = ..\Patterns\Thai\Thai-NumbersWithUnit.yaml
 	EndProjectSection
