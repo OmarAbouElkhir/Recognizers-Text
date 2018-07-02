@@ -51,6 +51,7 @@ namespace Microsoft.Recognizers.Definitions.Portuguese
 		public const string RangeUnitRegex = @"\b(?<unit>anos|ano|meses|m[êe]s|semanas|semana)\b";
 		public const string InConnectorRegex = @"\b(em)\b";
 		public const string WithinNextPrefixRegex = @"^[.]";
+		public const string CenturySuffixRegex = @"^[.]";
 		public const string FromRegex = @"((desde|de)(\s*a(s)?)?)$";
 		public const string ConnectorAndRegex = @"(e\s*([àa](s)?)?)$";
 		public const string BetweenRegex = @"(entre\s*([oa](s)?)?)";
@@ -476,5 +477,6 @@ namespace Microsoft.Recognizers.Definitions.Portuguese
 			{ "", 0 }
 		};
 		public const string DefaultLanguageFallback = "DMY";
+		public static readonly string[] DurationDateRestrictions = {  };
 	}
 }

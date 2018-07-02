@@ -39,6 +39,7 @@ class FrenchDateTime:
     QuarterRegexYearFront = f'({YearRegex}|l\'année\\s+({PastSuffixRegex}|{NextSuffixRegex})|{RelativeRegex}\\s+ann[eé]e)\\s+(le\\s+)?(?<cardinal>premier|1er|duexi[èe]me|2|troisi[èe]me|3|quatri[èe]me|4)\\s+quarts'
     AllHalfYearRegex = f'^[.]'
     PrefixDayRegex = f'^[.]'
+    CenturySuffixRegex = f'^[.]'
     SeasonRegex = f'\\b((<seas>printemps|été|automne|hiver)+\\s*({NextSuffixRegex}|{PastSuffixRegex}))|(?<season>({RelativeRegex}\\s+)?(?<seas>printemps|[ée]t[ée]|automne|hiver)((\\s+de|\\s*,\\s*)?\\s+({YearRegex}|{RelativeRegex}\\s+l\'ann[eé]e))?)\\b'
     WhichWeekRegex = f'(semaine)(\\s*)(?<number>\\d\\d|\\d|0\\d)'
     WeekOfRegex = f'(semaine)(\\s*)(de)'
@@ -167,6 +168,7 @@ class FrenchDateTime:
     SinceRegex = f'\\b(depuis)\\b'
     AgoPrefixRegex = f'\\b(y a)\\b'
     LaterRegex = f'\\b(plus tard)\\b'
+    AgoRegex = f'^[.]'
     InConnectorRegex = f'\\b(dans|en|sur)\\b'
     WithinNextPrefixRegex = f'^[.]'
     AmDescRegex = f'(h|am\\b|a\\.m\\.|a m\\b|a\\. m\\.|a\\.m\\b|a\\. m\\b)'
@@ -616,4 +618,5 @@ class FrenchDateTime:
     WrittenDecades = dict([('', 0)])
     SpecialDecadeCases = dict([('', 0)])
     DefaultLanguageFallback = 'DMY'
+    DurationDateRestrictions = []
 # pylint: enable=line-too-long

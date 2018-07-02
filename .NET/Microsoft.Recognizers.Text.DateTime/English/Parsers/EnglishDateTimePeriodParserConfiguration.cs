@@ -65,6 +65,10 @@ namespace Microsoft.Recognizers.Text.DateTime.English
 
         public Regex PrefixDayRegex { get; }
 
+        public Regex BeforeRegex { get; }
+
+        public Regex AfterRegex { get; }
+
         public IImmutableDictionary<string, string> UnitMap { get; }
 
         public IImmutableDictionary<string, int> Numbers { get; }
@@ -102,6 +106,8 @@ namespace Microsoft.Recognizers.Text.DateTime.English
             PmDescRegex = EnglishDateTimePeriodExtractorConfiguration.PmDescRegex;
             WithinNextPrefixRegex = EnglishDateTimePeriodExtractorConfiguration.WithinNextPrefixRegex;
             PrefixDayRegex = EnglishDateTimePeriodExtractorConfiguration.PrefixDayRegex;
+            BeforeRegex = EnglishDateTimePeriodExtractorConfiguration.BeforeRegex;
+            AfterRegex = EnglishDateTimePeriodExtractorConfiguration.AfterRegex;
             UnitMap = config.UnitMap;
             Numbers = config.Numbers;
         }
@@ -129,12 +135,12 @@ namespace Microsoft.Recognizers.Text.DateTime.English
             {
                 timeStr = "TMO";
                 beginHour = 8;
-                endHour = 12;
+                endHour = Constants.HalfDayHourCount;
             }
             else if (AfternoonStartEndRegex.IsMatch(trimedText))
             {
                 timeStr = "TAF";
-                beginHour = 12;
+                beginHour = Constants.HalfDayHourCount;
                 endHour = 16;
             }
             else if (EveningStartEndRegex.IsMatch(trimedText))

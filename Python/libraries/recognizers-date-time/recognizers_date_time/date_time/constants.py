@@ -1,3 +1,5 @@
+from ..resources import BaseDateTime
+
 class Constants:
     SYS_DATETIME_DATE: str = 'date'
     SYS_DATETIME_TIME: str = 'time'
@@ -22,6 +24,12 @@ class Constants:
     SemesterMonthCount: int = 6
     TrimesterMonthCount: int = 3
 
+    DefaultLanguageFallback_MDY: str = 'MDY'
+    DefaultLanguageFallback_DMY: str = 'DMY'
+
+    MaxTwoDigitYearFutureNum: int = int(BaseDateTime.MaxTwoDigitYearFutureNum)
+    MinTwoDigitYearPastNum: int = int(BaseDateTime.MinTwoDigitYearPastNum)
+
 class TimeTypeConstants:
     DATE: str = 'date'
     START_DATE: str = 'startDate'
@@ -39,6 +47,18 @@ class TimeTypeConstants:
     START: str = 'start'
     END: str = 'end'
 
+    # Mod Value
+    # "before" -> To mean "preceding in time". I.e. Does not include the extracted datetime entity in the resolution's ending point. Equivalent to "<"
     BEFORE_MOD: str = 'before'
+    # "after" -> To mean "following in time". I.e. Does not include the extracted datetime entity in the resolution's starting point. Equivalent to ">"
     AFTER_MOD: str = 'after'
+    # "since" -> Same as "after", but including the extracted datetime entity. Equivalent to ">="
     SINCE_MOD: str = 'since'
+    # "until" -> Same as "before", but including the extracted datetime entity. Equivalent to "<="
+    UNTIL_MOD: str = 'until'
+    EARLY_MOD: str = 'start'
+    MID_MOD: str = 'mid'
+    LATE_MOD: str = 'end'
+    MORE_THAN_MOD: str = 'more'
+    LESS_THAN_MOD: str = 'less'
+    REF_UNDEF_MOD: str = 'ref_undef'

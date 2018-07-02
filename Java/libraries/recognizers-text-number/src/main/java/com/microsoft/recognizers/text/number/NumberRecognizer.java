@@ -4,6 +4,8 @@ import com.microsoft.recognizers.text.Culture;
 import com.microsoft.recognizers.text.IModel;
 import com.microsoft.recognizers.text.ModelResult;
 import com.microsoft.recognizers.text.Recognizer;
+import com.microsoft.recognizers.text.number.chinese.parsers.ChineseNumberParserConfiguration;
+import com.microsoft.recognizers.text.number.chinese.parsers.ChineseNumberRangeParserConfiguration;
 import com.microsoft.recognizers.text.number.english.parsers.EnglishNumberParserConfiguration;
 import com.microsoft.recognizers.text.number.english.parsers.EnglishNumberRangeParserConfiguration;
 import com.microsoft.recognizers.text.number.french.parsers.FrenchNumberParserConfiguration;
@@ -37,7 +39,7 @@ public class NumberRecognizer extends Recognizer<NumberOptions> {
         this(null, numberOptions, lazyInitialization);
     }
 
-    protected NumberRecognizer(String culture, NumberOptions numberOptions, boolean lazyInitialization) {
+    public NumberRecognizer(String culture, NumberOptions numberOptions, boolean lazyInitialization) {
         super(culture, numberOptions, lazyInitialization);
     }
 
@@ -83,7 +85,7 @@ public class NumberRecognizer extends Recognizer<NumberOptions> {
     }
 
     public static List<ModelResult> recognizeNumber(String query, String culture, NumberOptions options, boolean fallbackToDefaultCulture) {
-        return RecognizeByModel((NumberRecognizer recognizer) -> recognizer.getNumberModel(culture, fallbackToDefaultCulture), query, options);
+        return recognizeByModel((NumberRecognizer recognizer) -> recognizer.getNumberModel(culture, fallbackToDefaultCulture), query, options);
     }
 
     public static List<ModelResult> recognizeOrdinal(String query, String culture) {
@@ -95,7 +97,7 @@ public class NumberRecognizer extends Recognizer<NumberOptions> {
     }
 
     public static List<ModelResult> recognizeOrdinal(String query, String culture, NumberOptions options, boolean fallbackToDefaultCulture) {
-        return RecognizeByModel((NumberRecognizer recognizer) -> recognizer.getOrdinalModel(culture, fallbackToDefaultCulture), query, options);
+        return recognizeByModel((NumberRecognizer recognizer) -> recognizer.getOrdinalModel(culture, fallbackToDefaultCulture), query, options);
     }
 
     public static List<ModelResult> recognizePercentage(String query, String culture) {
@@ -107,7 +109,7 @@ public class NumberRecognizer extends Recognizer<NumberOptions> {
     }
 
     public static List<ModelResult> recognizePercentage(String query, String culture, NumberOptions options, boolean fallbackToDefaultCulture) {
-        return RecognizeByModel((NumberRecognizer recognizer) -> recognizer.getPercentageModel(culture, fallbackToDefaultCulture), query, options);
+        return recognizeByModel((NumberRecognizer recognizer) -> recognizer.getPercentageModel(culture, fallbackToDefaultCulture), query, options);
     }
 
     public static List<ModelResult> recognizeNumberRange(String query, String culture) {
@@ -119,11 +121,11 @@ public class NumberRecognizer extends Recognizer<NumberOptions> {
     }
 
     public static List<ModelResult> recognizeNumberRange(String query, String culture, NumberOptions options, boolean fallbackToDefaultCulture) {
-        return RecognizeByModel((NumberRecognizer recognizer) -> recognizer.getNumberRangeModel(culture, fallbackToDefaultCulture), query, options);
+        return recognizeByModel((NumberRecognizer recognizer) -> recognizer.getNumberRangeModel(culture, fallbackToDefaultCulture), query, options);
     }
     //endregion
 
-    private static List<ModelResult> RecognizeByModel(Function<NumberRecognizer, IModel> getModelFun, String query, NumberOptions options) {
+    private static List<ModelResult> recognizeByModel(Function<NumberRecognizer, IModel> getModelFun, String query, NumberOptions options) {
         NumberRecognizer recognizer = new NumberRecognizer(options);
         IModel model = getModelFun.apply(recognizer);
         return model.parse(query);
@@ -193,6 +195,21 @@ public class NumberRecognizer extends Recognizer<NumberOptions> {
         registerModel(PercentModel.class, Culture.German, (options) -> new PercentModel(
                 AgnosticNumberParserFactory.getParser(AgnosticNumberParserType.Percentage, new GermanNumberParserConfiguration()),
                 new com.microsoft.recognizers.text.number.german.extractors.PercentageExtractor()));
+        //endregion
+        
+        //region Chinese
+        registerModel(NumberModel.class, Culture.Chinese, (options) -> new NumberModel(
+                AgnosticNumberParserFactory.getParser(AgnosticNumberParserType.Number, new ChineseNumberParserConfiguration()),
+                new com.microsoft.recognizers.text.number.chinese.extractors.NumberExtractor()));
+        registerModel(OrdinalModel.class, Culture.Chinese, (options) -> new OrdinalModel(
+                AgnosticNumberParserFactory.getParser(AgnosticNumberParserType.Ordinal, new ChineseNumberParserConfiguration()),
+                new com.microsoft.recognizers.text.number.chinese.extractors.OrdinalExtractor()));
+        registerModel(PercentModel.class, Culture.Chinese, (options) -> new PercentModel(
+                AgnosticNumberParserFactory.getParser(AgnosticNumberParserType.Percentage, new ChineseNumberParserConfiguration()),
+                new com.microsoft.recognizers.text.number.chinese.extractors.PercentageExtractor()));
+        registerModel(NumberRangeModel.class, Culture.Chinese, (options) -> new NumberRangeModel(
+                new BaseNumberRangeParser(new ChineseNumberRangeParserConfiguration()),
+                new com.microsoft.recognizers.text.number.chinese.extractors.NumberRangeExtractor()));
         //endregion
     }
 }

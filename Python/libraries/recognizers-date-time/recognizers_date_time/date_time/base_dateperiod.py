@@ -12,7 +12,7 @@ from .extractors import DateTimeExtractor
 from .parsers import DateTimeParser, DateTimeParseResult
 from .base_date import BaseDateParser
 from .base_duration import BaseDurationParser
-from .utilities import Token, merge_all_tokens, FormatUtil, DateTimeResolutionResult, DateUtils, DayOfWeek
+from .utilities import Token, merge_all_tokens, FormatUtil, DateTimeResolutionResult, DateUtils, DayOfWeek, RegExpUtility
 
 MatchedIndex = namedtuple('MatchedIndex', ['matched', 'index'])
 
@@ -721,16 +721,28 @@ class BaseDatePeriodParser(DateTimeParser):
             return result
 
         early_prefix = False
+        late_prefix = False
+        mid_prefix = False
 
         if RegExpUtility.get_group(match, 'EarlyPrefix'):
             early_prefix = True
             trimmed_source = match.group('suffix')
-
-        late_prefix = False
-
-        if RegExpUtility.get_group(match, 'LatePrefix'):
+            result.mod = TimeTypeConstants.EARLY_MOD
+        elif RegExpUtility.get_group(match, 'LatePrefix'):
             late_prefix = True
             trimmed_source = match.group('suffix')
+            result.mod = TimeTypeConstants.LATE_MOD
+        elif RegExpUtility.get_group(match, 'MidPrefix'):
+            mid_prefix = True
+            trimmed_source = match.group('suffix')
+            result.mod = TimeTypeConstants.MID_MOD
+
+        if RegExpUtility.get_group(match, 'RelEarly'):
+            early_prefix = True
+            result.mod = None
+        elif RegExpUtility.get_group(match, 'RelLate'):
+            late_prefix = True
+            result.mod = None
 
         month_str = RegExpUtility.get_group(match, 'month')
 
@@ -757,19 +769,26 @@ class BaseDatePeriodParser(DateTimeParser):
             if self.config.is_week_only(trimmed_source):
                 monday = DateUtils.this(reference, DayOfWeek.Monday) + datedelta(days=7 * swift)
                 result.timex = f'{year:04d}-W{monday.isocalendar()[1]:02d}'
-
-                if late_prefix:
-                    begin_date = DateUtils.this(reference, DayOfWeek.Thursday) + datedelta(days=7 * swift)
-                else:
-                    begin_date = DateUtils.this(reference, DayOfWeek.Monday) + datedelta(days=7 * swift)
-
+                begin_date = DateUtils.this(reference, DayOfWeek.Monday) + datedelta(days=7 * swift)
+                end_date = DateUtils.this(reference, DayOfWeek.Sunday) + datedelta(days=7 * swift)
+                
                 if early_prefix:
-                    end_date = DateUtils.this(reference, DayOfWeek.Wednesday) + datedelta(days=7 * swift)
-                else:
-                    end_date = DateUtils.this(reference, DayOfWeek.Sunday) + datedelta(days=7 * swift)
+                    end_date = DateUtils.this(reference, DayOfWeek.Wednesday) + datedelta(days=7 * swift) 
+                elif mid_prefix:
+                    begin_date = DateUtils.this(reference, DayOfWeek.Tuesday) + datedelta(days=7 * swift)
+                    end_date = DateUtils.this(reference, DayOfWeek.Friday) + datedelta(days=7 * swift)
+                elif late_prefix:
+                    begin_date = DateUtils.this(reference, DayOfWeek.Thursday) + datedelta(days=7 * swift)
 
                 if not self._inclusive_end_period:
                     end_date = end_date + datedelta(days=1)
+                
+                if early_prefix and swift == 0:
+                    if end_date > reference:
+                        end_date = reference
+                elif late_prefix and swift == 0:
+                    if begin_date < reference:
+                        begin_date = reference
 
                 result.future_value = [begin_date, end_date]
                 result.past_value = [begin_date, end_date]
@@ -1164,9 +1183,11 @@ class BaseDatePeriodParser(DateTimeParser):
         if not (match and len(match.group()) == len(source)):
             return result
 
-        cardinal_str = match.group('cardinal')
-        year_str = match.group('year')
-        order_str = match.group('order')
+        cardinal_str = RegExpUtility.get_group(match, 'cardinal')
+        year_str = RegExpUtility.get_group(match, 'year')
+        order_str = RegExpUtility.get_group(match, 'order')
+        quarter_str = RegExpUtility.get_group(match, 'number')
+
         no_specific_value = False
         try:
             year = int(year_str)
@@ -1177,7 +1198,6 @@ class BaseDatePeriodParser(DateTimeParser):
                 swift = 0
                 no_specific_value = True
             year = reference.year + swift
-        quarter_str = match.group('number')
 
         if quarter_str:
             quarter_num = int(quarter_str)
