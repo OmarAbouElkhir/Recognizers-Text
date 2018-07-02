@@ -192,5 +192,8 @@ namespace Microsoft.Recognizers.Text.DateTime.Thai
 
         public DateTimeOptions Options { get; }
 
+        public Regex MoreThanRegex => throw new System.NotImplementedException();
+
+        public Regex LessThanRegex => throw new System.NotImplementedException();
     }
 }
