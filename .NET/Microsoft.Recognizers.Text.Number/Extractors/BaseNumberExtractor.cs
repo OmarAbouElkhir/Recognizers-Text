@@ -38,9 +38,9 @@ namespace Microsoft.Recognizers.Text.Number
                 }
             }
 
-            matchSource = RemoveRedundantMatches(matchSource);
             matchSource = RankMatches(matchSource);
-
+            matchSource = RemoveRedundantMatches(matchSource);
+            
             foreach (var match in matchSource)
             {
                 for (var i = 0; i < match.Key.Length; i++)
