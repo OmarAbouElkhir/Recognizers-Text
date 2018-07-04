@@ -84,6 +84,14 @@
         "value": "60",
         "unit": "Year"
       }
+    },
+	{
+      "Text": "วัน",
+      "TypeName": "age",
+      "Resolution": {
+        "value": null,
+        "unit": "Day"
+      }
     }
   ]
 }
@@ -174,12 +182,21 @@
         "value": "3",
         "unit": "Month"
       }
+    },
+	{
+      "Text": "ปี",
+      "TypeName": "age",
+      "Resolution": {
+        "value": null,
+        "unit": "Year"
+      }
     }
   ]
 }
 ,
 {
   "Input": "ถ้าเราเดินหน้าต่อในเดือนธันวาคม มันจะมีอายุสามสัปดาห์",
+  "Debug": true,
   "NotSupported": "javascript,python",
   "Results": [
     {
@@ -188,6 +205,14 @@
       "Resolution": {
         "value": "3",
         "unit": "Week"
+      }
+    },
+	{
+      "Text": "เดือน",
+      "TypeName": "age",
+      "Resolution": {
+        "value": null,
+        "unit": "Month"
       }
     }
   ]
