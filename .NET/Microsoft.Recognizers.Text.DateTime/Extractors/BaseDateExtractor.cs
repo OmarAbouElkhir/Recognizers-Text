@@ -156,7 +156,7 @@ namespace Microsoft.Recognizers.Text.DateTime
                     if (match.Success)
                     {
                         var startIndex = match.Index;
-                        var endIndex = match.Index + match.Length + (result.Length ?? 0);
+                        var endIndex = result.Start.Value + result.Length.Value;
 
                         ExtendWithWeekdayAndYear(ref startIndex, ref endIndex,
                             config.MonthOfYear.GetValueOrDefault(match.Groups["month"].Value.ToLower(), reference.Month),

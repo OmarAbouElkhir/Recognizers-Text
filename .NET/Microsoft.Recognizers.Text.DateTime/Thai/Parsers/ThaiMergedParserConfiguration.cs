@@ -30,15 +30,14 @@ namespace Microsoft.Recognizers.Text.DateTime.Thai
             AfterRegex = ThaiMergedExtractorConfiguration.AfterRegex;
             SinceRegex = ThaiMergedExtractorConfiguration.SinceRegex;
             YearAfterRegex = ThaiMergedExtractorConfiguration.YearAfterRegex;
-
-            YearRegex = null;
+            YearRegex = ThaiDatePeriodExtractorConfiguration.YearRegex;
             SuperfluousWordMatcher = null;
-            DatePeriodParser = null;
-            TimePeriodParser = null;
-            DateTimePeriodParser = null;
+
+            DatePeriodParser = new BaseDatePeriodParser(new ThaiDatePeriodParserConfiguration(this));
+            TimePeriodParser = new BaseTimePeriodParser(new ThaiTimePeriodParserConfiguration(this));
+            DateTimePeriodParser = new BaseDateTimePeriodParser(new ThaiDateTimePeriodParserConfiguration(this));
             GetParser = null;
             HolidayParser = null;
-
             TimeZoneParser = new BaseTimeZoneParser();
         }
     }

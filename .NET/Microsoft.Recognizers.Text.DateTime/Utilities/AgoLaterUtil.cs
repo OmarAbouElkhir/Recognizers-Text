@@ -82,35 +82,40 @@ namespace Microsoft.Recognizers.Text.DateTime
             SwiftDayDelegate SwiftDay)
         {
             var ret = new DateTimeResolutionResult();
-            var durationRes = durationExtractor.Extract(text, referenceTime);
-            if (durationRes.Count > 0)
-            {
-                var pr = durationParser.Parse(durationRes[0], referenceTime);
-                var matches = unitRegex.Matches(text);
-                if (matches.Count > 0)
-                {
 
-                    var afterStr =
-                            text.Substring((int)durationRes[0].Start + (int)durationRes[0].Length)
+            if (durationExtractor != null)
+            {
+                var durationRes = durationExtractor.Extract(text, referenceTime);
+                if (durationRes.Count > 0)
+                {
+                    var pr = durationParser.Parse(durationRes[0], referenceTime);
+                    var matches = unitRegex.Matches(text);
+                    if (matches.Count > 0)
+                    {
+
+                        var afterStr =
+                                text.Substring((int)durationRes[0].Start + (int)durationRes[0].Length)
+                                    .Trim().ToLowerInvariant();
+
+                        var beforeStr =
+                            text.Substring(0, (int)durationRes[0].Start)
                                 .Trim().ToLowerInvariant();
 
-                    var beforeStr =
-                        text.Substring(0, (int)durationRes[0].Start)
-                            .Trim().ToLowerInvariant();
+                        var mode = AgoLaterMode.Date;
+                        if (pr.TimexStr.Contains("T"))
+                        {
+                            mode = AgoLaterMode.DateTime;
+                        }
 
-                    var mode = AgoLaterMode.Date;
-                    if (pr.TimexStr.Contains("T"))
-                    {
-                        mode = AgoLaterMode.DateTime;
-                    }
-
-                    if (pr.Value != null)
-                    {
-                        return GetAgoLaterResult(pr, afterStr, beforeStr, referenceTime,
-                                                 utilityConfiguration, mode, SwiftDay);
+                        if (pr.Value != null)
+                        {
+                            return GetAgoLaterResult(pr, afterStr, beforeStr, referenceTime,
+                                                     utilityConfiguration, mode, SwiftDay);
+                        }
                     }
                 }
             }
+            
             return ret;
         }
         

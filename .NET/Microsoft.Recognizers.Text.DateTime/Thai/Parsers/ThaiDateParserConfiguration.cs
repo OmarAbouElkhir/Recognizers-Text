@@ -125,24 +125,32 @@ namespace Microsoft.Recognizers.Text.DateTime.Thai
 
             var match = RelativeDayRegex.Match(text);
 
-            if (trimedText.Equals("today"))
+            if (trimedText.Equals("วันนี้"))
             {
                 swift = 0;
             }
-            else if (trimedText.Equals("tomorrow") || trimedText.Equals("tmr"))
+            else if (trimedText.Equals("พรุ่งนี้") || trimedText.Equals("วันพรุ่งนี้"))
             {
                 swift = 1;
             }
-            else if (trimedText.Equals("yesterday"))
+            else if (trimedText.Equals("เมื่อวาน") || trimedText.Equals("เมื่อวานนี้"))
             {
                 swift = -1;
             }
-            else if (trimedText.EndsWith("day after tomorrow") ||
-                     trimedText.EndsWith("day after tmr"))
+            // day after tomorrow
+            else if (trimedText.Contains("วันถัดจากพรุ่งนี้") ||
+                     trimedText.Contains("วันหลังจากพรุ่งนี้") ||
+                     trimedText.Contains("วันถัดจากวันพรุ่งนี้") ||
+                     trimedText.Contains("วันหลังจากวันพรุ่งนี้") ||
+                     trimedText.Contains("มะรืนนี้") ||
+                     trimedText.Contains("มะรืน") ||
+                     trimedText.Contains("วันมะรืน") ||
+                     trimedText.Contains("วันมะรืนนี้"))
             {
                 swift = 2;
             }
-            else if (trimedText.EndsWith("day before yesterday"))
+            // day before yesterday
+            else if (trimedText.Contains("เมื่อวานซืน"))
             {
                 swift = -2;
             }
@@ -176,7 +184,9 @@ namespace Microsoft.Recognizers.Text.DateTime.Thai
         public bool IsCardinalLast(string text)
         {
             var trimedText = text.Trim().ToLowerInvariant();
-            return trimedText.Equals("last");
+
+            // (last) week, and (last) week of the month
+            return trimedText.Equals("ที่แล้ว") || trimedText.Equals("ที่ผ่านมา") || trimedText.Equals("สุดท้าย");
         }
     }
 }

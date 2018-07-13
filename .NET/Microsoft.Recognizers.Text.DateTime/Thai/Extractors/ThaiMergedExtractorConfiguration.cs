@@ -73,17 +73,22 @@ namespace Microsoft.Recognizers.Text.DateTime.Thai
         {
             Options = options;
             DateExtractor = new BaseDateExtractor(new ThaiDateExtractorConfiguration());
-            TimeExtractor = null;
-            DateTimeExtractor = null;
-            DatePeriodExtractor = null;
-            TimePeriodExtractor = null;
-            DateTimePeriodExtractor = null;
-            DurationExtractor = null;
+            TimeExtractor = new BaseTimeExtractor(new ThaiTimeExtractorConfiguration(options));
+            DateTimeExtractor = new BaseDateTimeExtractor(new ThaiDateTimeExtractorConfiguration(options));
+            DatePeriodExtractor = new BaseDatePeriodExtractor(new ThaiDatePeriodExtractorConfiguration());
+            TimePeriodExtractor = new BaseTimePeriodExtractor(new ThaiTimePeriodExtractorConfiguration(options));
+            DateTimePeriodExtractor = new BaseDateTimePeriodExtractor(new ThaiDateTimePeriodExtractorConfiguration(options));
+            DurationExtractor = new BaseDurationExtractor(new ThaiDurationExtractorConfiguration(options));
             SetExtractor = null;
             HolidayExtractor = null;
             TimeZoneExtractor = null;
             DateTimeAltExtractor = null;
             IntegerExtractor = Number.Thai.IntegerExtractor.GetInstance();
+
+            // if ((options & DateTimeOptions.EnablePreview) != 0)
+            // {
+            //     SuperfluousWordMatcher.Init(DateTimeDefinitions.SuperfluousWordList);
+            // }
         }
 
         Regex IMergedExtractorConfiguration.AfterRegex => AfterRegex;

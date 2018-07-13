@@ -6,7 +6,6 @@ namespace Microsoft.Recognizers.Text.DateTime.English
 {
     public sealed class EnglishMergedParserConfiguration : EnglishCommonDateTimeParserConfiguration, IMergedParserConfiguration
     {
-
         public Regex BeforeRegex { get; }
 
         public Regex AfterRegex { get; }

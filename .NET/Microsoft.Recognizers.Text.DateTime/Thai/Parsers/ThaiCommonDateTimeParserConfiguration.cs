@@ -36,19 +36,19 @@ namespace Microsoft.Recognizers.Text.DateTime.Thai
 
             NumberParser = new BaseNumberParser(new ThaiNumberParserConfiguration());
             DateExtractor = new BaseDateExtractor(new ThaiDateExtractorConfiguration());
-            TimeExtractor = null;
-            DateTimeExtractor = null;
-            DurationExtractor = null;
-            DatePeriodExtractor = null;
-            TimePeriodExtractor = null;
-            DateTimePeriodExtractor = null;
-            DurationParser = null;
+            TimeExtractor = new BaseTimeExtractor(new ThaiTimeExtractorConfiguration(options));
+            DateTimeExtractor = new BaseDateTimeExtractor(new ThaiDateTimeExtractorConfiguration(options));
+            DurationExtractor = new BaseDurationExtractor(new ThaiDurationExtractorConfiguration(options));
+            DatePeriodExtractor = new BaseDatePeriodExtractor(new ThaiDatePeriodExtractorConfiguration());
+            TimePeriodExtractor = new BaseTimePeriodExtractor(new ThaiTimePeriodExtractorConfiguration(options));
+            DateTimePeriodExtractor = new BaseDateTimePeriodExtractor(new ThaiDateTimePeriodExtractorConfiguration(options));
+            DurationParser = new BaseDurationParser(new ThaiDurationParserConfiguration(this));
             DateParser = new BaseDateParser(new ThaiDateParserConfiguration(this));
-            TimeParser = null;
-            DateTimeParser = null;
-            DatePeriodParser = null;
-            TimePeriodParser = null;
-            DateTimePeriodParser = null;
+            TimeParser = new TimeParser(new ThaiTimeParserConfiguration(this));
+            DateTimeParser = new BaseDateTimeParser(new ThaiDateTimeParserConfiguration(this));
+            DatePeriodParser = new BaseDatePeriodParser(new ThaiDatePeriodParserConfiguration(this));
+            TimePeriodParser = new BaseTimePeriodParser(new ThaiTimePeriodParserConfiguration(this));
+            DateTimePeriodParser = new BaseDateTimePeriodParser(new ThaiDateTimePeriodParserConfiguration(this));
             DateTimeAltParser = null;
         }
 

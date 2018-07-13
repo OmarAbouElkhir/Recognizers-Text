@@ -168,7 +168,11 @@ namespace Microsoft.Recognizers.Text.DateTime
 
         private List<ExtractResult> FilterUnspecificDatePeriod(List<ExtractResult> ers, string text)
         {
-            ers.RemoveAll(o => this.config.UnspecificDatePeriodRegex.IsMatch(o.Text));
+            if (this.config.UnspecificDatePeriodRegex != null)
+            {
+                ers.RemoveAll(o => this.config.UnspecificDatePeriodRegex.IsMatch(o.Text));
+            }
+
             return ers;
         }
 

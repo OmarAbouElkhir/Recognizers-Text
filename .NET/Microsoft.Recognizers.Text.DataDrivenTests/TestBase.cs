@@ -88,8 +88,6 @@ namespace Microsoft.Recognizers.Text.DataDrivenTests
 
                 Assert.AreEqual(expected.TypeName, actual.TypeName, GetMessage(TestSpec));
                 Assert.AreEqual(expected.Text, actual.Text, GetMessage(TestSpec));
-                Assert.AreEqual(expected.Start, actual.Start, GetMessage(TestSpec));
-                Assert.AreEqual(expected.End, actual.End, GetMessage(TestSpec));
 
                 var values = actual.Resolution as IDictionary<string, object>;
                 var actualValues = (values[ResolutionKey.ValueSet] as IList<Dictionary<string, string>>).ToList();

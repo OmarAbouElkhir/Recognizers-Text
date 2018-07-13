@@ -314,11 +314,10 @@ namespace Microsoft.Recognizers.Text.DateTime
                 var midBegin = points[idx].Start + points[idx].Length ?? 0;
                 var midEnd = points[idx + 1].Start?? 0;
 
-                if (midEnd - midBegin > 0)
+                if (midEnd - midBegin >= 0)
                 {
                     var midStr = text.Substring(midBegin, midEnd-midBegin);
-                    if ((string.IsNullOrWhiteSpace(midStr) && !string.IsNullOrEmpty(midStr)) ||
-                        midStr.TrimStart().StartsWith(this.config.TokenBeforeDate))
+                    if (string.IsNullOrWhiteSpace(midStr) || midStr.TrimStart().StartsWith(this.config.TokenBeforeDate))
                     {
                         ret.Add(new Token(points[idx].Start ?? 0, points[idx + 1].Start + points[idx + 1].Length ?? 0));
                         idx += 2;

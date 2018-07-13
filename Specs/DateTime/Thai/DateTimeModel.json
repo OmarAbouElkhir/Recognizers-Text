@@ -3,9 +3,10 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T00:00:00"
   },
+  "NotSupported": "javascript, python",
   "Results": [
     {
-      "Text": "2/ตค",
+      "Text": "วันที่ 2/ตค",
       "TypeName": "datetimeV2.date",
       "Resolution": {
         "values": [
@@ -30,9 +31,10 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T00:00:00"
   },
+  "NotSupported": "javascript, python",
   "Results": [
     {
-      "Text": "22/04",
+      "Text": "วันที่ 22/04",
       "TypeName": "datetimeV2.date",
       "Resolution": {
         "values": [
@@ -57,6 +59,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T00:00:00"
   },
+  "NotSupported": "javascript, python",
   "Results": [
     {
       "Text": "พฤษภาคมวันที่ยี่สิบเก้า",
@@ -84,9 +87,10 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T00:00:00"
   },
+  "NotSupported": "javascript, python",
   "Results": [
     {
-      "Text": "สองส.ค.",
+      "Text": "วันที่สองส.ค.",
       "TypeName": "datetimeV2.date",
       "Resolution": {
         "values": [
@@ -111,6 +115,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T00:00:00"
   },
+  "NotSupported": "javascript, python",
   "Results": [
     {
       "Text": "วันนี้",
@@ -133,6 +138,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T00:00:00"
   },
+  "NotSupported": "javascript, python",
   "Results": [
     {
       "Text": "พรุ่งนี้",
@@ -155,6 +161,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T00:00:00"
   },
+  "NotSupported": "javascript, python",
   "Results": [
     {
       "Text": "เมื่อวาน",
@@ -177,6 +184,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T00:00:00"
   },
+  "NotSupported": "javascript, python",
   "Results": [
     {
       "Text": "วันศุกร์",
@@ -204,6 +212,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T00:00:00"
   },
+  "NotSupported": "dotNet, javascript, python",
   "Results": [
     {
       "Text": "ตั้งแต่ 4-23 ในเดือนหน้า",
@@ -227,6 +236,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T00:00:00"
   },
+  "NotSupported": "javascript, python",
   "Results": [
     {
       "Text": "ระหว่างวันที่ 3 และ 12 ของเดือนกันยา",
@@ -256,6 +266,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T00:00:00"
   },
+  "NotSupported": "javascript, python",
   "Results": [
     {
       "Text": "เดือนกันยายนนี้",
@@ -279,6 +290,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T00:00:00"
   },
+  "NotSupported": "javascript, python",
   "Results": [
     {
       "Text": "วันที่ 12 มกราคม 2016 - 01/22/2016",
@@ -298,33 +310,11 @@
 }
 ,
 {
-  "Input": "ฉันจะไม่อยู่ 3 วันถัดไป",
-  "Context": {
-    "ReferenceDateTime": "2016-11-07T00:00:00"
-  },
-  "Results": [
-    {
-      "Text": "3 วันถัดไป",
-      "TypeName": "datetimeV2.daterange",
-      "Resolution": {
-        "values": [
-          {
-            "timex": "(2016-11-08,2016-11-11,P3D)",
-            "type": "daterange",
-            "start": "2016-11-08",
-            "end": "2016-11-11"
-          }
-        ]
-      }
-    }
-  ]
-}
-,
-{
   "Input": "ฉันจะไม่อยู่ตอนสัปดาห์สุดท้ายของเดือนกรกฎาคม",
   "Context": {
     "ReferenceDateTime": "2016-11-07T00:00:00"
   },
+  "NotSupported": "dotNet, javascript, python",
   "Results": [
     {
       "Text": "สัปดาห์สุดท้ายของเดือนกรกฎาคม",
@@ -354,6 +344,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T00:00:00"
   },
+  "NotSupported": "javascript, python",
   "Results": [
     {
       "Text": "2015-3",
@@ -377,7 +368,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T00:00:00"
   },
-  "NotSupported": "python",
+  "NotSupported": "javascript, python",
   "Results": [
     {
       "Text": "ฤดูร้อนนี้",
@@ -400,6 +391,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T00:00:00"
   },
+  "NotSupported": "javascript, python",
   "Results": [
     {
       "Text": "ตั้งแต่พรุ่งนี้",
@@ -423,6 +415,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T00:00:00"
   },
+  "NotSupported": "javascript, python",
   "Results": [
     {
       "Text": "ตั้งแต่สิงหาคม",
@@ -452,6 +445,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T00:00:00"
   },
+  "NotSupported": "javascript, python",
   "Results": [
     {
       "Text": "ตั้งแต่สิงหาคมนี้",
@@ -475,6 +469,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T00:00:00"
   },
+  "NotSupported": "dotNet, javascript, python",
   "Results": [
     {
       "Text": "ตอนนี้",
@@ -493,10 +488,11 @@
 }
 ,
 {
-  "Input": "ฉันจะกลับวันที่ 14 ตุลาคม ตอน 8:00:31",
+  "Input": "ฉันจะกลับวันที่ 14 ตุลาคม ตอน 8:00:31 น.",
   "Context": {
     "ReferenceDateTime": "2016-11-07T00:00:00"
   },
+  "NotSupported": "javascript, python",
   "Results": [
     {
       "Text": "วันที่ 14 ตุลาคม ตอน 8:00:31 น.",
@@ -524,6 +520,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T00:00:00"
   },
+  "NotSupported": "javascript, python",
   "Results": [
     {
       "Text": "พรุ่งนี้ 8:00 น",
@@ -546,6 +543,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T00:00:00"
   },
+  "NotSupported": "dotNet, javascript, python",
   "Results": [
     {
       "Text": "10 โมง คืนนี้",
@@ -568,6 +566,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T00:00:00"
   },
+  "NotSupported": "dotNet, javascript, python",
   "Results": [
     {
       "Text": "8 โมงเช้านี้",
@@ -590,6 +589,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T00:00:00"
   },
+  "NotSupported": "javascript, python",
   "Results": [
     {
       "Text": "สิ้นวันพรุ่งนี้",
@@ -612,6 +612,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T00:00:00"
   },
+  "NotSupported": "javascript, python",
   "Results": [
     {
       "Text": "สิ้นวันอาทิตย์",
@@ -639,6 +640,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T00:00:00"
   },
+  "NotSupported": "javascript, python",
   "Results": [
     {
       "Text": "สิ้นวันอาทิตย์นี้",
@@ -661,6 +663,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T16:12:00"
   },
+  "NotSupported": "dotNet, javascript, python",
   "Results": [
     {
       "Text": "ห้าโมงถึงเจ็ดโมงวันนี้",
@@ -690,6 +693,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T16:12:00"
   },
+  "NotSupported": "dotNet, javascript, python",
   "Results": [
     {
       "Text": "ตั้งแต่ 5 โมงถึง 6 โมงเย็น ในวันที่ 22 เมษา",
@@ -719,6 +723,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T16:12:00"
   },
+  "NotSupported": "dotNet, javascript, python",
   "Results": [
     {
       "Text": "3:00 ถึง 4:00 พรุ่งนี้",
@@ -748,6 +753,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T16:12:00"
   },
+  "NotSupported": "dotNet, javascript, python",
   "Results": [
     {
       "Text": "เย็นนี้",
@@ -771,6 +777,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T16:12:00"
   },
+  "NotSupported": "javascript, python",
   "Results": [
     {
       "Text": "คืนพรุ่งนี้",
@@ -794,6 +801,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T16:12:00"
   },
+  "NotSupported": "javascript, python",
   "Results": [
     {
       "Text": "วันจันทร์หน้าตอนบ่าย",
@@ -817,6 +825,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T16:12:00"
   },
+  "NotSupported": "javascript, python",
   "Results": [
     {
       "Text": "ชั่วโมงหน้า",
@@ -840,6 +849,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T16:12:00"
   },
+  "NotSupported": "javascript, python",
   "Results": [
     {
       "Text": "วันอังคารตอนเช้า",
@@ -869,6 +879,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T00:00:00"
   },
+  "NotSupported": "javascript, python",
   "Results": [
     {
       "Text": "3 ชม.",
@@ -891,6 +902,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T00:00:00"
   },
+  "NotSupported": "javascript, python",
   "Results": [
     {
       "Text": "3.5ปี",
@@ -913,6 +925,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T00:00:00"
   },
+  "NotSupported": "javascript, python",
   "Results": [
     {
       "Text": "3 นาที",
@@ -935,6 +948,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T00:00:00"
   },
+  "NotSupported": "javascript, python",
   "Results": [
     {
       "Text": "123.45 วินาที",
@@ -957,6 +971,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T00:00:00"
   },
+  "NotSupported": "javascript, python",
   "Results": [
     {
       "Text": "ทั้งวัน",
@@ -979,7 +994,7 @@
   "Context": {
     "ReferenceDateTime": "2017-12-04T00:00:00"
   },
-  "NotSupported": "javascript",
+  "NotSupported": "javascript, python",
   "Results": [
     {
       "Text": "สัปดาห์หน้าวันจ.",
@@ -1016,14 +1031,14 @@
 }
 ,
 {
-  "Input": "คอร์ทานา โปรดตั้งการโทรสไกป์ตอนอาทิตย์หน้าวันอังคารหรือวันพฤหัส",
+  "Input": "คอร์ทานา โปรดตั้งการโทรสไกป์ตอนสัปดาห์หน้าวันอังคารหรือวันพฤหัส",
   "Context": {
     "ReferenceDateTime": "2017-12-04T00:00:00"
   },
-  "NotSupported": "javascript",
+  "NotSupported": "javascript, python",
   "Results": [
     {
-      "Text": "อาทิตย์หน้าวันอังคาร",
+      "Text": "สัปดาห์หน้าวันอังคาร",
       "TypeName": "datetimeV2.date",
       "Resolution": {
         "values": [
@@ -1061,7 +1076,7 @@
   "Context": {
     "ReferenceDateTime": "2018-01-07T00:00:00"
   },
-  "NotSupported": "javascript",
+  "NotSupported": "javascript, python",
   "Results": [
     {
       "Text": "วันอ. ที่ 9 พฤษภาคม",
@@ -1085,11 +1100,41 @@
 }
 ,
 {
+  "Input": "มันอาจเป็นเดือนพฤษภาคม",
+  "Context": {
+    "ReferenceDateTime": "2018-01-07T00:00:00"
+  },
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "เดือนพฤษภาคม",
+      "TypeName": "datetimeV2.daterange",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "XXXX-05",
+            "type": "daterange",
+            "start": "2017-05-01",
+            "end": "2017-06-01"
+          },
+          {
+            "timex": "XXXX-05",
+            "type": "daterange",
+            "start": "2018-05-01",
+            "end": "2018-06-01"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
   "Input": "มีวันว่างอยู่ 2-3 วันในสัปดาห์ของวันที่ 10 เมษายน  ฉันว่าเราควรโทรไปคุยเผื่อว่าจะมีทางเลือกอื่นๆ",
   "Context": {
     "ReferenceDateTime": "2018-03-14T01:00:00"
   },
-  "NotSupported": "javascript, python",
+  "NotSupported": "dotNet, javascript, python",
   "Results": [
     {
       "Text": "สัปดาห์ของวันที่ 10 เมษายน",
@@ -1119,11 +1164,10 @@
   "Context": {
     "ReferenceDateTime": "2018-04-07T00:00:00"
   },
+  "NotSupported": "javascript, python",
   "Results": [
     {
       "Text": "วันที่ 1 กรกฎาคม",
-      "Start": 13,
-      "End": 20,
       "TypeName": "datetimeV2.date",
       "Resolution": {
         "values": [
@@ -1148,7 +1192,7 @@
   "Context": {
     "ReferenceDateTime": "2018-05-18T00:00:00"
   },
-  "NotSupportedByDesign": "javascript, python",
+  "NotSupported": "javascript, python",
   "Results": [
     {
       "Text": "ตอนเช้าวันพุธ",
@@ -1166,13 +1210,14 @@
       }
     }
   ]
-},
+}
+,
 {
   "Input": "ฉันจะเดินทางไปปักกิ่งวันนี้ตอนกลางวัน",
   "Context": {
     "ReferenceDateTime": "2018-05-18T00:00:00"
   },
-  "NotSupportedByDesign": "javascript, python",
+  "NotSupported": "javascript, python",
   "Results": [
     {
       "Text": "วันนี้ตอนกลางวัน",
@@ -1190,13 +1235,14 @@
       }
     }
   ]
-},
+}
+,
 {
   "Input": "ฉันจะเดินทางไปปักกิ่งภายในวันนี้",
   "Context": {
     "ReferenceDateTime": "2018-05-18T00:00:00"
   },
-  "NotSupportedByDesign": "javascript, python",
+  "NotSupported": "javascript, python",
   "Results": [
     {
       "Text": "ภายในวันนี้",
@@ -1217,15 +1263,35 @@
 }
 ,
 {
+  "Input": "โบนัสของเดือนเมษายน 2017 เป็นเท่าไหร่",
+  "Context": {
+    "ReferenceDateTime": "2018-05-24T00:00:00"
+  },
+  "NotSupported": "javascript, python",
+  "Results": [{
+    "Text": "เดือนเมษายน 2017",
+    "TypeName": "datetimeV2.daterange",
+    "Resolution": {
+      "values": [
+        {
+          "timex": "2017-04",
+          "type": "daterange",
+          "start": "2017-04-01",
+          "end": "2017-05-01"
+        }
+      ]
+    }
+  }]
+}
+,
+{
   "Input": "ฉันกลับไปจีนในเดือนเมษายน 2017",
   "Context": {
     "ReferenceDateTime": "2018-05-24T00:00:00"
   },
-  "NotSupported": "python",
+  "NotSupported": "javascript, python",
   "Results": [{
     "Text": "เดือนเมษายน 2017",
-    "Start": 24,
-    "End": 33,
     "TypeName": "datetimeV2.daterange",
     "Resolution": {
       "values": [
@@ -1245,11 +1311,9 @@
   "Context": {
     "ReferenceDateTime": "2018-05-24T00:00:00"
   },
-  "NotSupported": "python",
+  "NotSupported": "javascript, python",
   "Results": [{
     "Text": "เดือนเมษายน",
-    "Start": 28,
-    "End": 32,
     "TypeName": "datetimeV2.daterange",
     "Resolution": {
       "values": [
@@ -1278,8 +1342,6 @@
   "NotSupported": "javascript, python",
   "Results": [{
     "Text": "สองวันหลังจากวันนี้",
-    "Start": 18,
-    "End": 37,
     "TypeName": "datetimeV2.date",
     "Resolution": {
       "values": [
@@ -1301,8 +1363,6 @@
   "NotSupported": "javascript, python",
   "Results": [{
     "Text": "สามอาทิตย์ถัดจากวันพรุ่งนี้",
-    "Start": 18,
-    "End": 42,
     "TypeName": "datetimeV2.date",
     "Resolution": {
       "values": [
@@ -1321,11 +1381,9 @@
   "Context": {
     "ReferenceDateTime": "2018-05-31T00:00:00"
   },
-  "NotSupported": "javascript, python",
+  "NotSupported": "dotNet, javascript, python",
   "Results": [{
     "Text": "สองวันก่อนเมื่อวานนี้",
-    "Start": 15,
-    "End": 39,
     "TypeName": "datetimeV2.date",
     "Resolution": {
       "values": [
@@ -1344,11 +1402,9 @@
   "Context": {
     "ReferenceDateTime": "2018-05-01T00:00:00"
   },
-  "NotSupported": "python",
+  "NotSupported": "javascript, python",
   "Results": [{
     "Text": "วันที่ 31 ธ.ค. 1994",
-    "Start": 23,
-    "End": 36,
     "TypeName": "datetimeV2.date",
     "Resolution": {
       "values": [
@@ -1367,11 +1423,9 @@
   "Context": {
     "ReferenceDateTime": "2018-05-01T00:00:00"
   },
-  "NotSupported": "python",
+  "NotSupported": "dotNet, javascript, python",
   "Results": [{
     "Text": "3/5/18 @ 17:49:19",
-    "Start": 13,
-    "End": 29,
     "TypeName": "datetimeV2.datetime",
     "Resolution": {
       "values": [
@@ -1390,11 +1444,9 @@
   "Context": {
     "ReferenceDateTime": "2018-05-31T00:00:00"
   },
-  "NotSupported": "javascript,python",
+  "NotSupported": "javascript, python",
   "Results": [{
     "Text": "ระหว่าง 10 ถึง 11:30 น. ในวันที่ 1/1/2015",
-    "Start": 15,
-    "End": 46,
     "TypeName": "datetimeV2.datetimerange",
     "Resolution": {
       "values": [
@@ -1420,11 +1472,9 @@
   "Context": {
     "ReferenceDateTime": "2018-05-31T00:00:00"
   },
-  "NotSupported": "javascript,python",
+  "NotSupported": "javascript, python",
   "Results": [{
     "Text": "วันที่ 1/1/2015 ระหว่าง 10 และ 11:30 นาฬิกา",
-    "Start": 15,
-    "End": 43,
     "TypeName": "datetimeV2.datetimerange",
     "Resolution": {
       "values": [
@@ -1450,11 +1500,9 @@
   "Context": {
     "ReferenceDateTime": "2018-05-31T00:00:00"
   },
-  "NotSupported": "javascript,python",
+  "NotSupported": "javascript, python",
   "Results": [{
     "Text": "ตั้งแต่ 10:30 น. ถึง 3 น. ในวันที่ 1/1/2015",
-    "Start": 15,
-    "End": 41,
     "TypeName": "datetimeV2.datetimerange",
     "Resolution": {
       "values": [
@@ -1474,11 +1522,9 @@
   "Context": {
     "ReferenceDateTime": "2018-05-31T00:00:00"
   },
-  "NotSupported": "javascript,python",
+  "NotSupported": "dotNet, javascript, python",
   "Results": [{
     "Text": "ระหว่าง 3 ถึง 5 โมงในวันที่ 1/1/2015",
-    "Start": 15,
-    "End": 41,
     "TypeName": "datetimeV2.datetimerange",
     "Resolution": {
       "values": [
@@ -1504,11 +1550,9 @@
   "Context": {
     "ReferenceDateTime": "2018-05-31T00:00:00"
   },
-  "NotSupported": "javascript,python",
+  "NotSupported": "javascript, python",
   "Results": [{
     "Text": "ตั้งแต่ 3:30 ถึง 5:55 นาฬิกาในวันที่ 1/1/2015",
-    "Start": 15,
-    "End": 43,
     "TypeName": "datetimeV2.datetimerange",
     "Resolution": {
       "values": [
@@ -1534,11 +1578,9 @@
   "Context": {
     "ReferenceDateTime": "2018-05-31T00:00:00"
   },
-  "NotSupported": "javascript,python",
+  "NotSupported": "javascript, python",
   "Results": [{
     "Text": "ก่อน คศ 2010",
-    "Start": 14,
-    "End": 24,
     "TypeName": "datetimeV2.daterange",
     "Resolution": {
       "values": [
@@ -1553,8 +1595,6 @@
   },
   {
     "Text": "หลัง คศ 2018",
-    "Start": 29,
-    "End": 38,
     "TypeName": "datetimeV2.daterange",
     "Resolution": {
       "values": [
@@ -1574,11 +1614,9 @@
   "Context": {
     "ReferenceDateTime": "2018-05-31T00:00:00"
   },
-  "NotSupported": "javascript,python",
+  "NotSupported": "javascript, python",
   "Results": [{
     "Text": "หลังปี 2010",
-    "Start": 14,
-    "End": 23,
     "TypeName": "datetimeV2.daterange",
     "Resolution": {
       "values": [
@@ -1593,8 +1631,6 @@
   },
   {
     "Text": "ก่อนปี 2018",
-    "Start": 29,
-    "End": 39,
     "TypeName": "datetimeV2.daterange",
     "Resolution": {
       "values": [
@@ -1609,8 +1645,6 @@
   },
   {
     "Text": "ก่อนปี 2000",
-    "Start": 44,
-    "End": 54,
     "TypeName": "datetimeV2.daterange",
     "Resolution": {
       "values": [
@@ -1625,8 +1659,6 @@
   },
   {
     "Text": "ปี 1998",
-    "Start": 64,
-    "End": 67,
     "TypeName": "datetimeV2.daterange",
     "Resolution": {
       "values": [
@@ -1646,11 +1678,9 @@
   "Context": {
     "ReferenceDateTime": "2018-06-20T00:00:00"
   },
-  "NotSupported": "python",
+  "NotSupported": "javascript, python",
   "Results": [{
     "Text": "วันศุกร์นี้ 15 มิย",
-    "Start": 45,
-    "End": 62,
     "TypeName": "datetimeV2.date",
     "Resolution": {
       "values": [
@@ -1674,11 +1704,9 @@
   "Context": {
     "ReferenceDateTime": "2018-06-20T00:00:00"
   },
-  "NotSupported": "python",
+  "NotSupported": "javascript, python",
   "Results": [{
     "Text": "วันศุกร์นี้ (15-มิย)",
-    "Start": 45,
-    "End": 64,
     "TypeName": "datetimeV2.date",
     "Resolution": {
       "values": [

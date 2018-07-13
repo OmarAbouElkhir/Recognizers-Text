@@ -16,23 +16,25 @@ PastPrefixRegex: !simpleRegex
   def: (ก่อน\s*หน้า|ก่อน|ที่\s*แล้ว|ที่\s*ผ่าน\s*มา)
 ThisPrefixRegex: !simpleRegex
   def: (นี้|ปัจจุบัน)
+CenturySuffixRegex: !simpleRegex
+  def: (^century)
 ReferencePrefixRegex: !simpleRegex
   def: (นั้น|เดียวกัน)
 FutureSuffixRegex: !simpleRegex
   def: (ใน\s*)?(อนาคต|จาก\s*นี้\s*ไป|ต่อจากนี้\s*ไป|ตั้งแต่\s*นี้\s*ไป|ต่อ\s*แต่\s*นี้\s*ไป|ตั้งแต่\s*นี้\s*ต่อไป|นับจากนี้\s*ไป|นับ\s*แต่\s*นี้\s*ไป)
 DayRegex: !simpleRegex
-  def: (วัน\s*ที่\s*)?(?<day>01|02|03|04|05|06|07|08|09|10th|10|11th|11st|11|12nd|12th|12|13rd|13th|13|14th|14|15th|15|16th|16|17th|17|18th|18|19th|19|1st|1|20th|20|21st|21th|21|22nd|22th|22|23rd|23th|23|24th|24|25th|25|26th|26|27th|27|28th|28|29th|29|2nd|2|30th|30|31st|31|3rd|3|4th|4|5th|5|6th|6|7th|7|8th|8|9th|9)(?=\b|t)
+  def: (วัน\s*ที่\s*)?\b(?<day>01|02|03|04|05|06|07|08|09|10th|10|11th|11st|11|12nd|12th|12|13rd|13th|13|14th|14|15th|15|16th|16|17th|17|18th|18|19th|19|1st|1|20th|20|21st|21th|21|22nd|22th|22|23rd|23th|23|24th|24|25th|25|26th|26|27th|27|28th|28|29th|29|2nd|2|30th|30|31st|31|3rd|3|4th|4|5th|5|6th|6|7th|7|8th|8|9th|9)(?=\b|t)
 MonthNumRegex: !simpleRegex
-  def:  (เดือน\s*)?(?<month>01|02|03|04|05|06|07|08|09|10|11|12|1|2|3|4|5|6|7|8|9)
+  def:  (เดือน\s*)?\b(?<month>01|02|03|04|05|06|07|08|09|10|11|12|1|2|3|4|5|6|7|8|9)\b
 CenturyRegex: !simpleRegex
   def: (?<century>((หนึ่ง|สอง)\s*พัน(\s*(หนึ่ง|สอง|สาม|สี่|ห้า|หก|เจ็ด|แปด|เก้า)\s*ร้อย)?)|((หนึ่ง|สอง|สาม|สี่|ห้า|หก|เจ็ด|แปด|เก้า)\s*(ร้อย)))
 WrittenNumRegex: !simpleRegex
   def: (เอ็ด|หนึ่ง|สอง|สาม|สี่|ห้า|หก|เจ็ด|แปด|เก้า|สิบ|สิบ\s*เอ็ด|สิบ\s*สอง|สิบ\s*สาม|สิบ\s*สี่|สิบ\s*ห้า|สิบ\s*หก|สิบ\s*เจ็ด|สิบ\s*แปด|สิบ\s*เก้า|ยี่\s*สิบ|สาม\s*สิบ|สี่\s*สิบ|ห้า\s*สิบ|หก\s*สิบ|เจ็ด\s*สิบ|แปด\s*สิบ|เก้า\s*สิบ)
 FullTextYearRegex: !nestedRegex
-  def: ((ปี|ค\.?ศ\.?|พ\.?ศ\.?)\s*)?((?<firsttwoyearnum>{CenturyRegex})\s*(?<lasttwoyearnum>((สิบ|ยี่\s*สิบ|สาม\s*สิบ|สี่\s*สิบ|ห้า\s*สิบ|หก\s*สิบ|เจ็ด\s*สิบ|แปด\s*สิบ|เก้า\s*สิบ)(\s*(เอ็ด|สอง|สาม|สี่|ห้า|หก|เจ็ด|แปด|เก้า))?)|{WrittenNumRegex})|(?<firsttwoyearnum>{CenturyRegex})|(?<fouryearnum>(หนึ่ง|สอง)\s*((ศูนย์|หนึ่ง|สอง|สาม|สี่|ห้า|หก|เจ็ด|แปด|เก้า)\s*){3}))
+  def: (((ปี|ค\.?ศ\.?|พ\.?ศ\.?)\s*)?((?<firsttwoyearnum>{CenturyRegex})\s*(?<lasttwoyearnum>((สิบ|ยี่\s*สิบ|สาม\s*สิบ|สี่\s*สิบ|ห้า\s*สิบ|หก\s*สิบ|เจ็ด\s*สิบ|แปด\s*สิบ|เก้า\s*สิบ)(\s*(เอ็ด|สอง|สาม|สี่|ห้า|หก|เจ็ด|แปด|เก้า))?)|{WrittenNumRegex})|(?<firsttwoyearnum>{CenturyRegex})|(?<fouryearnum>(หนึ่ง|สอง)\s*((ศูนย์|หนึ่ง|สอง|สาม|สี่|ห้า|หก|เจ็ด|แปด|เก้า)\s*){3})))
   references: [ CenturyRegex, WrittenNumRegex ]
 YearNumRegex: !simpleRegex
-  def: (((ปี|ค\.?ศ\.?)\s*)?(?<year>((1[5-9]|20)\d{2})|2100))|(((ปี|พ\.?ศ\.?)\s*)?(?<thyear>2[2-5]\d{2}|26[0-3][0-9]|264[0-3]))
+  def: ((((ปี|ค\.?ศ\.?)\s*)?(?<year>((1[5-9]|20)\d{2})|2100))|(((ปี|พ\.?ศ\.?)\s*)?(?<year>2[2-5]\d{2}|26[0-3][0-9]|264[0-3])))
 YearRegex: !nestedRegex
   def: ({YearNumRegex}|{FullTextYearRegex})
   references: [ YearNumRegex, FullTextYearRegex ]
@@ -78,7 +80,7 @@ WeekOfYearRegex: !nestedRegex
   def: (?<woy>(สัปดาห์|สัปดา|อาทิตย์|วีค)\s*(?<cardinal>แรก|ที่\s*(หนึ่ง|1)|ที่\s*(สอง|2)|ที่\s*(สาม|3)|ที่\s*(สี่|4)|ที่\s*(ห้า|5)|สุดท้าย)(\s*(ของ|ใน))?\s*({YearRegex}|ปี\s*{RelativeRegex}))
   references: [ YearRegex, RelativeRegex ]
 FollowedDateUnit: !nestedRegex
-  def: ^\s*{DateUnitRegex}
+  def: ({DateUnitRegex})
   references: [ DateUnitRegex ]
 NumberCombinedWithDateUnit: !nestedRegex
   def: (?<num>\d+(\.\d*)?){DateUnitRegex}
@@ -117,7 +119,7 @@ PrefixPeriodRegex: !nestedRegex
 PrefixDayRegex: !simpleRegex
   def: ((?<EarlyPrefix>ต้น|ตอน\s*ต้น|ช่วง\s*ต้น|ต้น\s*ๆ\s*)|(?<MidPrefix>กลาง|ตอน\s*กลาง|ช่วง\s*กลาง|กลาง\s*ๆ\s*)|(?<LatePrefix>ปลาย|สิ้น|ท้าย|ตอน\s*สิ้น|ตอน\s*ท้าย|ช่วง\s*สิ้น|ช่วง\s*ท้าย|ปลาย\s*ๆ\s*|ท้าย\s*ๆ\s*))(\s*ของ)?(\s*วัน)?$
 SeasonDescRegex: !simpleRegex
-  def: (?<seas>(ฤดู\s*ใบไม้\s*ผลิ|หน้า\s*ร้อน|ฤดู\s*ร้อน|ฤดู\s*ใบไม้\s*ร่วง|หน้า\s*หนาว|ฤดู\s*หนาว|หน้า\s*ฝน|ฤดู\s*ฝน)
+  def: (?<seas>(ฤดู\s*ใบไม้\s*ผลิ|หน้า\s*ร้อน|ฤดู\s*ร้อน|ฤดู\s*ใบไม้\s*ร่วง|หน้า\s*หนาว|ฤดู\s*หนาว|หน้า\s*ฝน|ฤดู\s*ฝน))
 SeasonRegex: !nestedRegex
   def: (?<season>({PrefixPeriodRegex}\s*)?{SeasonDescRegex}(\s*{RelativeRegex})?((\s*(ของ|ใน)|\s*,\s*)?\s*({YearRegex}|ปี\s*{RelativeRegex}))?)
   references: [ YearRegex, RelativeRegex, SeasonDescRegex, PrefixPeriodRegex ]
@@ -129,9 +131,8 @@ MonthOfRegex: !simpleRegex
   def: (เดือน)(\s*ของ)
 MonthRegex: !simpleRegex
   def: (เดือน\s*)?(?<month>เมษายน|พฤษภาคม|มิถุนายน|กรกฎาคม|สิงหาคม|กันยายน|ตุลาคม|พฤศจิกายน|ธันวาคม|มกราคม|กุมภาพันธ์|มีนาคม|เมษา|พฤษภา|มิถุนา|กรกฎา|สิงหา|กันยา|ตุลา|พฤศจิกา|พฤศจิ|ธันวา|มกรา|กุมภา|มีนา|เม\.?ย\.?|พ\.?ค\.?|มิ\.?ย\.?|ก\.?ค\.?|ส\.?ค\.?|ก\.?ย\.?|ต\.?ค\.?|พ\.?ย\.?|ธ\.?ค\.?|ม\.?ค\.?|ก\.?พ\.?|มี\.?ค\.?)
-#Cases collected from mined data 
 AmbiguousMonthP0Regex: !simpleRegex
-  def: \b((^may i)|(i|you|he|she|we|they)\s+may|(may\s+((((also|not|(also not)|well)\s+)?(be|contain|constitute|email|e-mail|take|have|result|involve|get|work|reply))|(or may not))))\b
+  def: ((^ขออนุญาตฉัน)|(ฉัน|คุณ|เขา|เธอ|เรา|พวกเขา)\s*อาจ(จะ)?|(อาจ(จะ)?\s*((((ไม่่)\s*)?(เป็น|รวม|ใช้|มี|ส่งผล|เกี่ยว|ได้))|(หรืออาจไม่ใช่))))
 AmDescRegex: !simpleRegex
   def: (am\b|a\.m\.|a m\b|a\. m\.|a\.m\b|a\. m\b|a m\b)
 PmDescRegex: !simpleRegex
@@ -139,8 +140,8 @@ PmDescRegex: !simpleRegex
 #This is a look-behind assertion. Some cases should extract two digits as year like 11/25/16, where 16 means 2016. 
 #The assertion determines if not connected with am/pm or hour separator (:), which should be a time.
 DateYearRegex: !nestedRegex
-  def:  (((ปี|ค\.?ศ\.?)\s*)?(?<year>((1\d|20)\d{2})|2100|([0-27-9]\d\b(?!(\s*((\:)|{AmDescRegex}|{PmDescRegex}|(นาฬิกา|น|น.|โมง))))))|((ปี|พ\.?ศ\.?)\s*)?(?<thyear>(2[2-5])\d{2}|26[0-3]\d|264[0-3]|([1-7]\d\b(?!(\s*((\:)|{AmDescRegex}|{PmDescRegex}|(นาฬิกา|น|น.|โมง)))))))
-  references: [ DescRegex, AmDescRegex, PmDescRegex ]
+  def:  (((ปี|ค\.?ศ\.?)\s*)?(?<year>((1\d|20)\d{2})|2100|([0-27-9]\d\b(?!(\s*((\:)|{AmDescRegex}|{PmDescRegex}|(นาฬิกา|น|น.|โมง))))))|((ปี|พ\.?ศ\.?)\s*)?(?<year>(2[2-5])\d{2}|26[0-3]\d|264[0-3]|([1-7]\d\b(?!(\s*((\:)|{AmDescRegex}|{PmDescRegex}|(นาฬิกา|น|น.|โมง)))))))
+  references: [ AmDescRegex, PmDescRegex ]
 YearSuffix: !nestedRegex
   def: (,?\s*({DateYearRegex}|{FullTextYearRegex}))
   references: [ DateYearRegex, FullTextYearRegex ]
@@ -168,7 +169,7 @@ RelativeDayRegex: !nestedRegex
   def: ((วัน\s*{RelativeRegex}))
   references: [ RelativeRegex ]
 SetWeekDayRegex: !simpleRegex
-  def: (?<prefix>(ตอน|ใน)\s*)?(?<weekday>เช้า|สาย|บ่าย|เย็น|กลางคืน|ค่ำ|มืด|ดึก|(วัน\s*)?(อาทิตย์|อาทิต|จันทร์|จัน|อังคาร|พุธ|พุด|พฤหัสบดี|พฤหัส|ศุกร์|เสาร์))
+  def: (?<prefix>(ตอน|ใน)\s*)?(?<weekday>เช้า|สาย|บ่าย|เย็น|กลางคืน|คืน|ค่ำ|มืด|ดึก|(วัน\s*)?(อาทิตย์|อาทิต|จันทร์|จัน|อังคาร|พุธ|พุด|พฤหัสบดี|พฤหัส|ศุกร์|เสาร์))
 WeekDayOfMonthRegex: !nestedRegex
   def: (?<wom>{WeekDayRegex}\s*(?<cardinal>แรก|ที่\s*(หนึ่ง|1)|ที่\s*(สอง|2)|ที่\s*(สาม|3)|ที่\s*(สี่|4)|ที่\s*(ห้า|5)|สุดท้าย)\s*{MonthSuffixRegex})
   references: [ WeekDayRegex, MonthSuffixRegex ]
@@ -179,49 +180,49 @@ SpecialDate: !nestedRegex
   def: (?=(ใน|ตอน)\s*){DayRegex}
   references: [ DayRegex ]
 DateExtractor1: !nestedRegex
-  def: ({WeekDayRegex}(\s*|\s*,\s*))?{MonthRegex}(\.)?\s*[/\\\.\-]?\s*{DayRegex}(\.)?
+  def: ({WeekDayRegex}\s*(นี้\s*)?[,-]?\s*)?(({DayRegex}(\.)?\s*[/\\\.\-]?\s*{MonthRegex})|({MonthRegex}(\.)?\s*[/\\\.\-]?\s*{DayRegex})|(\({MonthRegex}\s*[-.]\s*{DayRegex}\)))
   references: [ WeekDayRegex, MonthRegex, DayRegex ]
 DateExtractor2: !nestedRegex
-  def: ({WeekDayRegex}(\s*|\s*,\s*))?{MonthRegex}(\.)?\s*[\.\-]?\s*{DayRegex}(\.)?(\s*|\s*,\s*|\s*(ของ|ใน)\s*){DateYearRegex}
-  references: [ WeekDayRegex, MonthRegex, DayRegex, DateYearRegex ]
+  def: ({DateExtractor1})(\s*|\s*,\s*|\s*(ของ|ใน)\s*)({DateYearRegex})
+  references: [ DateExtractor1, DateYearRegex ]
 DateExtractor3: !nestedRegex
   def: ({WeekDayRegex}(\s*|\s*,\s*))?{DayRegex}(\.)?(\s*|\s*,\s*|\s*(ของ|ใน)\s*|\s*-\s*){MonthRegex}(\.)?((\s*|\s*,\s*){DateYearRegex})?
   references: [ WeekDayRegex, DayRegex, MonthRegex, DateYearRegex ]
 DateExtractor4: !nestedRegex
-  def: ({MonthNumRegex})\s*[/\\\-]\s*{DayRegex}(\.)?\s*[/\\\-]\s*{DateYearRegex}
+  def: ({MonthNumRegex})\s*[/\\\-]\s*{DayRegex}(\.)?\s*[/\\\-]\s*({DateYearRegex})
   references: [ MonthNumRegex, DayRegex, DateYearRegex ]
 DateExtractor5: !nestedRegex
-  def: ({DayRegex})\s*[/\\\-\.]\s*{MonthNumRegex}\s*[/\\\-\.]\s*{DateYearRegex}
+  def: ({DayRegex})\s*[/\\\-\.]\s*{MonthNumRegex}\s*[/\\\-\.]\s*({DateYearRegex})
   references: [ DayRegex, MonthNumRegex, DateYearRegex ]
 DateExtractor6: !nestedRegex
-  def: (?<=(ตอน|ใน)\s*){MonthNumRegex}[\-\.]{DayRegex}
+  def: (?<=(ใน|ตอน)\s*){MonthNumRegex}[\-\.]{DayRegex}
   references: [ MonthNumRegex, DayRegex ]
 DateExtractor7: !nestedRegex
-  def: ({MonthNumRegex})\s*/\s*{DayRegex}((\s*|\s*,\s*|\s*(ของ|ใน)\s*){DateYearRegex})?
+  def: ({MonthNumRegex})\s*/\s*{DayRegex}((\s*|\s*,\s*|\s+(ของ|ใน)\s*){DateYearRegex})?
   references: [ MonthNumRegex, DayRegex, DateYearRegex ]
 DateExtractor8: !nestedRegex
-  def: (?<=(ตอน|ใน)\s*){DayRegex}[\\\-]{MonthNumRegex}
+  def: (?<=(ใน|ตอน)\s*){DayRegex}[\\\-]{MonthNumRegex}\b
   references: [ DayRegex, MonthNumRegex ]
 DateExtractor9: !nestedRegex
-  def: ({DayRegex})\s*/\s*{MonthNumRegex}((\s*|\s*,\s*|\s*(ของ|ใน)\s*){DateYearRegex})?
+  def: ({DayRegex})\s*/\s*{MonthNumRegex}((\s*|\s*,\s*|\s+(ของ|ใน)\s*){DateYearRegex})?
   references: [ DayRegex, MonthNumRegex, DateYearRegex ]
 DateExtractorA: !nestedRegex
   def: ({DateYearRegex})\s*[/\\\-\.]\s*{MonthNumRegex}\s*[/\\\-\.]\s*{DayRegex}
   references: [ DateYearRegex, MonthNumRegex, DayRegex ]
 OfMonth: !nestedRegex
-  def: ^\s*(ของ|ใน)\s*{MonthRegex}
+  def: (ของ|ใน)\s*{MonthRegex}
   references: [ MonthRegex ]
 MonthEnd: !nestedRegex
-  def: '{MonthRegex}\s*$'
+  def: '{MonthRegex}'
   references: [ MonthRegex ]
 WeekDayEnd: !nestedRegex
-  def: '{WeekDayRegex}\s*,?\s*$'
+  def: '{WeekDayRegex}'
   references: [ WeekDayRegex ]
 RangeUnitRegex: !simpleRegex
   def: (?<unit>ปี|เดือน|สัปดาห์|สัปดา|อาทิตย์|วีค)
 OclockRegex: !simpleRegex
   def: (?<oclock>โมง|นาฬิกา|น.|น)
-DescRegex: !nestedRegex # Need to be translated
+DescRegex: !nestedRegex
   def: ((({OclockRegex}\s*)?(?<desc>ampm|am\b|a\.m\.|a m\b|a\. m\.|a\.m\b|a\. m\b|a m\b|pm\b|p\.m\.|p m\b|p\. m\.|p\.m\b|p\. m\b|p\b|p m\b|เช้า|เย็น))|{OclockRegex})
   references: [ OclockRegex ]
 HourNumRegex: !simpleRegex
@@ -231,7 +232,7 @@ MinuteNumRegex: !simpleRegex
 DeltaMinuteNumRegex: !simpleRegex
   def: (?<deltaminnum>เอ็ด|หนึ่ง|สอง|สาม|สี่|ห้า|หก|เจ็ด|แปด|เก้า|สิบ|สิบ\s*เอ็ด|สิบ\s*สอง|สิบ\s*สาม|สิบ\s*สี่|สิบ\s*ห้า|สิบ\s*หก|สิบ\s*เจ็ด|สิบ\s*แปด|สิบ\s*เก้า|ยี่\s*สิบ|สาม\s*สิบ|สี่\s*สิบ|ห้า\s*สิบ)
 PmRegex: !simpleRegex
-  def: (?<pm>(((เวลา|ตอน|ประมาณ|ราว\s*ๆ\s*|เมื่อ|ยาม)\s*)?(บ่าย|เย็น|เที่ยงคืน|เที่ยง|เที่ยง\s*วัน|กลางวัน))|((เวลา|ตอน|ยาม)\s*(กลางคืน|มืด|ดึก|ค่ำ|หัว\s*ค่ำ)))
+  def: (?<pm>(((เวลา|ตอน|ประมาณ|ราว\s*ๆ\s*|เมื่อ|ยาม)\s*)?(บ่าย|เย็น|เที่ยงคืน|เที่ยง|เที่ยง\s*วัน|กลางวัน))|((เวลา|ตอน|ยาม)\s*(กลางคืน|คืน|มืด|ดึก|ค่ำ|หัว\s*ค่ำ)))
 PmRegexFull: !simpleRegex
   def: (?<pm>((เวลา|ตอน|ประมาณ|ราว\s*ๆ\s*|เมื่อ|ยาม)\s*)?(บ่าย|เย็น|เที่ยงคืน|เที่ยง|เที่ยง\s*วัน|กลางวัน))
 AmRegex: !simpleRegex
@@ -239,7 +240,7 @@ AmRegex: !simpleRegex
 LunchRegex: !simpleRegex
   def: (เที่ยง|กลางวัน)
 NightRegex: !simpleRegex
-  def: (เที่ยงคืน|กลางคืน|มืด|ดึก|ค่ำ|หัว\s*ค่ำ)
+  def: (เที่ยงคืน|กลางคืน|คืน|มืด|ดึก|ค่ำ|หัว\s*ค่ำ)
 CommonDatePrefixRegex: !simpleRegex
   def: ^[\.]
 LessThanOneHour: !nestedRegex
@@ -324,18 +325,24 @@ TimeRegex10: !nestedRegex
 PureNumFromTo: !nestedRegex
   def: ((จาก|ตั้งแต่|ระหว่าง|ช่วง|ระหว่าง\s*ช่วง)\s*)?({HourRegex}|{PeriodHourNumRegex})(\s*(?<leftDesc>{DescRegex}))?\s*{TillRegex}\s*({HourRegex}|{PeriodHourNumRegex})\s*(?<rightDesc>{PmRegex}|{AmRegex}|{DescRegex})?
   references: [ HourRegex, PeriodHourNumRegex, DescRegex, TillRegex, PmRegex, AmRegex ]
+SpecificTimeFromTo: !nestedRegex
+  def: ((จาก|ตั้งแต่|ระหว่าง|ช่วง|ระหว่าง\s*ช่วง)\s*)?(?<time1>({TimeRegex2}|({HourRegex}|{PeriodHourNumRegex})(\s*(?<leftDesc>{DescRegex}))?))\s*{TillRegex}\s*(?<time2>({TimeRegex2}|({HourRegex}|{PeriodHourNumRegex})(\s*(?<rightDesc>{DescRegex}))?))
+  references: [ TimeRegex2, TillRegex, HourRegex, PeriodHourNumRegex, DescRegex, PmRegex, AmRegex ]
+SpecificTimeBetweenAnd: !nestedRegex
+  def: (ระหว่าง|ช่วง|ระหว่าง\s*ช่วง\s*)(?<time1>({TimeRegex2}|({HourRegex}|{PeriodHourNumRegex})(\s*(?<leftDesc>{DescRegex}))?))\s*{RangeConnectorRegex}\s*(?<time2>({TimeRegex2}|({HourRegex}|{PeriodHourNumRegex})(\s*(?<rightDesc>{DescRegex}))?))
+  references: [ TimeRegex2, RangeConnectorRegex, HourRegex, PeriodHourNumRegex, DescRegex, PmRegex, AmRegex ]
 PureNumBetweenAnd: !nestedRegex
   def: ((ระหว่าง|ช่วง|ระหว่าง\s*ช่วง)\s*)({HourRegex}|{PeriodHourNumRegex})(\s*(?<leftDesc>{DescRegex}))?\s*{RangeConnectorRegex}\s*({HourRegex}|{PeriodHourNumRegex})\s*(?<rightDesc>{PmRegex}|{AmRegex}|{DescRegex})?
   references: [ HourRegex, PeriodHourNumRegex, DescRegex, PmRegex, AmRegex, RangeConnectorRegex ]
 PrepositionRegex: !simpleRegex
   def: (?<prep>^(ที่|ตอน|เวลา|ณ\s*เวลา)$)
 TimeOfDayRegex: !simpleRegex
-  def: (?<timeOfDay>(((ใน\s*ช่วง|ช่วง|ตอน|ใน\s*ตอน|เวลา)\s*)?(เช้า(\s*(ตรู่|มืด))?|สาย(\s*โด่ง)?|บ่าย(\s*(อ่อน|จัด|แก่))?|(หัว\s*)?ค่ำ|กลางคืน|เย็น|กลางวัน|ระหว่าง\s*วัน)))
+  def: (?<timeOfDay>(((ใน\s*ช่วง|ช่วง|ตอน|ใน\s*ตอน|เวลา)\s*)?(เช้า(\s*(ตรู่|มืด))?|สาย(\s*โด่ง)?|บ่าย(\s*(อ่อน|จัด|แก่))?|(หัว\s*)?ค่ำ|กลางคืน|คืน|เย็น|กลางวัน|ระหว่าง\s*วัน)))
 SpecificTimeOfDayRegex: !nestedRegex
   def: (({TimeOfDayRegex}\s*{StrictRelativeRegex})|คืน\s*นี้)
   references: [ TimeOfDayRegex, StrictRelativeRegex ]
 TimeFollowedUnit: !nestedRegex
-  def: ^\s*{TimeUnitRegex}
+  def: ({TimeUnitRegex})
   references: [ TimeUnitRegex ]
 TimeNumberCombinedWithUnit: !nestedRegex
   def: (?<num>\d+(\.\d*)?){TimeUnitRegex}
@@ -343,28 +350,28 @@ TimeNumberCombinedWithUnit: !nestedRegex
 NowRegex: !simpleRegex
   def: (?<now>(ณ\s*)?(ตอนนี้|เวลานี้|บัดนี้|ขณะนี้|เดี๋ยวนี้|ปัจจุบัน)|(ด่วน|เร็ว)\s*ที่\s*สุด\s*ที่\s*เป็นไป\s*ได้|asap|(เมื่อ\s*)?ไม่\s*นาน\s*มา\s*นี้|(เมื่อ\s*)?เร็ว\s*ๆ\s*นี้|ก่อน\s*หน้า\s*นี้)
 SuffixRegex: !simpleRegex
-  def: ^\s*((ใน\s*ช่วง|ช่วง|ตอน|ใน\s*ตอน|เวลา)\s*)?(เช้า|สาย|บ่าย|เย็น|ค่ำ|กลางคืน)
+  def: ((ใน\s*ช่วง|ช่วง|ตอน|ใน\s*ตอน|เวลา)\s*)?(เช้า|สาย|บ่าย|เย็น|ค่ำ|กลางคืน|คืน)
 DateTimeTimeOfDayRegex: !simpleRegex
-  def: (?<timeOfDay>เช้า|สาย|บ่าย|เย็น|ค่ำ|กลางคืน)
+  def: (?<timeOfDay>เช้า|สาย|บ่าย|เย็น|ค่ำ|กลางคืน|คืน)
 DateTimeSpecificTimeOfDayRegex: !nestedRegex
   def: (({DateTimeTimeOfDayRegex}\s*{RelativeRegex})|คืน\s*นี้)
   references: [ DateTimeTimeOfDayRegex, RelativeRegex ]
 TimeOfTodayAfterRegex: !nestedRegex
-  def: ^\s*(,\s*)?((ใน\s*ช่วง|ช่วง|ตอน|ใน\s*ตอน|เวลา)\s*)?{DateTimeSpecificTimeOfDayRegex}
+  def: (,\s*)?((ใน\s*ช่วง|ช่วง|ตอน|ใน\s*ตอน|เวลา)\s*)?{DateTimeSpecificTimeOfDayRegex}
   references: [ DateTimeSpecificTimeOfDayRegex ]
 TimeOfTodayBeforeRegex: !nestedRegex
-  def: '{DateTimeSpecificTimeOfDayRegex}(\s*,)?(\s*(ตอน|ใน\s*ตอน|ช่วง|ใน\s*ช่วง|เวลา|ใน\s*เวลา)(ประมาณ|ราว)?)?\s*$'
+  def: '{DateTimeSpecificTimeOfDayRegex}(\s*,)?(\s*(ตอน|ใน\s*ตอน|ช่วง|ใน\s*ช่วง|เวลา|ใน\s*เวลา)(ประมาณ|ราว)?)?'
   references: [ DateTimeSpecificTimeOfDayRegex ]
 SimpleTimeOfTodayAfterRegex: !nestedRegex
   def: ({HourNumRegex}|{BaseDateTime.HourRegex})\s*(,\s*)?((ใน\s*ช่วง|ช่วง|ตอน|ใน\s*ตอน|เวลา)\s*)?{DateTimeSpecificTimeOfDayRegex}
   references: [ HourNumRegex, BaseDateTime.HourRegex, DateTimeSpecificTimeOfDayRegex ]
 SimpleTimeOfTodayBeforeRegex: !nestedRegex
-  def: '{DateTimeSpecificTimeOfDayRegex}(\s*,)?(\s*(ตอน|ใน\s*ตอน|ช่วง|ใน\s*ช่วง|เวลา|ใน\s*เวลา)(ประมาณ|ราว)?))?\s*({HourNumRegex}|{BaseDateTime.HourRegex})'
+  def: '{DateTimeSpecificTimeOfDayRegex}(\s*,)?(\s*(ตอน|ใน\s*ตอน|ช่วง|ใน\s*ช่วง|เวลา|ใน\s*เวลา)(ประมาณ|ราว)?)?\s*({HourNumRegex}|{BaseDateTime.HourRegex})'
   references: [ DateTimeSpecificTimeOfDayRegex, HourNumRegex, BaseDateTime.HourRegex ]
 TheEndOfRegex: !simpleRegex
-  def: (สิ้น|จบ)\s*$
+  def: (สิ้น|จบ)
 PeriodTimeOfDayRegex: !simpleRegex
-  def: (((ใน\s*ช่วง|ช่วง|ตอน|ใน\s*ตอน|เวลา)\s*)?(?<timeOfDay>เช้า(\s*(ตรู่|มืด))?|สาย(\s*โด่ง)?|บ่าย(\s*(อ่อน|จัด|แก่))?|(หัว\s*)?ค่ำ|กลางคืน|เย็น))
+  def: (((ใน\s*ช่วง|ช่วง|ตอน|ใน\s*ตอน|เวลา)\s*)?(?<timeOfDay>เช้า(\s*(ตรู่|มืด))?|สาย(\s*โด่ง)?|บ่าย(\s*(อ่อน|จัด|แก่))?|(หัว\s*)?ค่ำ|กลางคืน|คืน|เย็น))
 PeriodSpecificTimeOfDayRegex: !nestedRegex
   def: (({StrictRelativeRegex}\s*{PeriodTimeOfDayRegex})|คืน\s*นี้)
   references: [ PeriodTimeOfDayRegex, StrictRelativeRegex ]
@@ -372,9 +379,9 @@ PeriodTimeOfDayWithDateRegex: !nestedRegex
  def: (({TimeOfDayRegex}(\s*(ตอน|ของ))?))
  references: [ TimeOfDayRegex]
 LessThanRegex: !simpleRegex
-  def: (น้อย\s*กว่า)\s*$
+  def: (น้อย\s*กว่า)
 MoreThanRegex: !simpleRegex
-  def: (มาก\s*กว่า)\s*$
+  def: (มาก\s*กว่า)
 DurationUnitRegex: !simpleRegex
   def: (?<unit>ปี|เดือน|สัปดาห์|สัปดา|อาทิตย์|วีค|วัน|ชั่วโมง|ช.ม.|ชม.|ช.ม|ชม|นาที|วินาที)
 SuffixAndRegex: !simpleRegex
@@ -385,15 +392,15 @@ EachUnitRegex: !nestedRegex
   def: (?<each>((แต่\s*ละ|ทุก|ทุก\s*ๆ\s*)\s*{DurationUnitRegex})|ปี\s*เว้น\s*ปี|เดือน\s*เว้น\s*เดือน|อาทิตย์\s*เว้น\s*อาทิตย์|สัปดาห์\s*เว้น\s*สัปดาห์|สัปดา\s*เว้น\s*สัปดา|วัน\s*เว้น\s*วัน|ชั่วโมง\s*เว้น\s*ชั่วโมง|นาที\s*เว้น\s*นาที)
   references: [ DurationUnitRegex ]
 EachPrefixRegex: !simpleRegex
-  def: (?<each>(แต่\s*ละ|(ทุก|ทุก\s*ๆ))\s*$)
+  def: (?<each>(แต่\s*ละ|(ทุก|ทุก\s*ๆ)))
 SetEachRegex: !simpleRegex
   def: (?<each>(แต่\s*ละ|(ทุก|ทุก\s*ๆ))\s*)
 SetLastRegex: !simpleRegex
   def: (?<last>หน้า|ถัดไป|ต่อไป|ที่\s*จะ\s*ถึง|ที่\s*กำลัง\s*จะ\s*ถึง|ที่\s*จะ\s*มา\s*ถึง|ที่\s*กำลัง\s*จะ\s*มา\s*ถึง|ก่อน\s*หน้า|ก่อน|ที่\s*แล้ว|ที่\s*ผ่าน\s*มา|นี้|ปัจจุบัน)
 EachDayRegex: !simpleRegex
-  def: ^\s*(แต่\s*ละ|(ทุก|ทุก\s*ๆ))\s*วัน
+  def: (แต่\s*ละ|(ทุก|ทุก\s*ๆ))\s*วัน
 DurationFollowedUnit: !nestedRegex
-  def: ^\s*{SuffixAndRegex}?(\s*|-)?{DurationUnitRegex}
+  def: ({SuffixAndRegex})?(\s*|-)?({DurationUnitRegex})
   references: [ SuffixAndRegex, DurationUnitRegex ]
 NumberCombinedWithDurationUnit: !nestedRegex
   def: (?<num>\d+(\.\d*)?)(-)?{DurationUnitRegex}
@@ -409,15 +416,14 @@ HalfRegex: !simpleRegex
   def: (?<half>ครึ่ง\s*(?<unit>ปี|เดือน|สัปดาห์|สัปดา|อาทิตย์|วีค|วัน|ชั่วโมง|ชม.|ช.ม.|ช.ม|ชม))
 ConjunctionRegex: !simpleRegex
   def: ((กับ(\s*อีก)?)|และ(\s*อีก)?)
-  # To confirm multiple entries
-DateTokenPrefix: 'ใน|วัน\\s*ที่'
-TimeTokenPrefix: 'เวลา|ณ\\s*เวลา|ที่\\s*เวลา|ตอน'
-TokenBeforeDate: 'ใน|วัน\\s*ที่'
-TokenBeforeTime: 'เวลา|ณ\\s*เวลา|ที่\\s*เวลา|ตอน'
+DateTokenPrefix: 'ใน '
+TimeTokenPrefix: 'ตอน '
+TokenBeforeDate: 'ใน '
+TokenBeforeTime: 'ตอน '
 AMTimeRegex: !simpleRegex
   def: (?<am>เช้า|สาย)
 PMTimeRegex: !simpleRegex
-  def: (?<pm>บ่าย|เย็น|กลางคืน|ค่ำ|หัว\s*ค่ำ)
+  def: (?<pm>บ่าย|เย็น|กลางคืน|คืน|ค่ำ|หัว\s*ค่ำ)
 InclusiveModPrepositions: !simpleRegex
   def: (?<include>((ตอน|ใน|เวลา)\s*หรือ\s*)|(\s*หรือ\s*(ตอน|ใน|เวลา)))
 BeforeRegex: !nestedRegex
@@ -448,7 +454,7 @@ AfternoonStartEndRegex: !nestedRegex    #Typically, people would use 'บ่า�
 EveningStartEndRegex: !simpleRegex
   def: (^(เย็น))|((เย็น)$)
 NightStartEndRegex: !simpleRegex
-  def: (^(ข้ามคืน|คืน\s*นี้|กลางคืน|ค่ำ|ดึก))|((ข้ามคืน|คืน\s*นี้|กลางคืน|ค่ำ|ดึก)$)
+  def: (^(ข้ามคืน|คืน\s*นี้|กลางคืน|คืน|ค่ำ|ดึก))|((ข้ามคืน|คืน\s*นี้|กลางคืน|คืน|ค่ำ|ดึก)$)
 InexactNumberRegex: !simpleRegex
   def: (สอง\s*สาม|2-3|ไม่\s*กี่|(?<NumTwoTerm>สอง\s*ถึง\s*สาม))
 InexactNumberUnitRegex: !nestedRegex
@@ -500,15 +506,15 @@ WeekWithWeekDayRangeRegex: !nestedRegex
   def: ((?<week>(สัปดาห์|สัปดา|อาทิตย์|วีค)\s*({NextPrefixRegex}|{PastPrefixRegex}|นี้))((\s*(ระหว่าง|ช่วง|ระหว่าง\s*ช่วง)\s*{WeekDayRegex}\s*(และ|กับ|ถึง)\s*{WeekDayRegex})|(\s*(จาก|ตั้งแต่)\s*{WeekDayRegex}\s*(จน(ถึง\s*)?)\s*{WeekDayRegex})))\b
   references: [NextPrefixRegex, PastPrefixRegex, WeekDayRegex]
 GeneralEndingRegex: !simpleRegex
-  def: ^\s*((\.,)|\.|,|!|\?)?\s*$
+  def: ((\.,)|\.|,|!|\?)
 MiddlePauseRegex: !simpleRegex
   def: \s*(,)\s*
 DurationConnectorRegex: !simpleRegex
-  def: ^\s*(?<connector>\s*|(และ|กับ|กับ\s*อีก)|,)\s*$
+  def: (?<connector>\s*|(และ|กับ|กับ\s*อีก)|,)
 PrefixArticleRegex: !simpleRegex
   def: the\s*
 OrRegex: !simpleRegex
-  def: ((\b|,\s*)(หรือ|และ|กับ|กับ\s*อีก)|,)
+  def: ((,\s*)(หรือ|และ|กับ|กับ\s*อีก)|,)
 YearPlusNumberRegex: !nestedRegex
   def: (ปี\s*((?<year>(\d{3,4}))|{FullTextYearRegex}))
   references: [ FullTextYearRegex ]
@@ -519,7 +525,7 @@ TimeBeforeAfterRegex: !nestedRegex
   def: (((?<=(ก่อน|ไม่\s*ช้า\s*กว่า|ไม่\s*เกิน|ภาย\s*ใน|หลัง(\s*จาก)?)\s*)({WrittenTimeRegex}|{HourNumRegex}|{BaseDateTime.HourRegex}|{MidTimeRegex}))|{MidTimeRegex})
   references: [ WrittenTimeRegex, HourNumRegex, BaseDateTime.HourRegex, MidTimeRegex ]
 DateNumberConnectorRegex: !simpleRegex
-  def: ^\s*(?<connector>\s*(ตอน|ณ\s*เวลา|เวลา|ช่วง))\s*$
+  def: (?<connector>\s*(ตอน|ณ\s*เวลา|เวลา|ช่วง))
 DecadeRegex: !simpleRegex
   def: (?<decade>ยุค\s*ปี\s*หนึ่ง\s*พัน\s*เก้า\s*ร้อย|ยุค\s*ปี\s*พัน\s*เก้า\s*ร้อย|ยุค\s*10|ยุค\s*20|ยุค\s*30|ยุค\s*40|ยุค\s*50|ยุค\s*60|ยุค\s*70|ยุค\s*80|ยุค\s*90|ทเวนตี้|ทเวนตี้ส์|เธอร์ตี้|เธอร์ตี้ส์|โฟร์ตี้|โฟร์ตี้ส์|ฟิฟตี้|ฟิฟตี้ส์|ซิกส์ตี้|ซิกตี้|ซิกซ์ตี้ส์|ซิกตี้ส์|เซเวนตี้|เซเวนตี้ส์|เอทตี้|เอ็ทตี้|เอทตี้ส์|เอ็ทตี้ส์|ไนน์ตี้|ไนน์ตี้ส์|ยุค\s*ปี\s*สอง\s*พัน)
 DecadeWithCenturyRegex: !nestedRegex
@@ -984,5 +990,7 @@ SpecialDecadeCases: !dictionary
   entries:
     'ยุคปีพันเก้าร้อย': 1900
     'ยุคปีสองพัน': 2000
-DefaultLanguageFallback: 'DMY'
+DefaultLanguageFallback: 'MDY'
+DurationDateRestrictions: [ ]
+# For DurationDateRestrictions, only translate these terms if this particular circumstance applies in the target language. If not, keep it empty. 
 ...
