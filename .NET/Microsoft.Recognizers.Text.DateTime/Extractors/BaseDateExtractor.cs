@@ -140,7 +140,7 @@ namespace Microsoft.Recognizers.Text.DateTime
             foreach (var result in er)
             {
 
-                Int32.TryParse((this.config.NumberParser.Parse(result).Value ?? 0).ToString(), out int num);
+                int.TryParse((this.config.NumberParser.Parse(result).Value ?? 0).ToString(), out int num);
 
                 if (num < 1 || num > 31)
                 {
@@ -316,7 +316,11 @@ namespace Microsoft.Recognizers.Text.DateTime
             if (matchYear.Success && matchYear.Index == 0)
             {
                 year = GetYearFromText(matchYear);
-                endIndex += matchYear.Length;
+
+                if (year >= Constants.MinYearNum && year <= Constants.MaxYearNum)
+                {
+                    endIndex += matchYear.Length;
+                }
             }           
 
             var date = DateObject.MinValue.SafeCreateFromValue(year, month, day);
@@ -375,10 +379,81 @@ namespace Microsoft.Recognizers.Text.DateTime
                 }
 
                 var match = config.DateUnitRegex.Match(er.Text);
+
+                if (match.Success)
+                {                    
+                    ret.AddRange(AgoLaterUtil.ExtractorDurationWithBeforeAndAfter(text,
+                        er, ret, config.UtilityConfiguration));
+                }
+            }
+
+            // Extract cases like "in 3 weeks", which equals to "3 weeks from today"
+            var relativeDurationDateWithInPrefix = ExtractRelativeDurationDateWithInPrefix(text, reference);
+
+            // For cases like "in 3 weeks from today", we should choose "3 weeks from today" as the extract result rather than "in 3 weeks" or "in 3 weeks from today"
+            foreach (var erWithInPrefix in relativeDurationDateWithInPrefix)
+            {
+                if (!IsOverlapWithExistExtractions(erWithInPrefix, ret))
+                {
+                    ret.Add(erWithInPrefix);
+                }
+            }
+
+            return ret;
+        }
+
+        public bool IsOverlapWithExistExtractions(Token er, List<Token> existErs)
+        {
+            foreach (var existEr in existErs)
+            {
+                if (er.Start < existEr.End && er.End > existEr.Start)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        // "In 3 days/weeks/months/years" = "3 days/weeks/months/years from now"
+        public List<Token> ExtractRelativeDurationDateWithInPrefix(string text, DateObject reference)
+        {
+            var ret = new List<Token>();
+
+            var durations = new List<Token>();
+            var durationExtractions = config.DurationExtractor.Extract(text, reference);
+            foreach (var durationExtraction in durationExtractions)
+            {
+                var match = config.DateUnitRegex.Match(durationExtraction.Text);
                 if (match.Success)
                 {
-                    ret = AgoLaterUtil.ExtractorDurationWithBeforeAndAfter(text,
-                        er, ret, config.UtilityConfiguration);
+                    durations.Add(new Token(durationExtraction.Start ?? 0,
+                        (durationExtraction.Start + durationExtraction.Length ?? 0)));
+                }
+            }
+
+            foreach (var duration in durations)
+            {
+                var beforeStr = text.Substring(0, duration.Start).ToLowerInvariant();
+                var afterStr = text.Substring(duration.Start + duration.Length).ToLowerInvariant();
+
+                if (string.IsNullOrWhiteSpace(beforeStr) && string.IsNullOrWhiteSpace(afterStr))
+                {
+                    continue;
+                }
+
+                var match = Regex.Match(beforeStr, config.InConnectorRegex.ToString(),
+                    RegexOptions.RightToLeft | config.InConnectorRegex.Options);
+
+                if (match.Success && string.IsNullOrWhiteSpace(beforeStr.Substring(match.Index + match.Length)))
+                {
+                    var startToken = match.Index;
+                    match = config.RangeUnitRegex.Match(text.Substring(duration.Start, duration.Length));
+
+                    if (match.Success)
+                    {
+                        ret.Add(new Token(startToken, duration.End));
+                    }
                 }
             }
 

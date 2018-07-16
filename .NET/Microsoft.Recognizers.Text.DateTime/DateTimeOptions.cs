@@ -10,7 +10,8 @@ namespace Microsoft.Recognizers.Text.DateTime
         SplitDateAndTime = 2,
         CalendarMode = 4,
         ExtendedTypes = 8,
-        Format24 = 16,
+        ExperimentalMode = 16,
+        Format24 = 32,
         EnablePreview = 8388608, // 2 ^23
     }
 }
