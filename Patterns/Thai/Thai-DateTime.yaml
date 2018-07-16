@@ -23,7 +23,7 @@ ReferencePrefixRegex: !simpleRegex
 FutureSuffixRegex: !simpleRegex
   def: (ใน\s*)?(อนาคต|จาก\s*นี้\s*ไป|ต่อจากนี้\s*ไป|ตั้งแต่\s*นี้\s*ไป|ต่อ\s*แต่\s*นี้\s*ไป|ตั้งแต่\s*นี้\s*ต่อไป|นับจากนี้\s*ไป|นับ\s*แต่\s*นี้\s*ไป)
 DayRegex: !simpleRegex
-  def: (วัน\s*ที่\s*)?\b(?<day>01|02|03|04|05|06|07|08|09|10th|10|11th|11st|11|12nd|12th|12|13rd|13th|13|14th|14|15th|15|16th|16|17th|17|18th|18|19th|19|1st|1|20th|20|21st|21th|21|22nd|22th|22|23rd|23th|23|24th|24|25th|25|26th|26|27th|27|28th|28|29th|29|2nd|2|30th|30|31st|31|3rd|3|4th|4|5th|5|6th|6|7th|7|8th|8|9th|9)(?=\b|t)
+  def: (วัน\s*)?(ที่\s*)?\b(?<day>01|02|03|04|05|06|07|08|09|10th|10|11th|11st|11|12nd|12th|12|13rd|13th|13|14th|14|15th|15|16th|16|17th|17|18th|18|19th|19|1st|1|20th|20|21st|21th|21|22nd|22th|22|23rd|23th|23|24th|24|25th|25|26th|26|27th|27|28th|28|29th|29|2nd|2|30th|30|31st|31|3rd|3|4th|4|5th|5|6th|6|7th|7|8th|8|9th|9)(?=\b|t)
 MonthNumRegex: !simpleRegex
   def:  (เดือน\s*)?\b(?<month>01|02|03|04|05|06|07|08|09|10|11|12|1|2|3|4|5|6|7|8|9)\b
 CenturyRegex: !simpleRegex
@@ -221,7 +221,7 @@ WeekDayEnd: !nestedRegex
 RangeUnitRegex: !simpleRegex
   def: (?<unit>ปี|เดือน|สัปดาห์|สัปดา|อาทิตย์|วีค)
 OclockRegex: !simpleRegex
-  def: (?<oclock>โมง|นาฬิกา|น.|น)
+  def: ((?<!ตอ)(?<oclock>โมง|นาฬิกา|น.|น))
 DescRegex: !nestedRegex
   def: ((({OclockRegex}\s*)?(?<desc>ampm|am\b|a\.m\.|a m\b|a\. m\.|a\.m\b|a\. m\b|a m\b|pm\b|p\.m\.|p m\b|p\. m\.|p\.m\b|p\. m\b|p\b|p m\b|เช้า|เย็น))|{OclockRegex})
   references: [ OclockRegex ]
@@ -232,13 +232,13 @@ MinuteNumRegex: !simpleRegex
 DeltaMinuteNumRegex: !simpleRegex
   def: (?<deltaminnum>เอ็ด|หนึ่ง|สอง|สาม|สี่|ห้า|หก|เจ็ด|แปด|เก้า|สิบ|สิบ\s*เอ็ด|สิบ\s*สอง|สิบ\s*สาม|สิบ\s*สี่|สิบ\s*ห้า|สิบ\s*หก|สิบ\s*เจ็ด|สิบ\s*แปด|สิบ\s*เก้า|ยี่\s*สิบ|สาม\s*สิบ|สี่\s*สิบ|ห้า\s*สิบ)
 PmRegex: !simpleRegex
-  def: (?<pm>(((เวลา|ตอน|ประมาณ|ราว\s*ๆ\s*|เมื่อ|ยาม)\s*)?(บ่าย|เย็น|เที่ยงคืน|เที่ยง|เที่ยง\s*วัน|กลางวัน))|((เวลา|ตอน|ยาม)\s*(กลางคืน|คืน|มืด|ดึก|ค่ำ|หัว\s*ค่ำ)))
+  def: (?<pm>(((เวลา|ตอน|ประมาณ|ราว\s*ๆ\s*|เมื่อ|ยาม)\s*)?(บ่าย|เย็น|เที่ยงคืน|((?<!มื้อ)เที่ยง)|เที่ยง\s*วัน|กลางวัน))|((เวลา|ตอน|ยาม)\s*(กลางคืน|คืน|มืด|ดึก|ค่ำ|หัว\s*ค่ำ)))
 PmRegexFull: !simpleRegex
-  def: (?<pm>((เวลา|ตอน|ประมาณ|ราว\s*ๆ\s*|เมื่อ|ยาม)\s*)?(บ่าย|เย็น|เที่ยงคืน|เที่ยง|เที่ยง\s*วัน|กลางวัน))
+  def: (?<pm>((เวลา|ตอน|ประมาณ|ราว\s*ๆ\s*|เมื่อ|ยาม)\s*)?(บ่าย|เย็น|เที่ยงคืน|((?<!มื้อ)เที่ยง)|เที่ยง\s*วัน|กลางวัน))
 AmRegex: !simpleRegex
   def: (?<am>((เวลา|ตอน|ประมาณ|ราว\s*ๆ\s*|เมื่อ|ยาม)\s*)?(เช้า|เช้า\s*มืด|เช้า\s*ตรู่|สาย|ก่อน\s*เที่ยง|รุ่ง\s*สาง))
 LunchRegex: !simpleRegex
-  def: (เที่ยง|กลางวัน)
+  def: (((?<!มื้อ)เที่ยง)|กลางวัน)
 NightRegex: !simpleRegex
   def: (เที่ยงคืน|กลางคืน|คืน|มืด|ดึก|ค่ำ|หัว\s*ค่ำ)
 CommonDatePrefixRegex: !simpleRegex
@@ -268,7 +268,7 @@ MidmorningRegex: !simpleRegex
 MidafternoonRegex: !simpleRegex
   def: (?<midafternoon>บ่าย\s*ๆ\s*|บ่าย\s*แก่\s*ๆ\s*|บ่าย\s*อ่อน\s*ๆ\s*|บ่าย\s*จัด)
 MiddayRegex: !simpleRegex
-  def: (?<midday>กลางวัน|เที่ยง|เที่ยง\s*วัน|เที่ยง\s*ตรง|(12\s*โมง\s*)?เที่ยง)
+  def: (?<midday>กลางวัน|((?<!มื้อ)เที่ยง)|เที่ยง\s*วัน|เที่ยง\s*ตรง|(12\s*โมง\s*)?((?<!มื้อ)เที่ยง))
 MidTimeRegex: !nestedRegex
   def: (?<mid>({MidnightRegex}|{MidmorningRegex}|{MidafternoonRegex}|{MiddayRegex}))
   references: [ MidnightRegex, MidmorningRegex, MidafternoonRegex, MiddayRegex ]
@@ -493,7 +493,7 @@ RestOfDateRegex: !simpleRegex
 RestOfDateTimeRegex: !simpleRegex
   def: ที่\s*เหลือ\s*ของ\s*(?<unit>วัน)(\s*นี้)?
 MealTimeRegex: !simpleRegex
-  def: ((ตอน|เวลา)\s*)?(?<mealTime>เที่ยง|กลางวัน)
+  def: ((ตอน|เวลา)\s*)?(?<mealTime>((?<!มื้อ)เที่ยง)|กลางวัน)
 NumberEndingPattern: !nestedRegex
   def: ^(\s*(?<meeting>ประชุม|นัด\s*หมาย|การ\s*ประชุม|โทรศัพท์|skype call|สไกป์)\s*ถึง\s*(?<newTime>{PeriodHourNumRegex}|{HourRegex})((\.)?$|(\.,|,|!|\?)))
   references: [PeriodHourNumRegex, HourRegex]
@@ -608,7 +608,14 @@ CardinalMap: !dictionary
     ที่ 5: 5
 DayOfWeek: !dictionary
   types: [ string, int ]
-  entries: 
+  entries:
+    monday: 1
+    tuesday: 2
+    wednesday: 3
+    thursday: 4
+    friday: 5
+    saturday: 6
+    sunday: 0
     วันจันทร์: 1
     วันจัน: 1
     วันอังคาร: 2
@@ -653,6 +660,18 @@ DayOfWeek: !dictionary
 MonthOfYear: !dictionary
   types: [ string, int ]
   entries:
+    'january': 1
+    'february': 2
+    'march': 3
+    'april': 4
+    'may': 5
+    'june': 6
+    'july': 7
+    'august': 8
+    'september': 9
+    'october': 10
+    'november': 11
+    'december': 12
     'มกราคม': 1
     'กุมภาพันธ์': 2
     'มีนาคม': 3

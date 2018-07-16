@@ -147,17 +147,37 @@ namespace Microsoft.Recognizers.Text.DateTime
                     continue;
                 }
 
-                if (result.Start >= 0)
+                if (result.Start >= 0 && result.Length > 0)
                 {
+                    bool isFound = false;
+
                     // Handling cases like '(Monday,) Jan twenty two'
                     var frontStr = text.Substring(0, result.Start ?? 0);
+                    var endStr = text.Substring(result.Start.Value + result.Length.Value);
+
+                    var startIndex = 0;
+                    var endIndex = 0;
 
                     var match = this.config.MonthEnd.Match(frontStr);
                     if (match.Success)
                     {
-                        var startIndex = match.Index;
-                        var endIndex = result.Start.Value + result.Length.Value;
+                        startIndex = match.Index;
+                        endIndex = result.Start.Value + result.Length.Value;
+                        isFound = true;
+                    }
+                    else
+                    {
+                        match = this.config.MonthEnd.Match(endStr);
+                        if (match.Success)
+                        {
+                            startIndex = result.Start.Value;
+                            endIndex = result.Start.Value + result.Length.Value + match.Index + match.Length;
+                            isFound = true;
+                        }
+                    }
 
+                    if (isFound)
+                    {
                         ExtendWithWeekdayAndYear(ref startIndex, ref endIndex,
                             config.MonthOfYear.GetValueOrDefault(match.Groups["month"].Value.ToLower(), reference.Month),
                             num, text, reference);
@@ -168,7 +188,7 @@ namespace Microsoft.Recognizers.Text.DateTime
 
                     // Handling cases like 'for the 25th'
                     var matches = this.config.ForTheRegex.Matches(text);
-                    bool isFound = false;
+                    isFound = false;
                     foreach (Match matchCase in matches)
                     {
                         if (matchCase.Success)

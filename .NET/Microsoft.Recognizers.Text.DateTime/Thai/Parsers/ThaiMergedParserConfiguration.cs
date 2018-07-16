@@ -24,7 +24,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Thai
 
         public StringMatcher SuperfluousWordMatcher { get; }
 
-        public ThaiMergedParserConfiguration(DateTimeOptions options) : base(options)
+        public ThaiMergedParserConfiguration(DateTimeOptions options) : base(options | DateTimeOptions.Format24)
         {
             BeforeRegex = ThaiMergedExtractorConfiguration.BeforeRegex;
             AfterRegex = ThaiMergedExtractorConfiguration.AfterRegex;

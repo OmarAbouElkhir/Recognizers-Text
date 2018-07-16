@@ -87,7 +87,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T00:00:00"
   },
-  "NotSupported": "javascript, python",
+  "NotSupported": "dotNet, javascript, python",
   "Results": [
     {
       "Text": "วันที่สองส.ค.",
@@ -825,7 +825,7 @@
   "Context": {
     "ReferenceDateTime": "2016-11-07T16:12:00"
   },
-  "NotSupported": "javascript, python",
+  "NotSupported": "dotNet, javascript, python",
   "Results": [
     {
       "Text": "ชั่วโมงหน้า",
@@ -994,7 +994,7 @@
   "Context": {
     "ReferenceDateTime": "2017-12-04T00:00:00"
   },
-  "NotSupported": "javascript, python",
+  "NotSupported": "dotNet, javascript, python",
   "Results": [
     {
       "Text": "สัปดาห์หน้าวันจ.",
@@ -1217,7 +1217,7 @@
   "Context": {
     "ReferenceDateTime": "2018-05-18T00:00:00"
   },
-  "NotSupported": "javascript, python",
+  "NotSupported": "dotNet, javascript, python",
   "Results": [
     {
       "Text": "วันนี้ตอนกลางวัน",
@@ -1242,7 +1242,7 @@
   "Context": {
     "ReferenceDateTime": "2018-05-18T00:00:00"
   },
-  "NotSupported": "javascript, python",
+  "NotSupported": "dotNet, javascript, python",
   "Results": [
     {
       "Text": "ภายในวันนี้",

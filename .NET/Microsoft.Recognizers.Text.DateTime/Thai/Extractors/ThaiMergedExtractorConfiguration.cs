@@ -71,7 +71,7 @@ namespace Microsoft.Recognizers.Text.DateTime.Thai
 
         public ThaiMergedExtractorConfiguration(DateTimeOptions options)
         {
-            Options = options;
+            Options = options | DateTimeOptions.Format24;
             DateExtractor = new BaseDateExtractor(new ThaiDateExtractorConfiguration());
             TimeExtractor = new BaseTimeExtractor(new ThaiTimeExtractorConfiguration(options));
             DateTimeExtractor = new BaseDateTimeExtractor(new ThaiDateTimeExtractorConfiguration(options));

@@ -28,7 +28,7 @@ namespace Microsoft.Recognizers.Definitions.Thai
 		public const string CenturySuffixRegex = @"(^century)";
 		public const string ReferencePrefixRegex = @"(นั้น|เดียวกัน)";
 		public const string FutureSuffixRegex = @"(ใน\s*)?(อนาคต|จาก\s*นี้\s*ไป|ต่อจากนี้\s*ไป|ตั้งแต่\s*นี้\s*ไป|ต่อ\s*แต่\s*นี้\s*ไป|ตั้งแต่\s*นี้\s*ต่อไป|นับจากนี้\s*ไป|นับ\s*แต่\s*นี้\s*ไป)";
-		public const string DayRegex = @"(วัน\s*ที่\s*)?\b(?<day>01|02|03|04|05|06|07|08|09|10th|10|11th|11st|11|12nd|12th|12|13rd|13th|13|14th|14|15th|15|16th|16|17th|17|18th|18|19th|19|1st|1|20th|20|21st|21th|21|22nd|22th|22|23rd|23th|23|24th|24|25th|25|26th|26|27th|27|28th|28|29th|29|2nd|2|30th|30|31st|31|3rd|3|4th|4|5th|5|6th|6|7th|7|8th|8|9th|9)(?=\b|t)";
+		public const string DayRegex = @"(วัน\s*)?(ที่\s*)?\b(?<day>01|02|03|04|05|06|07|08|09|10th|10|11th|11st|11|12nd|12th|12|13rd|13th|13|14th|14|15th|15|16th|16|17th|17|18th|18|19th|19|1st|1|20th|20|21st|21th|21|22nd|22th|22|23rd|23th|23|24th|24|25th|25|26th|26|27th|27|28th|28|29th|29|2nd|2|30th|30|31st|31|3rd|3|4th|4|5th|5|6th|6|7th|7|8th|8|9th|9)(?=\b|t)";
 		public const string MonthNumRegex = @"(เดือน\s*)?\b(?<month>01|02|03|04|05|06|07|08|09|10|11|12|1|2|3|4|5|6|7|8|9)\b";
 		public const string CenturyRegex = @"(?<century>((หนึ่ง|สอง)\s*พัน(\s*(หนึ่ง|สอง|สาม|สี่|ห้า|หก|เจ็ด|แปด|เก้า)\s*ร้อย)?)|((หนึ่ง|สอง|สาม|สี่|ห้า|หก|เจ็ด|แปด|เก้า)\s*(ร้อย)))";
 		public const string WrittenNumRegex = @"(เอ็ด|หนึ่ง|สอง|สาม|สี่|ห้า|หก|เจ็ด|แปด|เก้า|สิบ|สิบ\s*เอ็ด|สิบ\s*สอง|สิบ\s*สาม|สิบ\s*สี่|สิบ\s*ห้า|สิบ\s*หก|สิบ\s*เจ็ด|สิบ\s*แปด|สิบ\s*เก้า|ยี่\s*สิบ|สาม\s*สิบ|สี่\s*สิบ|ห้า\s*สิบ|หก\s*สิบ|เจ็ด\s*สิบ|แปด\s*สิบ|เก้า\s*สิบ)";
@@ -102,15 +102,15 @@ namespace Microsoft.Recognizers.Definitions.Thai
 		public static readonly string MonthEnd = $@"{MonthRegex}";
 		public static readonly string WeekDayEnd = $@"{WeekDayRegex}";
 		public const string RangeUnitRegex = @"(?<unit>ปี|เดือน|สัปดาห์|สัปดา|อาทิตย์|วีค)";
-		public const string OclockRegex = @"(?<oclock>โมง|นาฬิกา|น.|น)";
+		public const string OclockRegex = @"((?<!ตอ)(?<oclock>โมง|นาฬิกา|น.|น))";
 		public static readonly string DescRegex = $@"((({OclockRegex}\s*)?(?<desc>ampm|am\b|a\.m\.|a m\b|a\. m\.|a\.m\b|a\. m\b|a m\b|pm\b|p\.m\.|p m\b|p\. m\.|p\.m\b|p\. m\b|p\b|p m\b|เช้า|เย็น))|{OclockRegex})";
 		public const string HourNumRegex = @"(?<hournum>ศูนย์|หนึ่ง|สอง|สาม|สี่|ห้า|หก|เจ็ด|แปด|เก้า|สิบ|สิบ\s*เอ็ด|สิบ\s*สอง|สิบ\s*สาม|สิบ\s*สี่|สิบ\s*ห้า|สิบ\s*หก|สิบ\s*เจ็ด|สิบ\s*แปด|สิบ\s*เก้า|ยี่\s*สิบ|ยี่\s*สิบ\s*เอ็ด|ยี่\s*สิบ\s*สอง|ยี่\s*สิบ\s*สาม)";
 		public const string MinuteNumRegex = @"(?<minnum>เอ็ด|หนึ่ง|สอง|สาม|สี่|ห้า|หก|เจ็ด|แปด|เก้า|สิบ|สิบ\s*เอ็ด|สิบ\s*สอง|สิบ\s*สาม|สิบ\s*สี่|สิบ\s*ห้า|สิบ\s*หก|สิบ\s*เจ็ด|สิบ\s*แปด|สิบ\s*เก้า|ยี่\s*สิบ|สาม\s*สิบ|สี่\s*สิบ|ห้า\s*สิบ)";
 		public const string DeltaMinuteNumRegex = @"(?<deltaminnum>เอ็ด|หนึ่ง|สอง|สาม|สี่|ห้า|หก|เจ็ด|แปด|เก้า|สิบ|สิบ\s*เอ็ด|สิบ\s*สอง|สิบ\s*สาม|สิบ\s*สี่|สิบ\s*ห้า|สิบ\s*หก|สิบ\s*เจ็ด|สิบ\s*แปด|สิบ\s*เก้า|ยี่\s*สิบ|สาม\s*สิบ|สี่\s*สิบ|ห้า\s*สิบ)";
-		public const string PmRegex = @"(?<pm>(((เวลา|ตอน|ประมาณ|ราว\s*ๆ\s*|เมื่อ|ยาม)\s*)?(บ่าย|เย็น|เที่ยงคืน|เที่ยง|เที่ยง\s*วัน|กลางวัน))|((เวลา|ตอน|ยาม)\s*(กลางคืน|คืน|มืด|ดึก|ค่ำ|หัว\s*ค่ำ)))";
-		public const string PmRegexFull = @"(?<pm>((เวลา|ตอน|ประมาณ|ราว\s*ๆ\s*|เมื่อ|ยาม)\s*)?(บ่าย|เย็น|เที่ยงคืน|เที่ยง|เที่ยง\s*วัน|กลางวัน))";
+		public const string PmRegex = @"(?<pm>(((เวลา|ตอน|ประมาณ|ราว\s*ๆ\s*|เมื่อ|ยาม)\s*)?(บ่าย|เย็น|เที่ยงคืน|((?<!มื้อ)เที่ยง)|เที่ยง\s*วัน|กลางวัน))|((เวลา|ตอน|ยาม)\s*(กลางคืน|คืน|มืด|ดึก|ค่ำ|หัว\s*ค่ำ)))";
+		public const string PmRegexFull = @"(?<pm>((เวลา|ตอน|ประมาณ|ราว\s*ๆ\s*|เมื่อ|ยาม)\s*)?(บ่าย|เย็น|เที่ยงคืน|((?<!มื้อ)เที่ยง)|เที่ยง\s*วัน|กลางวัน))";
 		public const string AmRegex = @"(?<am>((เวลา|ตอน|ประมาณ|ราว\s*ๆ\s*|เมื่อ|ยาม)\s*)?(เช้า|เช้า\s*มืด|เช้า\s*ตรู่|สาย|ก่อน\s*เที่ยง|รุ่ง\s*สาง))";
-		public const string LunchRegex = @"(เที่ยง|กลางวัน)";
+		public const string LunchRegex = @"(((?<!มื้อ)เที่ยง)|กลางวัน)";
 		public const string NightRegex = @"(เที่ยงคืน|กลางคืน|คืน|มืด|ดึก|ค่ำ|หัว\s*ค่ำ)";
 		public const string CommonDatePrefixRegex = @"^[\.]";
 		public static readonly string LessThanOneHour = $@"(?<lth>หนึ่ง\s*ใน\s*สี่|สาม\s*ใน\s*สี่|ครึ่ง(\s*ชั่วโมง)?|{BaseDateTime.DeltaMinuteRegex}(\s*นาที)|{DeltaMinuteNumRegex}(\s*นาที))";
@@ -122,7 +122,7 @@ namespace Microsoft.Recognizers.Definitions.Thai
 		public const string MidnightRegex = @"(?<midnight>เที่ยงคืน)";
 		public const string MidmorningRegex = @"(?<midmorning>สาย|สาย\s*ๆ\s*)";
 		public const string MidafternoonRegex = @"(?<midafternoon>บ่าย\s*ๆ\s*|บ่าย\s*แก่\s*ๆ\s*|บ่าย\s*อ่อน\s*ๆ\s*|บ่าย\s*จัด)";
-		public const string MiddayRegex = @"(?<midday>กลางวัน|เที่ยง|เที่ยง\s*วัน|เที่ยง\s*ตรง|(12\s*โมง\s*)?เที่ยง)";
+		public const string MiddayRegex = @"(?<midday>กลางวัน|((?<!มื้อ)เที่ยง)|เที่ยง\s*วัน|เที่ยง\s*ตรง|(12\s*โมง\s*)?((?<!มื้อ)เที่ยง))";
 		public static readonly string MidTimeRegex = $@"(?<mid>({MidnightRegex}|{MidmorningRegex}|{MidafternoonRegex}|{MiddayRegex}))";
 		public static readonly string AtRegex = $@"(((?<=(ตอน|เวลา)\s*)({WrittenTimeRegex}|{HourNumRegex}|{BaseDateTime.HourRegex}|{MidTimeRegex}))|{MidTimeRegex})";
 		public static readonly string IshRegex = $@"((ราว|ราว\s*ๆ\s*|ประมาณ)\s*{BaseDateTime.HourRegex}|ประมาณ\s*เที่ยง|ราว\s*เที่ยง|ราว\s*ๆ\s*เที่ยง)";
@@ -214,7 +214,7 @@ namespace Microsoft.Recognizers.Definitions.Thai
 		public static readonly string WeekDayAndDayOfMonthRegex = $@"({WeekDayRegex})\s*({FlexibleDayRegex})";
 		public const string RestOfDateRegex = @"ที่\s*เหลือ\s*ของ\s*(?<duration>สัปดาห์|สัปดา|อาทิตย์|วีค|เดือน|ปี)(\s*(นี้|ปัจจุบัน))?";
 		public const string RestOfDateTimeRegex = @"ที่\s*เหลือ\s*ของ\s*(?<unit>วัน)(\s*นี้)?";
-		public const string MealTimeRegex = @"((ตอน|เวลา)\s*)?(?<mealTime>เที่ยง|กลางวัน)";
+		public const string MealTimeRegex = @"((ตอน|เวลา)\s*)?(?<mealTime>((?<!มื้อ)เที่ยง)|กลางวัน)";
 		public static readonly string NumberEndingPattern = $@"^(\s*(?<meeting>ประชุม|นัด\s*หมาย|การ\s*ประชุม|โทรศัพท์|skype call|สไกป์)\s*ถึง\s*(?<newTime>{PeriodHourNumRegex}|{HourRegex})((\.)?$|(\.,|,|!|\?)))";
 		public const string OneOnOneRegex = @"(1\s*:\s*1)|(หนึ่ง\s*(ต่อ\s*)?หนึ่ง|ตัว\s*(ต่อ\s*)?ตัว|หนึ่ง\s*-\s*หนึ่ง|หนึ่ง\s*:\s*หนึ่ง)";
 		public static readonly string LaterEarlyPeriodRegex = $@"({PrefixPeriodRegex})\s*(?<suffix>{OneWordPeriodRegex})";
@@ -300,6 +300,13 @@ namespace Microsoft.Recognizers.Definitions.Thai
 		};
 		public static readonly Dictionary<string, int> DayOfWeek = new Dictionary<string, int>
 		{
+			{ "monday", 1 },
+			{ "tuesday", 2 },
+			{ "wednesday", 3 },
+			{ "thursday", 4 },
+			{ "friday", 5 },
+			{ "saturday", 6 },
+			{ "sunday", 0 },
 			{ "วันจันทร์", 1 },
 			{ "วันจัน", 1 },
 			{ "วันอังคาร", 2 },
@@ -344,6 +351,18 @@ namespace Microsoft.Recognizers.Definitions.Thai
 		};
 		public static readonly Dictionary<string, int> MonthOfYear = new Dictionary<string, int>
 		{
+			{ "january", 1 },
+			{ "february", 2 },
+			{ "march", 3 },
+			{ "april", 4 },
+			{ "may", 5 },
+			{ "june", 6 },
+			{ "july", 7 },
+			{ "august", 8 },
+			{ "september", 9 },
+			{ "october", 10 },
+			{ "november", 11 },
+			{ "december", 12 },
 			{ "มกราคม", 1 },
 			{ "กุมภาพันธ์", 2 },
 			{ "มีนาคม", 3 },

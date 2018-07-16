@@ -321,7 +321,7 @@ namespace Microsoft.Recognizers.Text.DateTime
                 ret.Timex += ":" + second.ToString("D2");
             }
 
-            if (hour <= Constants.HalfDayHourCount && !hasPm && !hasAm && !hasMid)
+            if (hour <= Constants.HalfDayHourCount && !hasPm && !hasAm && !hasMid && !config.Options.HasFlag(DateTimeOptions.Format24))
             {
                 ret.Comment = Constants.Comment_AmPm;
             }
