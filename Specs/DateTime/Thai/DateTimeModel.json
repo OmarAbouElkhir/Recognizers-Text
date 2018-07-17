@@ -1724,4 +1724,121 @@
     }
   }]
 }
+,
+{
+  "Input": "ฉันเกิดในปี 2543",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "NotSupported": "dotNet, javascript, python",
+  "Results": [
+    {
+      "Text": "ปี 2543",
+      "TypeName": "datetimeV2.duration",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "",
+            "type": "duration",
+            "value": "2543"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันเกิดในพ.ศ. 2543",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "NotSupported": "dotNet, javascript, python",
+  "Results": [
+    {
+      "Text": "พ.ศ. 2543",
+      "TypeName": "datetimeV2.daterange",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "2543",
+            "type": "daterange",
+            "start": "2543-01-01",
+			"end": "2544-01-01"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันเกิดในค.ศ. 2000",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "ค.ศ. 2000",
+      "TypeName": "datetimeV2.daterange",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "2000",
+            "type": "daterange",
+            "start": "2000-01-01",
+			"end": "2001-01-01"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันมีนัดในวันอาทิตย์ที่สอง",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "NotSupported": "dotNet, javascript, python",
+  "Results": [
+    {
+      "Text": "วันอาทิตย์",
+      "TypeName": "datetimeV2.date",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "",
+            "type": "date",
+            "value": "2"
+          }
+        ]
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "ฉันมีนัดในวันอาทิตย์ที่หก",
+  "Context": {
+    "ReferenceDateTime": "2016-11-07T00:00:00"
+  },
+  "NotSupported": "dotNet, javascript, python",
+  "Results": [
+    {
+      "Text": "วันอาทิตย์ที่หก",
+      "TypeName": "datetimeV2.date",
+      "Resolution": {
+        "values": [
+          {
+            "timex": "",
+            "type": "date",
+            "value": "6"
+          }
+        ]
+      }
+    }
+  ]
+}
 ]

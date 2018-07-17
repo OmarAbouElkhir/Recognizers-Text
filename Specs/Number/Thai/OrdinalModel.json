@@ -234,4 +234,60 @@
     }
   ]
 }
+,
+{
+  "Input": "เขาเป็นคนแรก",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "แรก",
+      "TypeName": "ordinal",
+      "Resolution": {
+        "value": "1"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "เขาเป็นคนที่หนึ่ง",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "ที่หนึ่ง",
+      "TypeName": "ordinal",
+      "Resolution": {
+        "value": "1"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "เขาเดินทางด้วยตั๋วชั้นหนึ่ง",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "หนึ่ง",
+      "TypeName": "ordinal",
+      "Resolution": {
+        "value": "1"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "เขาได้รางวัลอันดับหนึ่ง",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "อันดับหนึ่ง",
+      "TypeName": "ordinal",
+      "Resolution": {
+        "value": "1"
+      }
+    }
+  ]
+}
 ]

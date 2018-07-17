@@ -1629,4 +1629,20 @@
     } 
   ]
 }
+,
+{
+  "Input": "พ่อมีเงิน 5 บาท",
+  "NotSupported": "javascript, python",
+  "Results": [
+    {
+      "Text": "5 บาท",
+      "TypeName": "currency",
+      "Resolution": {
+        "isoCurrency": "THB",
+		"value": "5",
+        "unit": "Thai baht"
+      }
+    }
+  ]
+}
 ]

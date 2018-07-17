@@ -1990,4 +1990,60 @@
     }
   ]
 }
+,
+{
+  "Input": "ร้อยห้าสิบ",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "ร้อยห้าสิบ",
+      "TypeName": "number",
+      "Resolution": {
+        "value": "150"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "พันห้าร้อย",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "พันห้าร้อย",
+      "TypeName": "number",
+      "Resolution": {
+        "value": "1500"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "สองพันห้า",
+  "NotSupported": "dotNet,javascript,python",
+  "Results": [
+    {
+      "Text": "สองพันห้า",
+      "TypeName": "number",
+      "Resolution": {
+        "value": "2500"
+      }
+    }
+  ]
+}
+,
+{
+  "Input": "สองพันห้าบาท",
+  "NotSupported": "javascript,python",
+  "Results": [
+    {
+      "Text": "สองพันห้า",
+      "TypeName": "number",
+      "Resolution": {
+        "value": "2005"
+      }
+    }
+  ]
+}
 ]
