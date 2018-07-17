@@ -136,6 +136,18 @@ namespace Microsoft.Recognizers.Text.DateTime.Thai
         public static readonly Regex YearSuffix = 
             new Regex(DateTimeDefinitions.YearSuffix, RegexOptions.IgnoreCase | RegexOptions.Singleline);
 
+        public static readonly Regex LessThanRegex =
+            new Regex(DateTimeDefinitions.LessThanRegex, RegexOptions.IgnoreCase | RegexOptions.Singleline);
+
+        public static readonly Regex MoreThanRegex =
+            new Regex(DateTimeDefinitions.MoreThanRegex, RegexOptions.IgnoreCase | RegexOptions.Singleline);
+
+        public static readonly Regex InConnectorRegex =
+            new Regex(DateTimeDefinitions.InConnectorRegex, RegexOptions.IgnoreCase | RegexOptions.Singleline);
+
+        public static readonly Regex RangeUnitRegex =
+            new Regex(DateTimeDefinitions.RangeUnitRegex, RegexOptions.IgnoreCase | RegexOptions.Singleline);
+
         public static readonly ImmutableDictionary<string, int> DayOfWeek = 
             DateTimeDefinitions.DayOfWeek.ToImmutableDictionary();
 
@@ -190,10 +202,14 @@ namespace Microsoft.Recognizers.Text.DateTime.Thai
 
         Regex IDateExtractorConfiguration.YearSuffix => YearSuffix;
 
+        Regex IDateExtractorConfiguration.LessThanRegex => LessThanRegex;
+
+        Regex IDateExtractorConfiguration.MoreThanRegex => MoreThanRegex;
+
+        Regex IDateExtractorConfiguration.InConnectorRegex => InConnectorRegex;
+
+        Regex IDateExtractorConfiguration.RangeUnitRegex => RangeUnitRegex;
+
         public DateTimeOptions Options { get; }
-
-        public Regex MoreThanRegex => throw new System.NotImplementedException();
-
-        public Regex LessThanRegex => throw new System.NotImplementedException();
     }
 }
