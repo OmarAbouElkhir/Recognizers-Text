@@ -1192,7 +1192,7 @@
   "Context": {
     "ReferenceDateTime": "2018-05-18T00:00:00"
   },
-  "NotSupported": "javascript, python",
+  "NotSupported": "dotNet, javascript, python",
   "Results": [
     {
       "Text": "ตอนเช้าวันพุธ",
@@ -1360,7 +1360,7 @@
   "Context": {
     "ReferenceDateTime": "2018-05-31T00:00:00"
   },
-  "NotSupported": "javascript, python",
+  "NotSupported": "dotNet, javascript, python",
   "Results": [{
     "Text": "สามอาทิตย์ถัดจากวันพรุ่งนี้",
     "TypeName": "datetimeV2.date",
@@ -1444,7 +1444,7 @@
   "Context": {
     "ReferenceDateTime": "2018-05-31T00:00:00"
   },
-  "NotSupported": "javascript, python",
+  "NotSupported": "dotNet, javascript, python",
   "Results": [{
     "Text": "ระหว่าง 10 ถึง 11:30 น. ในวันที่ 1/1/2015",
     "TypeName": "datetimeV2.datetimerange",
@@ -1472,7 +1472,7 @@
   "Context": {
     "ReferenceDateTime": "2018-05-31T00:00:00"
   },
-  "NotSupported": "javascript, python",
+  "NotSupported": "dotNet, javascript, python",
   "Results": [{
     "Text": "วันที่ 1/1/2015 ระหว่าง 10 และ 11:30 นาฬิกา",
     "TypeName": "datetimeV2.datetimerange",
@@ -1500,7 +1500,7 @@
   "Context": {
     "ReferenceDateTime": "2018-05-31T00:00:00"
   },
-  "NotSupported": "javascript, python",
+  "NotSupported": "dotNet, javascript, python",
   "Results": [{
     "Text": "ตั้งแต่ 10:30 น. ถึง 3 น. ในวันที่ 1/1/2015",
     "TypeName": "datetimeV2.datetimerange",
@@ -1550,7 +1550,7 @@
   "Context": {
     "ReferenceDateTime": "2018-05-31T00:00:00"
   },
-  "NotSupported": "javascript, python",
+  "NotSupported": "dotNet, javascript, python",
   "Results": [{
     "Text": "ตั้งแต่ 3:30 ถึง 5:55 นาฬิกาในวันที่ 1/1/2015",
     "TypeName": "datetimeV2.datetimerange",
@@ -1578,7 +1578,7 @@
   "Context": {
     "ReferenceDateTime": "2018-05-31T00:00:00"
   },
-  "NotSupported": "javascript, python",
+  "NotSupported": "dotNet, javascript, python",
   "Results": [{
     "Text": "ก่อน คศ 2010",
     "TypeName": "datetimeV2.daterange",
@@ -1614,7 +1614,7 @@
   "Context": {
     "ReferenceDateTime": "2018-05-31T00:00:00"
   },
-  "NotSupported": "javascript, python",
+  "NotSupported": "dotNet, javascript, python",
   "Results": [{
     "Text": "หลังปี 2010",
     "TypeName": "datetimeV2.daterange",
@@ -1704,7 +1704,7 @@
   "Context": {
     "ReferenceDateTime": "2018-06-20T00:00:00"
   },
-  "NotSupported": "javascript, python",
+  "NotSupported": "dotNet, javascript, python",
   "Results": [{
     "Text": "วันศุกร์นี้ (15-มิย)",
     "TypeName": "datetimeV2.date",
